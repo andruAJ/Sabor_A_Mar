@@ -1,0 +1,89 @@
+# ===============================
+# UNITY GENERATED FOLDERS
+# ===============================
+Library/
+Temp/
+Obj/
+Build/
+Builds/
+Logs/
+UserSettings/
+
+# ===============================
+# OS / EDITOR TEMP FILES
+# ===============================
+*.log
+*.tmp
+*.utmp
+*.pidb
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.suo
+
+# ===============================
+# UNITY MEMORY / RECORDINGS
+# ===============================
+MemoryCaptures/
+Recordings/
+
+# ===============================
+# IDE / EDITOR CACHE
+# ===============================
+.vs/
+.gradle/
+.consulo/
+ExportedObj/
+
+# ===============================
+# VISUAL STUDIO / RIDER FILES
+# ===============================
+*.csproj
+*.unityproj
+*.sln
+*.user
+*.userprefs
+*.booproj
+*.svd
+
+Assets/Plugins/Editor/JetBrains/
+
+# ===============================
+# UNITY META FILES (GENERATED)
+# ===============================
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# ===============================
+# CRASH / DEBUG FILES
+# ===============================
+sysinfo.txt
+crashlytics-build.properties
+
+# ===============================
+# BUILDS / EXPORTS
+# ===============================
+*.apk
+*.aab
+*.app
+*.unitypackage
+*.unitypackage.meta
+
+# ===============================
+# ADDRESSABLES
+# ===============================
+Assets/AddressableAssetsData/*/*.bin*
+Assets/StreamingAssets/aa.meta
+Assets/StreamingAssets/aa/*
+
+# ===============================
+# NATIVE BINARIES (DO NOT VERSION)
+# ===============================
+*.dylib
+*.so
+*.bundle
+
+# Firebase (explicit safety)
+Assets/Firebase/Plugins/x86_64/
