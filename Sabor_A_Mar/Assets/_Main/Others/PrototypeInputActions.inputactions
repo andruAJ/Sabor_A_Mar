@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "PrototypeInputActions",
+    "maps": [
+        {
+            "name": "PrototypeButtons",
+            "id": "97612079-88ac-4037-90fd-42be8347bad8",
+            "actions": [
+                {
+                    "name": "Pop Out Element",
+                    "type": "Button",
+                    "id": "3341f973-2376-449b-945a-954e73c122f8",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f1d9ad7f-abb7-4249-9771-6bc7b6e3126a",
+                    "path": "<Keyboard>/t",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pop Out Element",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

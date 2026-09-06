@@ -23,11 +23,14 @@ public class FoodGrabbed : MonoBehaviour
             grabInteractable.enabled = false;
             distanceHandGrab.enabled = false;
             grabbable.enabled = false;
+
+            Debug.Log("Elemento agarrado");
         } 
         catch (ArgumentException e)
         {
             throw new ArgumentException("Error al desactivar los componentes de interacción: " + e.Message);
         }
-        gameObject.SetActive(false);
+        GameObject parent = this.gameObject.transform.parent.gameObject;
+        this.gameObject.SetActive(false);
     }
 }

@@ -10,4 +10,9 @@ public class FoodElement : MonoBehaviour
     {
         food_Name = this.tag;
     }
+
+    public string GetName() 
+    {
+        return food_Name;
+    }
 }
