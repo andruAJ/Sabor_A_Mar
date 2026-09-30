@@ -5,6 +5,12 @@ using UnityEngine;
 
 public class FoodGrabbed : MonoBehaviour
 {
+    public static event Action <FoodType> OnFoodGrabbed;
+
+    public enum FoodType
+    {
+        Platano, Pescado, Coco
+    }
     public void Seleccionarobjeto()
     {
 
@@ -25,6 +31,22 @@ public class FoodGrabbed : MonoBehaviour
             grabbable.enabled = false;
 
             Debug.Log("Elemento agarrado");
+
+            switch (GetComponent<FoodElement>().food_Name)
+            {
+                case "Platano":
+                    OnFoodGrabbed?.Invoke(FoodType.Platano);
+                    break;
+                case "Pescado":
+                    OnFoodGrabbed?.Invoke(FoodType.Pescado);
+                    break;
+                case "Coco":
+                    OnFoodGrabbed?.Invoke(FoodType.Coco);
+                    break;
+                default:
+                    Debug.LogWarning("Tipo de comida desconocido: " + GetComponent<FoodElement>().food_Name);
+                    break;
+            }
         } 
         catch (ArgumentException e)
         {

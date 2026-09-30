@@ -1,0 +1,34 @@
+# Apple ModelI/O MTL File: olla_03_terminada.mtl
+
+newmtl olla
+	map_Kd olla-color.png
+	Kd 1 1 1
+	Ka 0 0 0
+	Ks 0
+	ao 0
+	subsurface 0
+	map_metallic olla-metallic.png
+	specularTint 0
+	map_roughness olla-roughness.png
+	anisotropicRotation 0
+	sheen 0.05
+	sheenTint 0
+	clearCoat 0
+	clearCoatGloss 0
+
+newmtl olla.001
+	map_Kd olla.001-color.png
+	Kd 1 1 1
+	Ka 0 0 0
+	Ks 0
+	ao 0
+	subsurface 0
+	map_metallic olla.001-metallic.png
+	specularTint 0
+	map_roughness olla.001-roughness.png
+	anisotropicRotation 0
+	sheen 0.05
+	sheenTint 0
+	clearCoat 0
+	clearCoatGloss 0
+
