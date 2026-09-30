@@ -31,9 +31,9 @@ TagManager:
   - SamplesInfoPanel
   - QDSUIToggleCheckboxRadio
   - QDSUIToggleThumbnail
-  - Pez
   - Platano
   - Coco
+  - Pescado
   layers:
   - Default
   - TransparentFX

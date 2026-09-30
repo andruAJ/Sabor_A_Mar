@@ -36,12 +36,15 @@ public class FoodGrabbed : MonoBehaviour
             {
                 case "Platano":
                     OnFoodGrabbed?.Invoke(FoodType.Platano);
+                    Debug.Log("Platano agarrado");
                     break;
                 case "Pescado":
                     OnFoodGrabbed?.Invoke(FoodType.Pescado);
+                    Debug.Log("Pescado agarrado");
                     break;
                 case "Coco":
                     OnFoodGrabbed?.Invoke(FoodType.Coco);
+                    Debug.Log("Coco agarrado");
                     break;
                 default:
                     Debug.LogWarning("Tipo de comida desconocido: " + GetComponent<FoodElement>().food_Name);

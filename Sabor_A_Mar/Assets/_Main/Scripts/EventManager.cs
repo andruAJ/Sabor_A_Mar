@@ -11,7 +11,7 @@ public class EventManager : MonoBehaviour
 
     public void OnFoodGrabbed(FoodGrabbed.FoodType foodType)
     {
-        
+        Debug.Log("Evento recibido: " + foodType);
         uiManager.ChangeSlotTexture((int)foodType);
         
         Debug.Log("Comida agarrada: " + foodType);

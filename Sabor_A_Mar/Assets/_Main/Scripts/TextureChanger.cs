@@ -9,6 +9,12 @@ public class TextureChanger : MonoBehaviour
 
     private bool isUnblocked = false;
 
+    public void Start()
+    {
+        isUnblocked = false;
+        ChangeTexture();
+    }
+
     public void SetUnblocked(bool unblocked)
     {
         isUnblocked = unblocked;

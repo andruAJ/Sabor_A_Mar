@@ -10369,6 +10369,7 @@ GameObject:
   - component: {fileID: 932901869}
   - component: {fileID: 932901868}
   - component: {fileID: 932901867}
+  - component: {fileID: 932901872}
   - component: {fileID: 932901871}
   m_Layer: 0
   m_Name: GameManager
@@ -10389,6 +10390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333f6f28ba8ab2f448ea1e76be762a10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EventManager
+  uiManager: {fileID: 932901872}
 --- !u!114 &932901868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10476,6 +10478,22 @@ MonoBehaviour:
   m_DefaultActionMap: PrototypeButtons
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &932901872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932901866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8e32898feb3b9e4e806e4f55f5b1b5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI_Manager
+  slots:
+  - {fileID: 974627160}
+  - {fileID: 1893017585}
+  - {fileID: 2067242126}
 --- !u!1 &932956427
 GameObject:
   m_ObjectHideFlags: 0
@@ -11070,8 +11088,9 @@ GameObject:
   - component: {fileID: 974627161}
   - component: {fileID: 974627163}
   - component: {fileID: 974627162}
+  - component: {fileID: 974627164}
   m_Layer: 0
-  m_Name: Inv_Slot_3
+  m_Name: Inv_Slot_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11085,13 +11104,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 974627160}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0.01, z: 3.14}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.272}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 0.27, y: 0.8, z: 0.8}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2077277760}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!23 &974627162
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11117,7 +11136,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 15303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 075daf72c1e2dba4f9a89d9f68f11cb4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11149,6 +11168,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 974627160}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &974627164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974627160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31e46a3c8bd9cb249946c4430eba7140, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TextureChanger
+  material: {fileID: 2100000, guid: 075daf72c1e2dba4f9a89d9f68f11cb4, type: 2}
+  texture1: {fileID: 2800000, guid: 3122967450f63ce44a7ea1772b3ec83d, type: 3}
+  texture2: {fileID: 2800000, guid: fd5ef637a9ee4ca46983d66b13b02616, type: 3}
 --- !u!1 &983732182
 GameObject:
   m_ObjectHideFlags: 0
@@ -21298,7 +21332,7 @@ GameObject:
   - component: {fileID: 1838545690}
   m_Layer: 0
   m_Name: FoodInteractable
-  m_TagString: Pez
+  m_TagString: Coco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22038,6 +22072,7 @@ GameObject:
   - component: {fileID: 1893017586}
   - component: {fileID: 1893017588}
   - component: {fileID: 1893017587}
+  - component: {fileID: 1893017589}
   m_Layer: 0
   m_Name: Inv_Slot_2
   m_TagString: Untagged
@@ -22053,13 +22088,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1893017585}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0.01, z: -0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.272}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 0.27, y: 0.8, z: 0.8}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2077277760}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!23 &1893017587
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22085,7 +22120,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 15303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3fe09735f4b77cd4f9ff8775ae0afe75, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -22117,6 +22152,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1893017585}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1893017589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893017585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31e46a3c8bd9cb249946c4430eba7140, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TextureChanger
+  material: {fileID: 2100000, guid: 3fe09735f4b77cd4f9ff8775ae0afe75, type: 2}
+  texture1: {fileID: 2800000, guid: e7d2928be5d5ea94299aa06a008d375a, type: 3}
+  texture2: {fileID: 2800000, guid: dd8ae21bb295f7243aafdf3fd2147ae2, type: 3}
 --- !u!1 &1898084658
 GameObject:
   m_ObjectHideFlags: 0
@@ -24175,8 +24225,9 @@ GameObject:
   - component: {fileID: 2067242127}
   - component: {fileID: 2067242129}
   - component: {fileID: 2067242128}
+  - component: {fileID: 2067242130}
   m_Layer: 0
-  m_Name: Inv_Slot_1
+  m_Name: Inv_Slot_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24190,13 +24241,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2067242126}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0.01, z: -3.13}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.272}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 0.27, y: 0.8, z: 0.8}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2077277760}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!23 &2067242128
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24222,7 +24273,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 15303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: d5273f577fc85c84a9979242ca24c1fd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24254,6 +24305,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2067242126}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2067242130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067242126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31e46a3c8bd9cb249946c4430eba7140, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TextureChanger
+  material: {fileID: 2100000, guid: d5273f577fc85c84a9979242ca24c1fd, type: 2}
+  texture1: {fileID: 2800000, guid: 8fc04d50863cc4c438562e69b9be1a38, type: 3}
+  texture2: {fileID: 2800000, guid: 267043853628d3544aae254e787fb2e6, type: 3}
 --- !u!1 &2075296993
 GameObject:
   m_ObjectHideFlags: 0
@@ -24496,9 +24562,9 @@ Transform:
   m_LocalScale: {x: 0.04, y: 0.13, z: 0.12}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2067242127}
-  - {fileID: 1893017586}
   - {fileID: 974627161}
+  - {fileID: 1893017586}
+  - {fileID: 2067242127}
   m_Father: {fileID: 2093669757}
   m_LocalEulerAnglesHint: {x: 0, y: 68.97, z: -90}
 --- !u!23 &2077277761
