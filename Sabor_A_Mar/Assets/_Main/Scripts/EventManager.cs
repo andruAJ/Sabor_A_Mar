@@ -2,20 +2,18 @@ using UnityEngine;
 
 public class EventManager : MonoBehaviour
 {
-    
+    public UI_Manager uiManager;
+
     void Awake ()
     {
         FoodGrabbed.OnFoodGrabbed += OnFoodGrabbed;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void OnFoodGrabbed(FoodGrabbed.FoodType foodType)
     {
-        // cambiar UI
+        
+        uiManager.ChangeSlotTexture((int)foodType);
+        
         Debug.Log("Comida agarrada: " + foodType);
     }
 }
