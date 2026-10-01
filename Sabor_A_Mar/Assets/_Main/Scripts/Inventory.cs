@@ -12,6 +12,38 @@ public class Inventory : MonoBehaviour
 
     public Stack<FoodElement> inventory = new Stack<FoodElement>();
 
+    public bool platanoAgarrado = false;
+    public bool cocoAgarrado = false;
+
+    public bool pescadoAgarrado = false;
+
+    public bool PlatanoAgarrado
+    {
+        get => platanoAgarrado;
+        set
+        {
+            platanoAgarrado = value;
+        }
+    }
+
+    public bool CocoAgarrado
+    {
+        get => cocoAgarrado;
+        set
+        {
+            cocoAgarrado = value;
+        }
+    }
+
+    public bool PescadoAgarrado
+    {
+        get => pescadoAgarrado;
+        set
+        {
+            pescadoAgarrado = value;
+        }
+    }
+
     private void Awake()
     {
         if (Instance != null)
@@ -42,5 +74,5 @@ public class Inventory : MonoBehaviour
         {
             Debug.Log("Inventario vacío");
         }
-    }
+    }  
 }
