@@ -34,6 +34,7 @@ TagManager:
   - Platano
   - Coco
   - Pescado
+  - Hand
   layers:
   - Default
   - TransparentFX
