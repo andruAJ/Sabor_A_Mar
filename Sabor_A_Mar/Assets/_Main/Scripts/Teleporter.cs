@@ -31,13 +31,13 @@ public class Teleporter : MonoBehaviour
         }
     }
 
-    public void TeleportToPoint(TeleporterPoints point)
+    public void TeleportToPoint(int point)
     {
         if (teleport_volume == null || teleport_vignette == null) return;
         StartCoroutine(FadeOut());
-        if (teleporterPoints.Length > (int)point)
+        if (teleporterPoints.Length > point && point >= 0)
         {
-            Transform targetPoint = teleporterPoints[(int)point];
+            Transform targetPoint = teleporterPoints[point];
             player.transform.position = targetPoint.position;
         }
         else
