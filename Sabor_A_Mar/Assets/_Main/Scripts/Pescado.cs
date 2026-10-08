@@ -6,8 +6,8 @@ public class Pescado : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Hand"))
         {
-            // Call the method to handle the collision with the player
-            
+            Debug.Log("Hand entro en el área");
+
         }
     }
 }
