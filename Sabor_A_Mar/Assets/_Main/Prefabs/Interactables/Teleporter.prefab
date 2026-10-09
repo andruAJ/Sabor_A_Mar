@@ -49,42 +49,10 @@ MonoBehaviour:
   teleporterPoints:
   - {fileID: 7247660891978441892}
   - {fileID: 451850177291368383}
-  - {fileID: 8642932688233596914}
   player: {fileID: 0}
   tp_volumeParent: {fileID: 276861059043959041}
   teleport_volume: {fileID: 0}
   effect_timer: 1
---- !u!1 &5454572484223449760
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8642932688233596914}
-  m_Layer: 0
-  m_Name: TP_P_3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8642932688233596914
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5454572484223449760}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.5, y: 0, z: 14}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3665750261679165094}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6717191024048875550
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,7 +115,6 @@ Transform:
   m_Children:
   - {fileID: 7247660891978441892}
   - {fileID: 451850177291368383}
-  - {fileID: 8642932688233596914}
   m_Father: {fileID: 7400267368658825661}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7599814146019464027
