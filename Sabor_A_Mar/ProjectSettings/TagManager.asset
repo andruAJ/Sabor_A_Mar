@@ -35,6 +35,11 @@ TagManager:
   - Coco
   - Pescado
   - Hand
+  - Cuchillo
+  - Descamador
+  - Sarten
+  - Pataconera
+  - Rayador
   layers:
   - Default
   - TransparentFX

@@ -209,10 +209,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c7c91cda1e90418572793d1e52f3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pescado
-  pescado_Escamas: {fileID: 0}
-  pescado_Sin_Escamas: {fileID: 0}
-  pescado_Cortado: {fileID: 0}
-  pescado_Frito: {fileID: 0}
+  pescado_Escamas: {fileID: 2800000, guid: e8853e7d60db4404d987b5eed78d16d3, type: 3}
+  pescado_Sin_Escamas: {fileID: 2800000, guid: 59d59b291d941d348b43d9a7e8e006be, type: 3}
+  pescado_Cortado: {fileID: 2800000, guid: befaa2e1d95ae704aa566e038a789721, type: 3}
+  pescado_Frito: {fileID: 2800000, guid: 7673b2dfb329f0547b673aa41d879159, type: 3}
+  pescadoMeshRenderer: {fileID: 696693334558865550}
   pescadoMaterial: {fileID: 0}
 --- !u!136 &4707276159324971293
 CapsuleCollider:
@@ -477,6 +478,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3468191288451c646bce33dddeedfc66, type: 3}
+--- !u!23 &696693334558865550 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -5965111130776285117, guid: 3468191288451c646bce33dddeedfc66, type: 3}
+  m_PrefabInstance: {fileID: 2638139485541017805}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2528266098473160486 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3468191288451c646bce33dddeedfc66, type: 3}
