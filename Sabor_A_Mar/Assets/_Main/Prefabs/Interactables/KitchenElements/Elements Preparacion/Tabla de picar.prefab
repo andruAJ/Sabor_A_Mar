@@ -75,7 +75,6 @@ GameObject:
   - component: {fileID: 8201428438051919417}
   - component: {fileID: 6853728063628612749}
   - component: {fileID: 620873569047625}
-  - component: {fileID: 5839649404344892769}
   m_Layer: 0
   m_Name: Tabla de picar
   m_TagString: Untagged
@@ -142,24 +141,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &5839649404344892769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2795813700756043492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e13c7c91cda1e90418572793d1e52f3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Pescado
-  pescado_Escamas: {fileID: 2800000, guid: e8853e7d60db4404d987b5eed78d16d3, type: 3}
-  pescado_Sin_Escamas: {fileID: 2800000, guid: 59d59b291d941d348b43d9a7e8e006be, type: 3}
-  pescado_Cortado: {fileID: 2800000, guid: befaa2e1d95ae704aa566e038a789721, type: 3}
-  pescado_Frito: {fileID: 2800000, guid: 7673b2dfb329f0547b673aa41d879159, type: 3}
-  pescadoMeshRenderer: {fileID: 0}
-  pescadoMaterial: {fileID: 0}
 --- !u!1001 &5965352183310755225
 PrefabInstance:
   m_ObjectHideFlags: 0

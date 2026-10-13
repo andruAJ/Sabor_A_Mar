@@ -166,16 +166,16 @@ GameObject:
   m_Component:
   - component: {fileID: 404092715729522954}
   - component: {fileID: -796297167272746976}
-  - component: {fileID: 4707276159324971293}
   - component: {fileID: 3952737986202319712}
   - component: {fileID: 6382699262467036975}
   - component: {fileID: 7410520885720797690}
   - component: {fileID: 7308568397084304401}
   - component: {fileID: 5294816288203726856}
   - component: {fileID: 7365111343407463109}
+  - component: {fileID: 7664548314118354858}
   m_Layer: 0
   m_Name: Pescado
-  m_TagString: Untagged
+  m_TagString: Pescado
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -190,7 +190,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0, y: 0, z: 0.23}
-  m_LocalScale: {x: 0.41, y: 0.41, z: 0.41}
+  m_LocalScale: {x: 0.082000025, y: 0.08200001, z: 0.08200001}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2528266098473160486}
@@ -215,29 +215,6 @@ MonoBehaviour:
   pescado_Frito: {fileID: 2800000, guid: 7673b2dfb329f0547b673aa41d879159, type: 3}
   pescadoMeshRenderer: {fileID: 696693334558865550}
   pescadoMaterial: {fileID: 0}
---- !u!136 &4707276159324971293
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4630857438089977539}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &3952737986202319712
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -377,6 +354,27 @@ MonoBehaviour:
   - {fileID: 8261887091397537352}
   - {fileID: 7122069105962412718}
   _data: {fileID: 0}
+--- !u!65 &7664548314118354858
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4630857438089977539}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 2.36702, z: 5.737664}
+  m_Center: {x: 0, y: 0.0506306, z: 0.12015841}
 --- !u!1001 &2638139485541017805
 PrefabInstance:
   m_ObjectHideFlags: 0
