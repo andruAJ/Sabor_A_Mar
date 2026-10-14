@@ -7,21 +7,15 @@ public class UI_Manager : MonoBehaviour
     public Animator tp_animatorController;
     public GameObject[] slots;
 
-    public void ShowPanel(string panelName)
-    {
-        if (panelName == "Inventory")
-            inv_animatorController.SetTrigger("Show");
-        else if (panelName == "Teleport")
-            tp_animatorController.SetTrigger("Show");
-        else Debug.LogWarning("Panel name not recognized: " + panelName);
-    }
+    private bool isInventoryVisible = false;
+    private bool isTeleportVisible = false;
 
-    public void HidePanel(string panelName)
+    public void ShowOrHidePanel(string panelName)
     {
         if (panelName == "Inventory")
-            inv_animatorController.SetTrigger("Hide");
+            inv_animatorController.SetTrigger(isInventoryVisible ? "Hide" : "Show");
         else if (panelName == "Teleport")
-            tp_animatorController.SetTrigger("Hide");
+            tp_animatorController.SetTrigger(isTeleportVisible ? "Hide" : "Show");
         else Debug.LogWarning("Panel name not recognized: " + panelName);
     }
     
