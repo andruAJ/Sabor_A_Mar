@@ -1,17 +1,22 @@
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class TablaPicar : MonoBehaviour
 {
     public Pescado pescadoScript;
+    private PositionConstraint positionConstraint;
 
     public void OnCollisionEnter(Collision collision)
     {
-        switch(collision.gameObject.tag)
+        Debug.Log("Collision detected with: " + collision.gameObject.name);
+        switch (collision.gameObject.tag)
         {
             case "Pescado":
                 pescadoScript = collision.gameObject.GetComponent<Pescado>();
                 if (pescadoScript != null)
                 {
+                    collision.gameObject.GetComponent<PositionConstraint>().enabled = true;
+                    Debug.Log("Constraint deberia ser activado");
                     pescadoScript.enabled = true;
                 }
                 break;
@@ -22,5 +27,9 @@ public class TablaPicar : MonoBehaviour
                 break;
         }
 
+    }
+    public void OnCollisionStay(Collision collision)
+    {
+        Debug.Log("Collision stay detected with: " + collision.gameObject.name);
     }
 }

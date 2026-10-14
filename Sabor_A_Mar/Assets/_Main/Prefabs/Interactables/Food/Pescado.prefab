@@ -173,6 +173,7 @@ GameObject:
   - component: {fileID: 5294816288203726856}
   - component: {fileID: 7365111343407463109}
   - component: {fileID: 7664548314118354858}
+  - component: {fileID: 5017661958717746470}
   m_Layer: 0
   m_Name: Pescado
   m_TagString: Pescado
@@ -204,7 +205,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4630857438089977539}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e13c7c91cda1e90418572793d1e52f3d, type: 3}
   m_Name: 
@@ -375,6 +376,26 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 2.36702, z: 5.737664}
   m_Center: {x: 0, y: 0.0506306, z: 0.12015841}
+--- !u!1818360608 &5017661958717746470
+PositionConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4630857438089977539}
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Weight: 1
+  m_TranslationAtRest: {x: 2.388, y: 1.3065, z: -0.28917}
+  m_TranslationOffset: {x: 0, y: 0.058649898, z: 0}
+  m_AffectTranslationX: 1
+  m_AffectTranslationY: 1
+  m_AffectTranslationZ: 1
+  m_Active: 1
+  m_IsLocked: 1
+  m_Sources:
+  - sourceTransform: {fileID: 0}
+    weight: 1
 --- !u!1001 &2638139485541017805
 PrefabInstance:
   m_ObjectHideFlags: 0
