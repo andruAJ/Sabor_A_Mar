@@ -1,4 +1,8 @@
+using Oculus.Interaction;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.Animations;
+using UnityEngine.Rendering.Universal;
 
 public class Pescado : MonoBehaviour
 {
@@ -39,19 +43,27 @@ public class Pescado : MonoBehaviour
         switch (collisionTag)
         {
             case "Cuchillo":
-                golpes++;
-                blendValue += 0.35f;
-                if(golpes >= 3)
+                if (currentState == PescadoState.SinEscamas)
                 {
-                    SetPescadoState(PescadoState.Cortado);
-                }
+                    golpes++;
+                    blendValue += 0.35f;
+                    BlendTextures(blendValue);
+                    if (golpes >= 3)
+                    {
+                        SetPescadoState(PescadoState.Cortado);
+                    }
+                }   
                 break;
             case "Descamador":
-                golpes++;
-                blendValue += 0.35f;
-                if (golpes >= 3)
+                if(currentState == PescadoState.Escamas)
                 {
-                    SetPescadoState(PescadoState.SinEscamas);
+                    golpes++;
+                    blendValue += 0.35f;
+                    BlendTextures(blendValue);
+                    if (golpes >= 3)
+                    {
+                        SetPescadoState(PescadoState.SinEscamas);
+                    }
                 }
                 break;
             default:
@@ -75,6 +87,7 @@ public class Pescado : MonoBehaviour
             case PescadoState.Cortado:
                 UpdateTextures(pescado_Cortado, pescado_Frito);
                 BlendTextures(0f);
+                this.gameObject.GetComponent<PositionConstraint>().enabled = false;
                 break;
             case PescadoState.Frito:
                 UpdateTextures(pescado_Frito, pescado_Frito);
@@ -91,5 +104,14 @@ public class Pescado : MonoBehaviour
     public void BlendTextures(float blendValue) 
     {
         pescadoMaterial.SetFloat("BlendValue", blendValue);
+    }
+    public IEnumerator Fritura() 
+    {
+        float elapsedTime = 0f;
+        while (elapsedTime < 10f)
+        {
+            BlendTextures(elapsedTime / 10f);
+            yield return null;
+        }
     }
 }
