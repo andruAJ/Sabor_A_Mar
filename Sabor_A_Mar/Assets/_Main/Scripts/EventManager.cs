@@ -6,11 +6,14 @@ public class EventManager : MonoBehaviour
 
     public Pescado pescadoScript;
 
-    void Awake ()
+
+
+    void Awake()
     {
         FoodGrabbed.OnFoodGrabbed += OnFoodGrabbed;
         Enable_Preparaciones.OnTablaCollided += PreparacionTabla;
         Enable_Preparaciones.OnSartenCollided += PreparacionSarten;
+        Inventory.OnQuantityChanged +=  ChangeInventoryIcon;
     }
 
     public void OnFoodGrabbed(FoodGrabbed.FoodType foodType)
@@ -62,5 +65,9 @@ public class EventManager : MonoBehaviour
             default:
                 break;
         }
+    }
+    public void ChangeInventoryIcon(int quantity) 
+    {
+        uiManager.ChangeInvButtonTexture(quantity);
     }
 }

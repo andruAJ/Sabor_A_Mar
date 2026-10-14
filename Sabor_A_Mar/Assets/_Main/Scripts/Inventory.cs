@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,8 @@ public class Inventory : MonoBehaviour
     public int maxInventorySize = 3;
 
     public Stack<FoodElement> inventory = new Stack<FoodElement>();
+
+    public static event Action<int> OnQuantityChanged;
 
     public bool platanoAgarrado = false;
     public bool cocoAgarrado = false;
@@ -44,6 +47,8 @@ public class Inventory : MonoBehaviour
         }
     }
 
+
+
     private void Awake()
     {
         if (Instance != null)
@@ -53,11 +58,13 @@ public class Inventory : MonoBehaviour
             return;
         }
         Instance = this;
+        OnQuantityChanged?.Invoke(inventory.Count);
     }
 
     public void AddToInventory(FoodElement comida)
     {
         inventory.Push(comida);
+        OnQuantityChanged?.Invoke(inventory.Count);
     }
     public void RemoveFromInventory()
     {
