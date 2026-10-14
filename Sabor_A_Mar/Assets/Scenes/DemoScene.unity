@@ -3007,30 +3007,6 @@ PrefabInstance:
       value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 9209013274846957624, guid: 676fe87c8e8241f4da7aeb1958c1655d, type: 3}
-      propertyPath: invIcon0
-      value: 
-      objectReference: {fileID: 2800000, guid: b159963efdbd81d46985e33f732728e8, type: 3}
-    - target: {fileID: 9209013274846957624, guid: 676fe87c8e8241f4da7aeb1958c1655d, type: 3}
-      propertyPath: invIcon1
-      value: 
-      objectReference: {fileID: 2800000, guid: 469f416e709eac043bce7bcec0ee11f2, type: 3}
-    - target: {fileID: 9209013274846957624, guid: 676fe87c8e8241f4da7aeb1958c1655d, type: 3}
-      propertyPath: invIcon2
-      value: 
-      objectReference: {fileID: 2800000, guid: bebc86fe81478ca4da877710d65844ed, type: 3}
-    - target: {fileID: 9209013274846957624, guid: 676fe87c8e8241f4da7aeb1958c1655d, type: 3}
-      propertyPath: invIcon3
-      value: 
-      objectReference: {fileID: 2800000, guid: ae44e2f69ddc38a44aa2367b3fb9ec44, type: 3}
-    - target: {fileID: 9209013274846957624, guid: 676fe87c8e8241f4da7aeb1958c1655d, type: 3}
-      propertyPath: invIconMaterial
-      value: 
-      objectReference: {fileID: 2100000, guid: 1ad09add7aefd0b41bf6b2426d7be580, type: 2}
-    - target: {fileID: 9209013274846957624, guid: 676fe87c8e8241f4da7aeb1958c1655d, type: 3}
-      propertyPath: slots.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 9209013274846957624, guid: 676fe87c8e8241f4da7aeb1958c1655d, type: 3}
       propertyPath: 'slots.Array.data[0]'
       value: 
       objectReference: {fileID: 380912863}
@@ -3182,38 +3158,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1017080394819720665, guid: 7ee90bb57579a09449b83f7cd662d9e6, type: 3}
-      propertyPath: _pokeInteractable
-      value: 
-      objectReference: {fileID: 365409130}
-    - target: {fileID: 1691243526050719356, guid: 7ee90bb57579a09449b83f7cd662d9e6, type: 3}
-      propertyPath: _interactableView
-      value: 
-      objectReference: {fileID: 365409130}
-    - target: {fileID: 2436660411501834870, guid: 7ee90bb57579a09449b83f7cd662d9e6, type: 3}
-      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 565086270}
-    - target: {fileID: 7762107371330565397, guid: 7ee90bb57579a09449b83f7cd662d9e6, type: 3}
-      propertyPath: _interactableView
-      value: 
-      objectReference: {fileID: 365409130}
-    - target: {fileID: 7907239193054218157, guid: 7ee90bb57579a09449b83f7cd662d9e6, type: 3}
-      propertyPath: _pokeInteractable
-      value: 
-      objectReference: {fileID: 365409130}
-    - target: {fileID: 7934307687364129914, guid: 7ee90bb57579a09449b83f7cd662d9e6, type: 3}
-      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 565086270}
     - target: {fileID: 7983340676126242021, guid: 7ee90bb57579a09449b83f7cd662d9e6, type: 3}
       propertyPath: m_Name
       value: '[BuildingBlock] Camera Rig'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 4274687698736403155, guid: 7ee90bb57579a09449b83f7cd662d9e6, type: 3}
-    - {fileID: 4049467246566469989, guid: 7ee90bb57579a09449b83f7cd662d9e6, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ee90bb57579a09449b83f7cd662d9e6, type: 3}
@@ -3387,14 +3337,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: FoodInteractable
       objectReference: {fileID: 0}
-    - target: {fileID: 8639934199254278966, guid: 28a148482c9e7914ea4fdad622474249, type: 3}
-      propertyPath: m_TagString
-      value: Platano
-      objectReference: {fileID: 0}
-    - target: {fileID: 9217393582592609080, guid: 28a148482c9e7914ea4fdad622474249, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

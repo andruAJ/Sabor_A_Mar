@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 6427609289049494914}
   m_Layer: 0
   m_Name: FoodInteractable
-  m_TagString: Coco
+  m_TagString: Platano
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

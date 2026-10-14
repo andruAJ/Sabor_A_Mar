@@ -62,6 +62,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Inventory
   inventorySpawnPoint: {fileID: 0}
   maxInventorySize: 3
+  platanoAgarrado: 0
+  cocoAgarrado: 0
+  pescadoAgarrado: 0
 --- !u!114 &1518620307974301852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75,6 +78,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EventManager
   uiManager: {fileID: 9209013274846957624}
+  pescadoScript: {fileID: 0}
 --- !u!114 &9209013274846957624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,10 +91,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8e32898feb3b9e4e806e4f55f5b1b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI_Manager
+  inv_animatorController: {fileID: 0}
+  tp_animatorController: {fileID: 0}
   slots:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  invIcon0: {fileID: 2800000, guid: b159963efdbd81d46985e33f732728e8, type: 3}
+  invIcon1: {fileID: 2800000, guid: 469f416e709eac043bce7bcec0ee11f2, type: 3}
+  invIcon2: {fileID: 2800000, guid: bebc86fe81478ca4da877710d65844ed, type: 3}
+  invIcon3: {fileID: 2800000, guid: ae44e2f69ddc38a44aa2367b3fb9ec44, type: 3}
+  invIconMaterial: {fileID: 2100000, guid: 1ad09add7aefd0b41bf6b2426d7be580, type: 2}
 --- !u!114 &4596781614323697576
 MonoBehaviour:
   m_ObjectHideFlags: 0
