@@ -3083,8 +3083,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4314253705864857425, guid: ecc6db11b81c03648a286906026b2cad, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: f1df85d981822bb44a972fbca54bcd6c, type: 2}
+    - target: {fileID: 4314253705864857425, guid: ecc6db11b81c03648a286906026b2cad, type: 3}
       propertyPath: m_ProvidesContacts
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4314253705864857425, guid: ecc6db11b81c03648a286906026b2cad, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4314253705864857425, guid: ecc6db11b81c03648a286906026b2cad, type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
