@@ -1,3 +1,5 @@
+using Oculus.Interaction;
+using Oculus.Interaction.HandGrab;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -72,8 +74,18 @@ public class Inventory : MonoBehaviour
         {
             if (inventory.TryPop(out var popped))
             {
-                popped.gameObject.SetActive(true);            //verificar si esta línea sí prende correctamente el papá
-                popped.transform.position = inventorySpawnPoint.position;             //verificar si ésta línea sí mueve correctamente el papá
+                popped.gameObject.SetActive(true);           
+                popped.transform.position = inventorySpawnPoint.position;
+                DistanceGrabInteractable interactable = popped.GetComponentInChildren<DistanceGrabInteractable>();        //tengo que estar pendiente que esta función sí busque en todos los hijos o si toca nombrar en cuál hijo debe buscar
+                HandGrabInteractable handInteractable = popped.GetComponentInChildren<HandGrabInteractable>();
+                GrabInteractable grabInteractable = popped.GetComponentInChildren<GrabInteractable>();
+                DistanceHandGrabInteractable distanceHandGrab = popped.GetComponentInChildren<DistanceHandGrabInteractable>();
+                Grabbable grabbable = popped.GetComponent<Grabbable>();
+                interactable.enabled = true;
+                handInteractable.enabled = true;
+                grabInteractable.enabled = true;
+                distanceHandGrab.enabled = true;
+                grabbable.enabled = true;
                 Debug.Log("Elemento salió del inventario");
             }
         }
