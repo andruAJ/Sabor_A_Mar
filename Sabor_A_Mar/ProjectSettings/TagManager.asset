@@ -42,6 +42,7 @@ TagManager:
   - Rayador
   - Bowl
   - Olla
+  - Tabla
   layers:
   - Default
   - TransparentFX

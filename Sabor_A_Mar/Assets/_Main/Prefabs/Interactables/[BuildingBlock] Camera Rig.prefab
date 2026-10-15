@@ -820,7 +820,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Meta.XR.BuildingBlocks::Meta.XR.BuildingBlocks.BuildingBlock
   blockId: 4e14e0ba-51f2-4a5c-a822-e304bf36d48c
-  instanceId: 8f609c84-27ed-4c71-b7ad-23e7ddfef9a2
+  instanceId: 16701e01-cb46-4a8e-a91b-7184a46b922f
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: fb25cac7-8f37-455d-ac01-3fa41a1be37d
@@ -6195,6 +6195,59 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &2292198540231223821
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1165646266739475941}
+  - component: {fileID: 5672164537802703858}
+  m_Layer: 0
+  m_Name: InventorySpawnPointParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1165646266739475941
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2292198540231223821}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5271178738567808396}
+  m_Father: {fileID: 8367664300357369371}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1818360609 &5672164537802703858
+RotationConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2292198540231223821}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Weight: 1
+  m_RotationAtRest: {x: 0, y: 0, z: 0}
+  m_RotationOffset: {x: 0, y: 0, z: 0}
+  m_AffectRotationX: 1
+  m_AffectRotationY: 1
+  m_AffectRotationZ: 1
+  m_Active: 1
+  m_IsLocked: 0
+  m_Sources:
+  - sourceTransform: {fileID: 4890988565531677834}
+    weight: 1
 --- !u!1 &2304373353388880612
 GameObject:
   m_ObjectHideFlags: 0
@@ -7625,7 +7678,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Meta.XR.BuildingBlocks::Meta.XR.BuildingBlocks.BuildingBlock
   blockId: 4e14e0ba-51f2-4a5c-a822-e304bf36d48c
-  instanceId: 96725a42-8daa-4fe3-b315-21e1666c4eef
+  instanceId: b6f4fb75-9c6d-4976-8144-1d69b08b6713
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: fb25cac7-8f37-455d-ac01-3fa41a1be37d
@@ -7889,7 +7942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Meta.XR.BuildingBlocks::Meta.XR.BuildingBlocks.BuildingBlock
   blockId: 8b26b298-7bf4-490e-b245-a039c0184303
-  instanceId: 9b8fb1cf-26e4-41d7-85e8-370e581930d9
+  instanceId: 12f70b66-afb1-48fe-90fe-d24ceda337d0
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -10356,7 +10409,7 @@ Transform:
   - {fileID: 7708799672851711120}
   - {fileID: 8229870801923609407}
   - {fileID: 6609961856088289514}
-  - {fileID: 5271178738567808396}
+  - {fileID: 1165646266739475941}
   m_Father: {fileID: 265500178325435035}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3884529337822844490
@@ -12725,6 +12778,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5271178738567808396}
+  - component: {fileID: 4425298075895893597}
   m_Layer: 0
   m_Name: InventorySpawnpoint
   m_TagString: Untagged
@@ -12740,13 +12794,33 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4939630330588307552}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.51, z: 0.581}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.53200006, z: 1.163}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8367664300357369371}
+  m_Father: {fileID: 1165646266739475941}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1818360608 &4425298075895893597
+PositionConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4939630330588307552}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Weight: 1
+  m_TranslationAtRest: {x: 0, y: 0.53200006, z: 1.163}
+  m_TranslationOffset: {x: 0, y: 0.53200006, z: 1.163}
+  m_AffectTranslationX: 1
+  m_AffectTranslationY: 1
+  m_AffectTranslationZ: 1
+  m_Active: 1
+  m_IsLocked: 0
+  m_Sources:
+  - sourceTransform: {fileID: 4890988565531677834}
+    weight: 1
 --- !u!1 &4989363986502880189
 GameObject:
   m_ObjectHideFlags: 0
@@ -15314,7 +15388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Meta.XR.BuildingBlocks::Meta.XR.BuildingBlocks.BuildingBlock
   blockId: 8b26b298-7bf4-490e-b245-a039c0184303
-  instanceId: e52500a4-53d0-4865-8abb-12fd9557fc53
+  instanceId: 5d0675d4-dfcf-44a4-8d46-5baa9572ecd2
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -20385,7 +20459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Meta.XR.BuildingBlocks::Meta.XR.BuildingBlocks.BuildingBlock
   blockId: e47682b9-c270-40b1-b16d-90b627a5ce1b
-  instanceId: 81222fa7-b779-4f29-b9ae-1fd61601df2b
+  instanceId: 3b2c5180-f36a-455f-83ac-03995653010a
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -23436,7 +23510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Meta.XR.BuildingBlocks::Meta.XR.BuildingBlocks.BuildingBlock
   blockId: 81f55626-5fad-45e9-a1df-184f330da7ba
-  instanceId: ef02e2e1-0868-48e8-803e-f78f22ea6ba6
+  instanceId: 8d44703a-0fa8-456e-8c9d-3187938ebc48
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 2063f481-1b63-4eda-9ee8-a00df98536bc
