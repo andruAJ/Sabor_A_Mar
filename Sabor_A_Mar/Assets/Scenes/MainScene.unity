@@ -399,48 +399,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6236077340221737265, guid: d42a01d10749b454ca9a233709bd2a49, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 247963847}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d42a01d10749b454ca9a233709bd2a49, type: 3}
 --- !u!4 &247963845 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3736870551958794500, guid: d42a01d10749b454ca9a233709bd2a49, type: 3}
   m_PrefabInstance: {fileID: 247963844}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &247963846 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6236077340221737265, guid: d42a01d10749b454ca9a233709bd2a49, type: 3}
-  m_PrefabInstance: {fileID: 247963844}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &247963847
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 247963846}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &261843758
 GameObject:
   m_ObjectHideFlags: 0
@@ -1274,11 +1239,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c3e67d52457e08449b0662f31c2023d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Inventory
---- !u!1 &344450961 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3947309005200915633, guid: 203fd3d821a9a1c4fa840a7765943c9a, type: 3}
-  m_PrefabInstance: {fileID: 707639961}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &413425866
 GameObject:
   m_ObjectHideFlags: 0
@@ -1347,17 +1307,6 @@ Transform:
   - {fileID: 247963845}
   m_Father: {fileID: 337422501}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &518694578 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7424071501652006301, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
-  m_PrefabInstance: {fileID: 945985727}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1940949351}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 317e663e2bb60ea408fe22b908b59295, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.PokeInteractable
 --- !u!1 &566709958 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 277011000919623431, guid: 411127c26076c384a8f51a28ec26dd23, type: 3}
@@ -1540,11 +1489,6 @@ MonoBehaviour:
   _movementProvider: {fileID: 0}
   _handAligment: 1
   _handGrabPoses: []
---- !u!1 &630914140 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8232206289847211652, guid: 203fd3d821a9a1c4fa840a7765943c9a, type: 3}
-  m_PrefabInstance: {fileID: 707639961}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &707639961
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1553,18 +1497,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 413425867}
     m_Modifications:
-    - target: {fileID: 3891049967411362567, guid: 203fd3d821a9a1c4fa840a7765943c9a, type: 3}
-      propertyPath: _pokeInteractable
-      value: 
-      objectReference: {fileID: 1747453714}
-    - target: {fileID: 4045847673016010784, guid: 203fd3d821a9a1c4fa840a7765943c9a, type: 3}
-      propertyPath: _pokeInteractable
-      value: 
-      objectReference: {fileID: 1883153377}
-    - target: {fileID: 4828648464408300328, guid: 203fd3d821a9a1c4fa840a7765943c9a, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 386a6d2e8a904584f9499062c9815246, type: 2}
     - target: {fileID: 4923407871943365711, guid: 203fd3d821a9a1c4fa840a7765943c9a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.165
@@ -1613,36 +1545,14 @@ PrefabInstance:
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 340907003}
-    - target: {fileID: 6476121142357470214, guid: 203fd3d821a9a1c4fa840a7765943c9a, type: 3}
-      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RemoveFromInventory
-      objectReference: {fileID: 0}
     - target: {fileID: 7577619309863371181, guid: 203fd3d821a9a1c4fa840a7765943c9a, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 340907002}
-    - target: {fileID: 7577619309863371181, guid: 203fd3d821a9a1c4fa840a7765943c9a, type: 3}
-      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TogglePanel
-      objectReference: {fileID: 0}
-    - target: {fileID: 7741141613285749717, guid: 203fd3d821a9a1c4fa840a7765943c9a, type: 3}
-      propertyPath: _interactableView
-      value: 
-      objectReference: {fileID: 1883153382}
-    - target: {fileID: 8456957712159532114, guid: 203fd3d821a9a1c4fa840a7765943c9a, type: 3}
-      propertyPath: _interactableView
-      value: 
-      objectReference: {fileID: 1747453719}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8232206289847211652, guid: 203fd3d821a9a1c4fa840a7765943c9a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1883153382}
-    - targetCorrespondingSourceObject: {fileID: 3947309005200915633, guid: 203fd3d821a9a1c4fa840a7765943c9a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1747453719}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 203fd3d821a9a1c4fa840a7765943c9a, type: 3}
 --- !u!4 &707639962 stripped
 Transform:
@@ -1934,70 +1844,18 @@ PrefabInstance:
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 811151270}
-    - target: {fileID: 130621430851478495, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
-      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TeleportToPoint
-      objectReference: {fileID: 0}
     - target: {fileID: 1743552510725595340, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
       propertyPath: m_Name
       value: Teleport_UI
       objectReference: {fileID: 0}
-    - target: {fileID: 2191886555177231132, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2191886555177231132, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3323001210987349104, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
-      propertyPath: _pokeInteractable
-      value: 
-      objectReference: {fileID: 518694578}
-    - target: {fileID: 3997032366463317973, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
-      propertyPath: _interactableView
-      value: 
-      objectReference: {fileID: 1928347548}
     - target: {fileID: 4125967551014130946, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 340907002}
-    - target: {fileID: 4125967551014130946, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
-      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TogglePanel
-      objectReference: {fileID: 0}
-    - target: {fileID: 4896556248094643352, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
-      propertyPath: _interactableView
-      value: 
-      objectReference: {fileID: 1331770826}
-    - target: {fileID: 5456187103844967612, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
-      propertyPath: _interactableView
-      value: 
-      objectReference: {fileID: 1940949356}
-    - target: {fileID: 5576034474159048570, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5576034474159048570, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5601605898908554756, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
-      propertyPath: _pokeInteractable
-      value: 
-      objectReference: {fileID: 1928347543}
     - target: {fileID: 5628545200597706195, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 811151270}
-    - target: {fileID: 5628545200597706195, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
-      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TeleportToPoint
-      objectReference: {fileID: 0}
-    - target: {fileID: 5701112320092431038, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
-      propertyPath: _pokeInteractable
-      value: 
-      objectReference: {fileID: 1331770821}
     - target: {fileID: 7776739746079710890, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2041,16 +1899,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7993564864525918365, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1928347548}
-    - targetCorrespondingSourceObject: {fileID: 3560301827698934260, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1940949356}
-    - targetCorrespondingSourceObject: {fileID: 8526238369904761427, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1331770826}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
 --- !u!4 &945985728 stripped
 Transform:
@@ -2060,11 +1909,6 @@ Transform:
 --- !u!95 &945985729 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 2258388224204065162, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
-  m_PrefabInstance: {fileID: 945985727}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1087679173 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8526238369904761427, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
   m_PrefabInstance: {fileID: 945985727}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1159185841
@@ -2179,37 +2023,6 @@ MonoBehaviour:
     _installationVariants:
     - _memberName: variant
       _value: '{"value__":1}'
---- !u!1 &1257851224 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7993564864525918365, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
-  m_PrefabInstance: {fileID: 945985727}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1331770821 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8001578372046696855, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
-  m_PrefabInstance: {fileID: 945985727}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1087679173}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 317e663e2bb60ea408fe22b908b59295, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.PokeInteractable
---- !u!114 &1331770826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1087679173}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bff16bb2b8cae9409e88ec4d3527c9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.InteractableGroupView
-  _interactables:
-  - {fileID: 1331770821}
-  _data: {fileID: 0}
 --- !u!1001 &1357247701
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2281,14 +2094,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 483131180}
     m_Modifications:
     - target: {fileID: 4222398685488678063, guid: 542d08b95a4a6cd4c98f977ff6c74f7a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.20000002
-      objectReference: {fileID: 0}
-    - target: {fileID: 4222398685488678063, guid: 542d08b95a4a6cd4c98f977ff6c74f7a, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.20000002
-      objectReference: {fileID: 0}
-    - target: {fileID: 4222398685488678063, guid: 542d08b95a4a6cd4c98f977ff6c74f7a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.40791
       objectReference: {fileID: 0}
@@ -2335,48 +2140,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8950288147704789535, guid: 542d08b95a4a6cd4c98f977ff6c74f7a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1385508373}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 542d08b95a4a6cd4c98f977ff6c74f7a, type: 3}
 --- !u!4 &1385508371 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4222398685488678063, guid: 542d08b95a4a6cd4c98f977ff6c74f7a, type: 3}
   m_PrefabInstance: {fileID: 1385508370}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1385508372 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8950288147704789535, guid: 542d08b95a4a6cd4c98f977ff6c74f7a, type: 3}
-  m_PrefabInstance: {fileID: 1385508370}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &1385508373
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1385508372}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1001 &1466989818
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2619,6 +2389,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 336951498}
     m_Modifications:
+    - target: {fileID: 28904259312833052, guid: 291abb87ca51d23458da276b03cf6120, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2002568684090495569, guid: 291abb87ca51d23458da276b03cf6120, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2321094233743082093, guid: 291abb87ca51d23458da276b03cf6120, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4006254011407174306, guid: 291abb87ca51d23458da276b03cf6120, type: 3}
       propertyPath: m_LocalPosition.x
       value: -27.813904
@@ -2659,6 +2441,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4116337000209641541, guid: 291abb87ca51d23458da276b03cf6120, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4973673713164150417, guid: 291abb87ca51d23458da276b03cf6120, type: 3}
       propertyPath: m_LocalScale.x
       value: 54.17472
@@ -2671,9 +2457,25 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 4.664552
       objectReference: {fileID: 0}
+    - target: {fileID: 5644006333963407473, guid: 291abb87ca51d23458da276b03cf6120, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7679979559722434369, guid: 291abb87ca51d23458da276b03cf6120, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7898803599222172338, guid: 291abb87ca51d23458da276b03cf6120, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8260674164845463348, guid: 291abb87ca51d23458da276b03cf6120, type: 3}
       propertyPath: m_Name
       value: Casa
+      objectReference: {fileID: 0}
+    - target: {fileID: 8455065630108789066, guid: 291abb87ca51d23458da276b03cf6120, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2798,32 +2600,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7e06c35a8120784fac57a2b258138d6, type: 3}
---- !u!114 &1747453714 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2087726961414514498, guid: 203fd3d821a9a1c4fa840a7765943c9a, type: 3}
-  m_PrefabInstance: {fileID: 707639961}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 344450961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 317e663e2bb60ea408fe22b908b59295, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.PokeInteractable
---- !u!114 &1747453719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 344450961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bff16bb2b8cae9409e88ec4d3527c9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.InteractableGroupView
-  _interactables:
-  - {fileID: 1747453714}
-  _data: {fileID: 0}
 --- !u!1 &1758657960
 GameObject:
   m_ObjectHideFlags: 0
@@ -2921,32 +2697,6 @@ Transform:
   - {fileID: 276229858}
   m_Father: {fileID: 337422501}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1883153377 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8680473674809120193, guid: 203fd3d821a9a1c4fa840a7765943c9a, type: 3}
-  m_PrefabInstance: {fileID: 707639961}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 630914140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 317e663e2bb60ea408fe22b908b59295, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.PokeInteractable
---- !u!114 &1883153382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 630914140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bff16bb2b8cae9409e88ec4d3527c9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.InteractableGroupView
-  _interactables:
-  - {fileID: 1883153377}
-  _data: {fileID: 0}
 --- !u!1 &1896878618
 GameObject:
   m_ObjectHideFlags: 0
@@ -2980,52 +2730,6 @@ Transform:
   - {fileID: 170563075}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1928347543 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8736591543130070298, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
-  m_PrefabInstance: {fileID: 945985727}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1257851224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 317e663e2bb60ea408fe22b908b59295, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.PokeInteractable
---- !u!114 &1928347548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1257851224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bff16bb2b8cae9409e88ec4d3527c9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.InteractableGroupView
-  _interactables:
-  - {fileID: 1928347543}
-  _data: {fileID: 0}
---- !u!1 &1940949351 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3560301827698934260, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
-  m_PrefabInstance: {fileID: 945985727}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1940949356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1940949351}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bff16bb2b8cae9409e88ec4d3527c9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.InteractableGroupView
-  _interactables:
-  - {fileID: 518694578}
-  _data: {fileID: 0}
 --- !u!1001 &1948616976
 PrefabInstance:
   m_ObjectHideFlags: 0
