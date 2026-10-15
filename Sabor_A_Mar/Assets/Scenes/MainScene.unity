@@ -133,15 +133,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 8ff95e724c0c29a4a880ea60a808c2f8, type: 2}
     - target: {fileID: 404092715729522954, guid: b491032bc82755e4892cbe094e2903c4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.36987615
+      value: -2.48
       objectReference: {fileID: 0}
     - target: {fileID: 404092715729522954, guid: b491032bc82755e4892cbe094e2903c4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.26092
+      value: 1.49
       objectReference: {fileID: 0}
     - target: {fileID: 404092715729522954, guid: b491032bc82755e4892cbe094e2903c4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.8002088
+      value: 2.513
       objectReference: {fileID: 0}
     - target: {fileID: 404092715729522954, guid: b491032bc82755e4892cbe094e2903c4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1274,6 +1274,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c3e67d52457e08449b0662f31c2023d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Inventory
+--- !u!1 &344450961 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3947309005200915633, guid: 203fd3d821a9a1c4fa840a7765943c9a, type: 3}
+  m_PrefabInstance: {fileID: 707639961}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &413425866
 GameObject:
   m_ObjectHideFlags: 0
@@ -1298,15 +1303,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 413425866}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.94, z: 2.54}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -0.808, y: 2.332, z: 1.361}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 707639962}
   - {fileID: 945985728}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &483131179
 GameObject:
   m_ObjectHideFlags: 0
@@ -1347,7 +1352,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7424071501652006301, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
   m_PrefabInstance: {fileID: 945985727}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1940949351}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 317e663e2bb60ea408fe22b908b59295, type: 3}
@@ -1535,6 +1540,11 @@ MonoBehaviour:
   _movementProvider: {fileID: 0}
   _handAligment: 1
   _handGrabPoses: []
+--- !u!1 &630914140 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8232206289847211652, guid: 203fd3d821a9a1c4fa840a7765943c9a, type: 3}
+  m_PrefabInstance: {fileID: 707639961}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &707639961
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1551,6 +1561,10 @@ PrefabInstance:
       propertyPath: _pokeInteractable
       value: 
       objectReference: {fileID: 1883153377}
+    - target: {fileID: 4828648464408300328, guid: 203fd3d821a9a1c4fa840a7765943c9a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 386a6d2e8a904584f9499062c9815246, type: 2}
     - target: {fileID: 4923407871943365711, guid: 203fd3d821a9a1c4fa840a7765943c9a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.165
@@ -1611,10 +1625,24 @@ PrefabInstance:
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: TogglePanel
       objectReference: {fileID: 0}
+    - target: {fileID: 7741141613285749717, guid: 203fd3d821a9a1c4fa840a7765943c9a, type: 3}
+      propertyPath: _interactableView
+      value: 
+      objectReference: {fileID: 1883153382}
+    - target: {fileID: 8456957712159532114, guid: 203fd3d821a9a1c4fa840a7765943c9a, type: 3}
+      propertyPath: _interactableView
+      value: 
+      objectReference: {fileID: 1747453719}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8232206289847211652, guid: 203fd3d821a9a1c4fa840a7765943c9a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1883153382}
+    - targetCorrespondingSourceObject: {fileID: 3947309005200915633, guid: 203fd3d821a9a1c4fa840a7765943c9a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1747453719}
   m_SourcePrefab: {fileID: 100100000, guid: 203fd3d821a9a1c4fa840a7765943c9a, type: 3}
 --- !u!4 &707639962 stripped
 Transform:
@@ -1641,6 +1669,17 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 1221829587830561919, guid: 203fd3d821a9a1c4fa840a7765943c9a, type: 3}
   m_PrefabInstance: {fileID: 707639961}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &811151270 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7270792094026727788, guid: c7e06c35a8120784fac57a2b258138d6, type: 3}
+  m_PrefabInstance: {fileID: 1659393741}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a0a907be178146449ec12e19de0c78a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Teleporter
 --- !u!1 &822091916
 GameObject:
   m_ObjectHideFlags: 0
@@ -1891,6 +1930,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 413425867}
     m_Modifications:
+    - target: {fileID: 130621430851478495, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
+      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 811151270}
+    - target: {fileID: 130621430851478495, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
+      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TeleportToPoint
+      objectReference: {fileID: 0}
     - target: {fileID: 1743552510725595340, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
       propertyPath: m_Name
       value: Teleport_UI
@@ -1907,6 +1954,10 @@ PrefabInstance:
       propertyPath: _pokeInteractable
       value: 
       objectReference: {fileID: 518694578}
+    - target: {fileID: 3997032366463317973, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
+      propertyPath: _interactableView
+      value: 
+      objectReference: {fileID: 1928347548}
     - target: {fileID: 4125967551014130946, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1915,6 +1966,14 @@ PrefabInstance:
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: TogglePanel
       objectReference: {fileID: 0}
+    - target: {fileID: 4896556248094643352, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
+      propertyPath: _interactableView
+      value: 
+      objectReference: {fileID: 1331770826}
+    - target: {fileID: 5456187103844967612, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
+      propertyPath: _interactableView
+      value: 
+      objectReference: {fileID: 1940949356}
     - target: {fileID: 5576034474159048570, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1927,6 +1986,14 @@ PrefabInstance:
       propertyPath: _pokeInteractable
       value: 
       objectReference: {fileID: 1928347543}
+    - target: {fileID: 5628545200597706195, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
+      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 811151270}
+    - target: {fileID: 5628545200597706195, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
+      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TeleportToPoint
+      objectReference: {fileID: 0}
     - target: {fileID: 5701112320092431038, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
       propertyPath: _pokeInteractable
       value: 
@@ -1974,7 +2041,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7993564864525918365, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1928347548}
+    - targetCorrespondingSourceObject: {fileID: 3560301827698934260, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1940949356}
+    - targetCorrespondingSourceObject: {fileID: 8526238369904761427, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1331770826}
   m_SourcePrefab: {fileID: 100100000, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
 --- !u!4 &945985728 stripped
 Transform:
@@ -1984,6 +2060,11 @@ Transform:
 --- !u!95 &945985729 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 2258388224204065162, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
+  m_PrefabInstance: {fileID: 945985727}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1087679173 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8526238369904761427, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
   m_PrefabInstance: {fileID: 945985727}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1159185841
@@ -2098,17 +2179,37 @@ MonoBehaviour:
     _installationVariants:
     - _memberName: variant
       _value: '{"value__":1}'
+--- !u!1 &1257851224 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7993564864525918365, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
+  m_PrefabInstance: {fileID: 945985727}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1331770821 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8001578372046696855, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
   m_PrefabInstance: {fileID: 945985727}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1087679173}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 317e663e2bb60ea408fe22b908b59295, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.PokeInteractable
+--- !u!114 &1331770826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087679173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bff16bb2b8cae9409e88ec4d3527c9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.InteractableGroupView
+  _interactables:
+  - {fileID: 1331770821}
+  _data: {fileID: 0}
 --- !u!1001 &1357247701
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2626,11 +2727,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 451850177291368383, guid: c7e06c35a8120784fac57a2b258138d6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.53
+      value: 30.3
       objectReference: {fileID: 0}
     - target: {fileID: 451850177291368383, guid: c7e06c35a8120784fac57a2b258138d6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.13
+      value: 12.5
       objectReference: {fileID: 0}
     - target: {fileID: 4107125892169978505, guid: c7e06c35a8120784fac57a2b258138d6, type: 3}
       propertyPath: m_Name
@@ -2702,12 +2803,27 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2087726961414514498, guid: 203fd3d821a9a1c4fa840a7765943c9a, type: 3}
   m_PrefabInstance: {fileID: 707639961}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 344450961}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 317e663e2bb60ea408fe22b908b59295, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.PokeInteractable
+--- !u!114 &1747453719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344450961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bff16bb2b8cae9409e88ec4d3527c9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.InteractableGroupView
+  _interactables:
+  - {fileID: 1747453714}
+  _data: {fileID: 0}
 --- !u!1 &1758657960
 GameObject:
   m_ObjectHideFlags: 0
@@ -2810,12 +2926,27 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8680473674809120193, guid: 203fd3d821a9a1c4fa840a7765943c9a, type: 3}
   m_PrefabInstance: {fileID: 707639961}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 630914140}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 317e663e2bb60ea408fe22b908b59295, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.PokeInteractable
+--- !u!114 &1883153382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630914140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bff16bb2b8cae9409e88ec4d3527c9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.InteractableGroupView
+  _interactables:
+  - {fileID: 1883153377}
+  _data: {fileID: 0}
 --- !u!1 &1896878618
 GameObject:
   m_ObjectHideFlags: 0
@@ -2854,12 +2985,47 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8736591543130070298, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
   m_PrefabInstance: {fileID: 945985727}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1257851224}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 317e663e2bb60ea408fe22b908b59295, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.PokeInteractable
+--- !u!114 &1928347548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257851224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bff16bb2b8cae9409e88ec4d3527c9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.InteractableGroupView
+  _interactables:
+  - {fileID: 1928347543}
+  _data: {fileID: 0}
+--- !u!1 &1940949351 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3560301827698934260, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
+  m_PrefabInstance: {fileID: 945985727}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1940949356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940949351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bff16bb2b8cae9409e88ec4d3527c9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.InteractableGroupView
+  _interactables:
+  - {fileID: 518694578}
+  _data: {fileID: 0}
 --- !u!1001 &1948616976
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2915,6 +3081,10 @@ PrefabInstance:
     - target: {fileID: 2909913461630142199, guid: ecc6db11b81c03648a286906026b2cad, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4314253705864857425, guid: ecc6db11b81c03648a286906026b2cad, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2974,6 +3144,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 337422501}
     m_Modifications:
+    - target: {fileID: 122353186786650375, guid: 411127c26076c384a8f51a28ec26dd23, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 122353186786650375, guid: 411127c26076c384a8f51a28ec26dd23, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.434
+      objectReference: {fileID: 0}
+    - target: {fileID: 122353186786650375, guid: 411127c26076c384a8f51a28ec26dd23, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 122353186786650375, guid: 411127c26076c384a8f51a28ec26dd23, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 122353186786650375, guid: 411127c26076c384a8f51a28ec26dd23, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 277011000919623431, guid: 411127c26076c384a8f51a28ec26dd23, type: 3}
       propertyPath: m_TagString
       value: Descamador
