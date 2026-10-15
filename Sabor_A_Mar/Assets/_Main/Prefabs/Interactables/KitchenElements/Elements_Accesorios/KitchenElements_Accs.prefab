@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rayador
       objectReference: {fileID: 0}
+    - target: {fileID: 7391570157794059087, guid: 9f93921fbf32b6e409e682dbb983237e, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -251,6 +255,10 @@ PrefabInstance:
     - target: {fileID: 6419513418089186840, guid: d8b61a31db2eaa048aae76659e3d101b, type: 3}
       propertyPath: m_Name
       value: Cuchillo
+      objectReference: {fileID: 0}
+    - target: {fileID: 6722870298734638032, guid: d8b61a31db2eaa048aae76659e3d101b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -371,6 +379,10 @@ PrefabInstance:
     - target: {fileID: 61049802265612089, guid: 82d720ca65d976749ba5bd69b52d2e4b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3046903335778953693, guid: 82d720ca65d976749ba5bd69b52d2e4b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7104466894131853211, guid: 82d720ca65d976749ba5bd69b52d2e4b, type: 3}
       propertyPath: m_Name

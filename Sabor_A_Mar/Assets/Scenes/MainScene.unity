@@ -127,6 +127,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1797305775}
     m_Modifications:
+    - target: {fileID: -796297167272746976, guid: b491032bc82755e4892cbe094e2903c4, type: 3}
+      propertyPath: pescadoMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 8ff95e724c0c29a4a880ea60a808c2f8, type: 2}
     - target: {fileID: 404092715729522954, guid: b491032bc82755e4892cbe094e2903c4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.36987615
@@ -1338,6 +1342,43 @@ Transform:
   - {fileID: 247963845}
   m_Father: {fileID: 337422501}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &518694578 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7424071501652006301, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
+  m_PrefabInstance: {fileID: 945985727}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 317e663e2bb60ea408fe22b908b59295, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.PokeInteractable
+--- !u!1 &566709958 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 277011000919623431, guid: 411127c26076c384a8f51a28ec26dd23, type: 3}
+  m_PrefabInstance: {fileID: 1999409579}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &566709964
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566709958}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.37415254, y: 0.196794, z: 0.854694}
+  m_Center: {x: -0.003113113, y: 0.11, z: 0.5492491}
 --- !u!1 &623030525
 GameObject:
   m_ObjectHideFlags: 0
@@ -1502,6 +1543,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 413425867}
     m_Modifications:
+    - target: {fileID: 3891049967411362567, guid: 203fd3d821a9a1c4fa840a7765943c9a, type: 3}
+      propertyPath: _pokeInteractable
+      value: 
+      objectReference: {fileID: 1747453714}
+    - target: {fileID: 4045847673016010784, guid: 203fd3d821a9a1c4fa840a7765943c9a, type: 3}
+      propertyPath: _pokeInteractable
+      value: 
+      objectReference: {fileID: 1883153377}
     - target: {fileID: 4923407871943365711, guid: 203fd3d821a9a1c4fa840a7765943c9a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.165
@@ -1854,6 +1903,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3323001210987349104, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
+      propertyPath: _pokeInteractable
+      value: 
+      objectReference: {fileID: 518694578}
     - target: {fileID: 4125967551014130946, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1870,6 +1923,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5601605898908554756, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
+      propertyPath: _pokeInteractable
+      value: 
+      objectReference: {fileID: 1928347543}
+    - target: {fileID: 5701112320092431038, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
+      propertyPath: _pokeInteractable
+      value: 
+      objectReference: {fileID: 1331770821}
     - target: {fileID: 7776739746079710890, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2037,6 +2098,17 @@ MonoBehaviour:
     _installationVariants:
     - _memberName: variant
       _value: '{"value__":1}'
+--- !u!114 &1331770821 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8001578372046696855, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
+  m_PrefabInstance: {fileID: 945985727}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 317e663e2bb60ea408fe22b908b59295, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.PokeInteractable
 --- !u!1001 &1357247701
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2486,6 +2558,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4973673713164150417, guid: 291abb87ca51d23458da276b03cf6120, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 54.17472
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973673713164150417, guid: 291abb87ca51d23458da276b03cf6120, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973673713164150417, guid: 291abb87ca51d23458da276b03cf6120, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4.664552
+      objectReference: {fileID: 0}
     - target: {fileID: 8260674164845463348, guid: 291abb87ca51d23458da276b03cf6120, type: 3}
       propertyPath: m_Name
       value: Casa
@@ -2540,9 +2624,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 451850177291368383, guid: c7e06c35a8120784fac57a2b258138d6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -16.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 451850177291368383, guid: c7e06c35a8120784fac57a2b258138d6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.13
+      objectReference: {fileID: 0}
     - target: {fileID: 4107125892169978505, guid: c7e06c35a8120784fac57a2b258138d6, type: 3}
       propertyPath: m_Name
       value: Teleporter
+      objectReference: {fileID: 0}
+    - target: {fileID: 7247660891978441892, guid: c7e06c35a8120784fac57a2b258138d6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 7247660891978441892, guid: c7e06c35a8120784fac57a2b258138d6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.049
+      objectReference: {fileID: 0}
+    - target: {fileID: 7247660891978441892, guid: c7e06c35a8120784fac57a2b258138d6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.634
       objectReference: {fileID: 0}
     - target: {fileID: 7270792094026727788, guid: c7e06c35a8120784fac57a2b258138d6, type: 3}
       propertyPath: player
@@ -2593,6 +2697,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7e06c35a8120784fac57a2b258138d6, type: 3}
+--- !u!114 &1747453714 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2087726961414514498, guid: 203fd3d821a9a1c4fa840a7765943c9a, type: 3}
+  m_PrefabInstance: {fileID: 707639961}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 317e663e2bb60ea408fe22b908b59295, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.PokeInteractable
 --- !u!1 &1758657960
 GameObject:
   m_ObjectHideFlags: 0
@@ -2690,6 +2805,17 @@ Transform:
   - {fileID: 276229858}
   m_Father: {fileID: 337422501}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1883153377 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8680473674809120193, guid: 203fd3d821a9a1c4fa840a7765943c9a, type: 3}
+  m_PrefabInstance: {fileID: 707639961}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 317e663e2bb60ea408fe22b908b59295, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.PokeInteractable
 --- !u!1 &1896878618
 GameObject:
   m_ObjectHideFlags: 0
@@ -2723,6 +2849,17 @@ Transform:
   - {fileID: 170563075}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1928347543 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8736591543130070298, guid: 50c6e20611578bc4dba0b54c7da20f26, type: 3}
+  m_PrefabInstance: {fileID: 945985727}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 317e663e2bb60ea408fe22b908b59295, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.PokeInteractable
 --- !u!1001 &1948616976
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2837,9 +2974,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 337422501}
     m_Modifications:
+    - target: {fileID: 277011000919623431, guid: 411127c26076c384a8f51a28ec26dd23, type: 3}
+      propertyPath: m_TagString
+      value: Descamador
+      objectReference: {fileID: 0}
     - target: {fileID: 2144293327774163167, guid: 411127c26076c384a8f51a28ec26dd23, type: 3}
       propertyPath: m_Name
       value: KitchenElements_Accs
+      objectReference: {fileID: 0}
+    - target: {fileID: 5959742899790123528, guid: 411127c26076c384a8f51a28ec26dd23, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8376968521834693217, guid: 411127c26076c384a8f51a28ec26dd23, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2881,10 +3026,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5406783037402667329, guid: 411127c26076c384a8f51a28ec26dd23, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 277011000919623431, guid: 411127c26076c384a8f51a28ec26dd23, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 566709964}
   m_SourcePrefab: {fileID: 100100000, guid: 411127c26076c384a8f51a28ec26dd23, type: 3}
 --- !u!4 &1999409580 stripped
 Transform:

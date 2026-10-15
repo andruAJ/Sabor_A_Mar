@@ -41,6 +41,7 @@ public class EventManager : MonoBehaviour
                 //aqui activar el script del platano
                 break;
             default:
+                Debug.LogWarning("Chequear el tag de este objeto:  " + collision.gameObject);
                 break;
         }
     }

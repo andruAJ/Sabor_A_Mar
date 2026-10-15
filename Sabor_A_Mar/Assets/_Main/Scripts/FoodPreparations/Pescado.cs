@@ -43,6 +43,7 @@ public class Pescado : MonoBehaviour
         switch (collisionTag)
         {
             case "Cuchillo":
+                Debug.LogWarning("Golpe con cuchillo");
                 if (currentState == PescadoState.SinEscamas)
                 {
                     golpes++;
@@ -55,7 +56,8 @@ public class Pescado : MonoBehaviour
                 }   
                 break;
             case "Descamador":
-                if(currentState == PescadoState.Escamas)
+                Debug.LogWarning("Golpe con descamador");
+                if (currentState == PescadoState.Escamas)
                 {
                     golpes++;
                     blendValue += 0.35f;

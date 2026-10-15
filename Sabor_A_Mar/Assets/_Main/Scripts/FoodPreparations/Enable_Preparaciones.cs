@@ -12,6 +12,7 @@ public class Enable_Preparaciones : MonoBehaviour
 
     public void OnCollisionEnter(Collision collision)
     {
+        this.gameObject.GetComponent<SphereCollider>().enabled = false;
         positionConstraint = collision.gameObject.GetComponent<PositionConstraint>();
         if (positionConstraint != null)
         {
