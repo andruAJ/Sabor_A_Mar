@@ -23,16 +23,21 @@ public class EventManager : MonoBehaviour
         
         Debug.Log("Comida agarrada: " + foodType);
     }
-    public void PreparacionTabla(Collision collision)
+    public void PreparacionTabla(Collider other)
     {
-        switch (collision.gameObject.tag)
+        Debug.LogWarning("PreparacionTabla: " + other.gameObject.name);
+        switch (other.gameObject.tag)
         {
             case "Pescado":
-                pescadoScript = collision.gameObject.GetComponent<Pescado>();
+                pescadoScript = other.gameObject.GetComponent<Pescado>();
+                Debug.LogWarning("PreparacionTabla -> Case Pescado");
                 if (pescadoScript != null)
                 {
+                    Debug.LogWarning("PreparacionTabla -> Case Pescado -> Script encontrado");
                     if (pescadoScript != enabled)
                     {
+                        //Aquí no está entrando
+                        Debug.LogWarning("PreparacionTabla -> Case Pescado -> Script encontrado -> El script está Desactivado");
                         pescadoScript.enabled = true;
                     }
                 }
@@ -41,16 +46,16 @@ public class EventManager : MonoBehaviour
                 //aqui activar el script del platano
                 break;
             default:
-                Debug.LogWarning("Chequear el tag de este objeto:  " + collision.gameObject);
+                Debug.LogWarning("Chequear el tag de este objeto:  " + other.gameObject + " y el pirobo que está mandando este mensaje es: " + this.gameObject.name);
                 break;
         }
     }
-    public void PreparacionSarten(Collision collision)
+    public void PreparacionSarten(Collider other)
     {
-        switch (collision.gameObject.tag)
+        switch (other.gameObject.tag)
         {
             case "Pescado":
-                pescadoScript = collision.gameObject.GetComponent<Pescado>();
+                pescadoScript = other.gameObject.GetComponent<Pescado>();
                 if (pescadoScript != null)
                 {
                     if (pescadoScript != enabled)

@@ -5,15 +5,14 @@ using static FoodGrabbed;
 
 public class Enable_Preparaciones : MonoBehaviour
 {
-    public static event Action<Collision> OnTablaCollided;
-    public static event Action<Collision> OnSartenCollided;
-    public Pescado pescadoScript;
+    public static event Action<Collider> OnTablaCollided;
+    public static event Action<Collider> OnSartenCollided;
     private PositionConstraint positionConstraint;
 
-    public void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
         this.gameObject.GetComponent<SphereCollider>().enabled = false;
-        positionConstraint = collision.gameObject.GetComponent<PositionConstraint>();
+        positionConstraint = other.gameObject.GetComponent<PositionConstraint>();
         if (positionConstraint != null)
         {
             positionConstraint.enabled = true;
@@ -22,10 +21,10 @@ public class Enable_Preparaciones : MonoBehaviour
         switch (this.gameObject.tag) 
         {
             case "Tabla":
-                OnTablaCollided?.Invoke(collision);
+                OnTablaCollided?.Invoke(other);
                 break;
             case "Sarten":
-                OnSartenCollided?.Invoke(collision);
+                OnSartenCollided?.Invoke(other);
                 break;
             default:
                 Debug.LogWarning("Chequear el tag de este objeto:  " + this);
