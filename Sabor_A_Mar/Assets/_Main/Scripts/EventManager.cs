@@ -14,9 +14,8 @@ public class EventManager : MonoBehaviour
         Enable_Preparaciones.OnTablaCollided += PreparacionTabla;
         Enable_Preparaciones.OnSartenCollided += PreparacionSarten;
         Inventory.OnQuantityChanged +=  ChangeInventoryIcon;
-        Inventory.OnFoodReleased += ToggleInteractions;
+        Inventory.OnInventoryChanged += ToggleInteractions;
         Pescado.OnPreparacionPescado += ToggleInteractions;
-        FoodGrabbed.OnElementGrabbed += ToggleInteractions;
     }
 
     public void OnFoodGrabbed(FoodGrabbed.FoodType foodType)

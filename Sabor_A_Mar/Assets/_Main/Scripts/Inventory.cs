@@ -16,7 +16,7 @@ public class Inventory : MonoBehaviour
     public Stack<FoodElement> inventory = new Stack<FoodElement>();
 
     public static event Action<int> OnQuantityChanged;
-    public static event Action<bool, GameObject> OnFoodReleased;
+    public static event Action<bool, GameObject> OnInventoryChanged;
 
     public bool platanoAgarrado = false;
     public bool cocoAgarrado = false;
@@ -66,6 +66,7 @@ public class Inventory : MonoBehaviour
 
     public void AddToInventory(FoodElement comida)
     {
+        OnInventoryChanged?.Invoke(false, comida.gameObject);
         inventory.Push(comida);
         OnQuantityChanged?.Invoke(inventory.Count);
     }
@@ -77,7 +78,7 @@ public class Inventory : MonoBehaviour
             {
                 popped.gameObject.SetActive(true);           
                 popped.transform.position = inventorySpawnPoint.position;
-                OnFoodReleased?.Invoke(true, popped.gameObject);
+                OnInventoryChanged?.Invoke(true, popped.gameObject);
                 Debug.Log("Elemento salió del inventario");
             }
         }

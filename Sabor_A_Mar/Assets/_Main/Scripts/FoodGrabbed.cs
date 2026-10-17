@@ -6,7 +6,6 @@ using UnityEngine;
 public class FoodGrabbed : MonoBehaviour
 {
     public static event Action <FoodType> OnFoodGrabbed;
-    public static event Action<bool, GameObject> OnElementGrabbed;
 
     public enum FoodType
     {
@@ -19,8 +18,6 @@ public class FoodGrabbed : MonoBehaviour
 
         try 
         {
-            OnElementGrabbed?.Invoke(false, this.gameObject);
-
             Debug.Log("Elemento agarrado");
 
             switch (GetComponent<FoodElement>().food_Name)
