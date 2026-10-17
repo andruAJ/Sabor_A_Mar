@@ -16,6 +16,7 @@ public class Inventory : MonoBehaviour
     public Stack<FoodElement> inventory = new Stack<FoodElement>();
 
     public static event Action<int> OnQuantityChanged;
+    public static event Action<bool, GameObject> OnFoodReleased;
 
     public bool platanoAgarrado = false;
     public bool cocoAgarrado = false;
@@ -76,16 +77,7 @@ public class Inventory : MonoBehaviour
             {
                 popped.gameObject.SetActive(true);           
                 popped.transform.position = inventorySpawnPoint.position;
-                DistanceGrabInteractable interactable = popped.GetComponentInChildren<DistanceGrabInteractable>();        //tengo que estar pendiente que esta función sí busque en todos los hijos o si toca nombrar en cuál hijo debe buscar
-                HandGrabInteractable handInteractable = popped.GetComponentInChildren<HandGrabInteractable>();
-                GrabInteractable grabInteractable = popped.GetComponentInChildren<GrabInteractable>();
-                DistanceHandGrabInteractable distanceHandGrab = popped.GetComponentInChildren<DistanceHandGrabInteractable>();
-                Grabbable grabbable = popped.GetComponent<Grabbable>();
-                interactable.enabled = true;
-                handInteractable.enabled = true;
-                grabInteractable.enabled = true;
-                distanceHandGrab.enabled = true;
-                grabbable.enabled = true;
+                OnFoodReleased?.Invoke(true, popped.gameObject);
                 Debug.Log("Elemento salió del inventario");
             }
         }

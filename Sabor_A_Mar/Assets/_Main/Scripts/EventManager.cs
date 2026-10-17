@@ -3,8 +3,8 @@ using UnityEngine;
 public class EventManager : MonoBehaviour
 {
     public UI_Manager uiManager;
-
     public Pescado pescadoScript;
+    public ToggleInteractions toggleInteractions;
 
 
 
@@ -14,6 +14,9 @@ public class EventManager : MonoBehaviour
         Enable_Preparaciones.OnTablaCollided += PreparacionTabla;
         Enable_Preparaciones.OnSartenCollided += PreparacionSarten;
         Inventory.OnQuantityChanged +=  ChangeInventoryIcon;
+        Inventory.OnFoodReleased += ToggleInteractions;
+        Pescado.OnPreparacionPescado += ToggleInteractions;
+        FoodGrabbed.OnElementGrabbed += ToggleInteractions;
     }
 
     public void OnFoodGrabbed(FoodGrabbed.FoodType foodType)
@@ -22,6 +25,10 @@ public class EventManager : MonoBehaviour
         uiManager.ChangeSlotTexture((int)foodType);
         
         Debug.Log("Comida agarrada: " + foodType);
+    }
+    public void ToggleInteractions(bool enable, GameObject targetObject) 
+    {
+        toggleInteractions.ToggleInteractionComponents(enable, targetObject);
     }
     public void PreparacionTabla(Collider other)
     {

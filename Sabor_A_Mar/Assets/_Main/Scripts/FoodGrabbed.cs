@@ -6,6 +6,7 @@ using UnityEngine;
 public class FoodGrabbed : MonoBehaviour
 {
     public static event Action <FoodType> OnFoodGrabbed;
+    public static event Action<bool, GameObject> OnElementGrabbed;
 
     public enum FoodType
     {
@@ -18,17 +19,7 @@ public class FoodGrabbed : MonoBehaviour
 
         try 
         {
-            DistanceGrabInteractable interactable = GetComponentInChildren<DistanceGrabInteractable>();        //tengo que estar pendiente que esta función sí busque en todos los hijos o si toca nombrar en cuál hijo debe buscar
-            HandGrabInteractable handInteractable = GetComponentInChildren<HandGrabInteractable>();
-            GrabInteractable grabInteractable = GetComponentInChildren<GrabInteractable>();
-            DistanceHandGrabInteractable distanceHandGrab = GetComponentInChildren<DistanceHandGrabInteractable>();
-            Grabbable grabbable = GetComponent<Grabbable>();
-
-            interactable.enabled = false;
-            handInteractable.enabled = false;
-            grabInteractable.enabled = false;
-            distanceHandGrab.enabled = false;
-            grabbable.enabled = false;
+            OnElementGrabbed?.Invoke(false, this.gameObject);
 
             Debug.Log("Elemento agarrado");
 

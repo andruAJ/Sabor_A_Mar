@@ -1,8 +1,7 @@
-using Oculus.Interaction;
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Animations;
-using UnityEngine.Rendering.Universal;
 
 public class Pescado : MonoBehaviour
 {
@@ -24,6 +23,9 @@ public class Pescado : MonoBehaviour
     //Valor del blend
     private float blendValue = 0f;
 
+    //Eventos
+    public static event Action <bool, GameObject> OnPreparacionPescado;
+
     public enum PescadoState
     {
         Escamas,
@@ -36,6 +38,7 @@ public class Pescado : MonoBehaviour
     {
         pescadoMaterial = pescadoMeshRenderer.material;
         currentState = PescadoState.Escamas;
+        OnPreparacionPescado?.Invoke(false, this.gameObject);
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -96,6 +99,7 @@ public class Pescado : MonoBehaviour
                 blendValue = 0f;
                 BlendTextures(0f);
                 this.gameObject.GetComponent<PositionConstraint>().enabled = false;
+                OnPreparacionPescado?.Invoke(true, this.gameObject);
                 break;
             case PescadoState.Frito:
                 UpdateTextures(pescado_Frito, pescado_Frito);

@@ -1197,6 +1197,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1518620307974301852, guid: 676fe87c8e8241f4da7aeb1958c1655d, type: 3}
+      propertyPath: toggleInteractions
+      value: 
+      objectReference: {fileID: 340907005}
     - target: {fileID: 1775625922605993846, guid: 676fe87c8e8241f4da7aeb1958c1655d, type: 3}
       propertyPath: inventorySpawnPoint
       value: 
@@ -1268,14 +1272,17 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7165781367132025492, guid: 676fe87c8e8241f4da7aeb1958c1655d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 340907005}
   m_SourcePrefab: {fileID: 100100000, guid: 676fe87c8e8241f4da7aeb1958c1655d, type: 3}
 --- !u!114 &340907002 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9209013274846957624, guid: 676fe87c8e8241f4da7aeb1958c1655d, type: 3}
   m_PrefabInstance: {fileID: 340907001}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 340907004}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8e32898feb3b9e4e806e4f55f5b1b5b, type: 3}
@@ -1286,12 +1293,29 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1775625922605993846, guid: 676fe87c8e8241f4da7aeb1958c1655d, type: 3}
   m_PrefabInstance: {fileID: 340907001}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 340907004}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0c3e67d52457e08449b0662f31c2023d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Inventory
+--- !u!1 &340907004 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7165781367132025492, guid: 676fe87c8e8241f4da7aeb1958c1655d, type: 3}
+  m_PrefabInstance: {fileID: 340907001}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &340907005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340907004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a16937bbf4b6c4e498d0ae1096ef61fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ToggleInteractions
 --- !u!1 &413425866
 GameObject:
   m_ObjectHideFlags: 0
