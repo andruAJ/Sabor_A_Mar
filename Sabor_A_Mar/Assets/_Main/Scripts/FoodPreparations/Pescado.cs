@@ -46,6 +46,7 @@ public class Pescado : MonoBehaviour
                 Debug.LogWarning("Golpe con cuchillo");
                 if (currentState == PescadoState.SinEscamas)
                 {
+                    Debug.LogWarning("Golpe con cuchillo y estado SinEscamas");
                     golpes++;
                     blendValue += 0.35f;
                     BlendTextures(blendValue);
@@ -59,12 +60,14 @@ public class Pescado : MonoBehaviour
                 Debug.LogWarning("Golpe con descamador");
                 if (currentState == PescadoState.Escamas)
                 {
+                    Debug.LogWarning("Golpe con descamador y estado Escamas");
                     golpes++;
                     blendValue += 0.35f;
                     BlendTextures(blendValue);
                     if (golpes >= 3)
                     {
                         SetPescadoState(PescadoState.SinEscamas);
+
                     }
                 }
                 break;
@@ -96,6 +99,7 @@ public class Pescado : MonoBehaviour
                 BlendTextures(1f);
                 break;
         }
+        Debug.LogWarning("Estado del pescado cambiado a: " + currentState.ToString());
     }
     public void UpdateTextures(Texture2D texture1, Texture2D texture2) 
     {
@@ -105,7 +109,7 @@ public class Pescado : MonoBehaviour
 
     public void BlendTextures(float blendValue) 
     {
-        pescadoMaterial.SetFloat("BlendValue", blendValue);
+        pescadoMaterial.SetFloat("CombiningValue", blendValue);
     }
     public IEnumerator Fritura() 
     {
