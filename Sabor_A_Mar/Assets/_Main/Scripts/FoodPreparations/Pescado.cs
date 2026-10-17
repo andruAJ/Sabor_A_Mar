@@ -82,15 +82,18 @@ public class Pescado : MonoBehaviour
         {
             case PescadoState.Escamas:
                 UpdateTextures(pescado_Escamas, pescado_Sin_Escamas);
+                blendValue = 0f;
                 BlendTextures(0f);
                 break;
             case PescadoState.SinEscamas:
                 UpdateTextures(pescado_Sin_Escamas, pescado_Cortado);
+                blendValue = 0f;
                 BlendTextures(0f);
                 golpes = 0;
                 break;
             case PescadoState.Cortado:
                 UpdateTextures(pescado_Cortado, pescado_Frito);
+                blendValue = 0f;
                 BlendTextures(0f);
                 this.gameObject.GetComponent<PositionConstraint>().enabled = false;
                 break;
@@ -103,13 +106,13 @@ public class Pescado : MonoBehaviour
     }
     public void UpdateTextures(Texture2D texture1, Texture2D texture2) 
     {
-        pescadoMaterial.SetTexture("Texture1", texture1);
-        pescadoMaterial.SetTexture("Texture2", texture2);
+        pescadoMaterial.SetTexture("_Texture1", texture1);
+        pescadoMaterial.SetTexture("_Texture2", texture2);
     }
 
     public void BlendTextures(float blendValue) 
     {
-        pescadoMaterial.SetFloat("CombiningValue", blendValue);
+        pescadoMaterial.SetFloat("_CombiningValue", blendValue);
     }
     public IEnumerator Fritura() 
     {

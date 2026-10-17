@@ -11556,6 +11556,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -0.598
       objectReference: {fileID: 0}
+    - target: {fileID: 7789419245095181842, guid: 411127c26076c384a8f51a28ec26dd23, type: 3}
+      propertyPath: m_TagString
+      value: Cuchillo
+      objectReference: {fileID: 0}
     - target: {fileID: 8376968521834693217, guid: 411127c26076c384a8f51a28ec26dd23, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.48
