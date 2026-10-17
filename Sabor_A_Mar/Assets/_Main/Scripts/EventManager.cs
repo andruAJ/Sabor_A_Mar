@@ -25,19 +25,15 @@ public class EventManager : MonoBehaviour
     }
     public void PreparacionTabla(Collider other)
     {
-        Debug.LogWarning("PreparacionTabla: " + other.gameObject.name);
         switch (other.gameObject.tag)
         {
             case "Pescado":
                 pescadoScript = other.gameObject.GetComponent<Pescado>();
-                Debug.LogWarning("PreparacionTabla -> Case Pescado");
                 if (pescadoScript != null)
                 {
-                    Debug.LogWarning("PreparacionTabla -> Case Pescado -> Script encontrado");
-                    if (pescadoScript != enabled)
+                    if (pescadoScript.enabled == false)
                     {
-                        //Aquí no está entrando
-                        Debug.LogWarning("PreparacionTabla -> Case Pescado -> Script encontrado -> El script está Desactivado");
+
                         pescadoScript.enabled = true;
                     }
                 }
