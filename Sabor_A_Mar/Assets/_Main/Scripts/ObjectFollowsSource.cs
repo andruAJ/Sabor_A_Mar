@@ -1,28 +1,24 @@
+using Oculus.Platform.Models;
 using UnityEngine;
 using UnityEngine.Animations;
 
 public class ObjectFollowsSource : MonoBehaviour
 {
-    public Transform source;
-    public PositionConstraint positionConstraint;
+    public Transform leader;
+    public Transform follower;
+    public float speed = 5f;
+    public float distanceThreshold = 2f;
+    private Vector3 distance;
 
-    private void OnTriggerStay(Collider other)
+
+    void Update()
     {
-        
-        if (other.transform == source)
+        distance = leader.position - follower.position;
+        if (distance.magnitude > distanceThreshold)
         {
-            Debug.LogWarning("me quedo quieto");
-            positionConstraint.enabled = false;
+            follower.transform.position = Vector3.MoveTowards(follower.transform.position, leader.position, Time.deltaTime * speed);
         }
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        
-        if (other.transform == source) 
-        {
-            Debug.LogWarning("me muevo");
-            positionConstraint.enabled = true;
-        }
-    }
+
 }
