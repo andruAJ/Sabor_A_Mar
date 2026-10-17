@@ -60,7 +60,7 @@ public class EventManager : MonoBehaviour
                 pescadoScript = other.gameObject.GetComponent<Pescado>();
                 if (pescadoScript != null)
                 {
-                    if (pescadoScript != enabled)
+                    if (pescadoScript.enabled == false)
                     {
                         pescadoScript.enabled = true;
                     }

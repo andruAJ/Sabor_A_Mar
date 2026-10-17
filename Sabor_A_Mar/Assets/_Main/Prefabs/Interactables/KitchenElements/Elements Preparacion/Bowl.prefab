@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7402692253355277928}
   - component: {fileID: 7199722719344228612}
   - component: {fileID: 6572717822432136725}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bowl
   m_TagString: Bowl
   m_Icon: {fileID: 0}
@@ -156,6 +156,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8f0963caa73b0444caf39127af661f08, type: 3}
       propertyPath: m_Name
       value: Plato
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8f0963caa73b0444caf39127af661f08, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4097072141199905492, guid: 8f0963caa73b0444caf39127af661f08, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8252720951620915793, guid: 8f0963caa73b0444caf39127af661f08, type: 3}
       propertyPath: m_LocalPosition.x

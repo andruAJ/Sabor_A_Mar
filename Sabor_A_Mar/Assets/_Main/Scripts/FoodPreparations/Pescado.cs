@@ -103,6 +103,7 @@ public class Pescado : MonoBehaviour
                 break;
             case PescadoState.Frito:
                 UpdateTextures(pescado_Frito, pescado_Frito);
+                this.gameObject.GetComponent<PositionConstraint>().enabled = false;
                 BlendTextures(1f);
                 break;
         }
@@ -123,6 +124,7 @@ public class Pescado : MonoBehaviour
         float elapsedTime = 0f;
         while (elapsedTime < 10f)
         {
+            elapsedTime += Time.deltaTime;
             BlendTextures(elapsedTime / 10f);
             yield return null;
         }

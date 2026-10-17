@@ -396,24 +396,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Olla
       objectReference: {fileID: 0}
-    - target: {fileID: 6236077340221737265, guid: d42a01d10749b454ca9a233709bd2a49, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6952107788269775869, guid: d42a01d10749b454ca9a233709bd2a49, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7443451285956210096, guid: d42a01d10749b454ca9a233709bd2a49, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7473625018188496129, guid: d42a01d10749b454ca9a233709bd2a49, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8688650174545249166, guid: d42a01d10749b454ca9a233709bd2a49, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1046,18 +1029,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: "Sart\xE9n"
       objectReference: {fileID: 0}
-    - target: {fileID: 88121021893964470, guid: 60daf0f2029ff9a44812e08ea9e1a7b0, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1405185753462390339, guid: 60daf0f2029ff9a44812e08ea9e1a7b0, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4127247079230367636, guid: 60daf0f2029ff9a44812e08ea9e1a7b0, type: 3}
-      propertyPath: m_ExcludeLayers.m_Bits
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7340370182205503797, guid: 60daf0f2029ff9a44812e08ea9e1a7b0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.47
@@ -1097,18 +1068,6 @@ PrefabInstance:
     - target: {fileID: 7340370182205503797, guid: 60daf0f2029ff9a44812e08ea9e1a7b0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7464473014437593858, guid: 60daf0f2029ff9a44812e08ea9e1a7b0, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7594789690806493729, guid: 60daf0f2029ff9a44812e08ea9e1a7b0, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8894447225027576734, guid: 60daf0f2029ff9a44812e08ea9e1a7b0, type: 3}
-      propertyPath: m_Layer
-      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10444,29 +10403,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 483131180}
     m_Modifications:
-    - target: {fileID: 304861349559128931, guid: a79f6273d433ade468986441f765a044, type: 3}
-      propertyPath: m_ExcludeLayers.m_Bits
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1488278072799196179, guid: a79f6273d433ade468986441f765a044, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1727849890826975800, guid: a79f6273d433ade468986441f765a044, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 2795813700756043492, guid: a79f6273d433ade468986441f765a044, type: 3}
       propertyPath: m_Name
       value: Tabla de picar
-      objectReference: {fileID: 0}
-    - target: {fileID: 2795813700756043492, guid: a79f6273d433ade468986441f765a044, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6775764481916770504, guid: a79f6273d433ade468986441f765a044, type: 3}
-      propertyPath: m_Layer
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8201428438051919417, guid: a79f6273d433ade468986441f765a044, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10508,8 +10447,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 304861349559128931, guid: a79f6273d433ade468986441f765a044, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -10567,21 +10505,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5136066850311879280, guid: 542d08b95a4a6cd4c98f977ff6c74f7a, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8312564232926008821, guid: 542d08b95a4a6cd4c98f977ff6c74f7a, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 8950288147704789535, guid: 542d08b95a4a6cd4c98f977ff6c74f7a, type: 3}
       propertyPath: m_Name
       value: Bowl
-      objectReference: {fileID: 0}
-    - target: {fileID: 8950288147704789535, guid: 542d08b95a4a6cd4c98f977ff6c74f7a, type: 3}
-      propertyPath: m_Layer
-      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10870,6 +10796,10 @@ PrefabInstance:
     - target: {fileID: 2321094233743082093, guid: 291abb87ca51d23458da276b03cf6120, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650682037449385201, guid: 291abb87ca51d23458da276b03cf6120, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4006254011407174306, guid: 291abb87ca51d23458da276b03cf6120, type: 3}
       propertyPath: m_LocalPosition.x

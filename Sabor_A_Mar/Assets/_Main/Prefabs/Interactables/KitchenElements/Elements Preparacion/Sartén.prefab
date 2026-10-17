@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 7340370182205503797}
   - component: {fileID: 7441644956336847029}
   - component: {fileID: 1413167065418867554}
-  - component: {fileID: 4127247079230367636}
   - component: {fileID: 1062638833005063013}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Sart\xE9n"
   m_TagString: Sarten
   m_Icon: {fileID: 0}
@@ -79,33 +78,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!54 &4127247079230367636
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 88121021893964470}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!114 &1062638833005063013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,7 +90,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66a6c4381322624aa6277de7dad95c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enable_Preparaciones
-  pescadoScript: {fileID: 0}
 --- !u!1 &8894447225027576734
 GameObject:
   m_ObjectHideFlags: 0
@@ -128,7 +99,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3310898351280127002}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,14 +190,26 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: a4ec7f2a760794852ad661057a30aa7e, type: 2}
+    - target: {fileID: -516098083770646512, guid: 54cd96b69c8be4d08b5f8e3488dfe8b3, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 54cd96b69c8be4d08b5f8e3488dfe8b3, type: 3}
       propertyPath: m_Name
       value: sarten_
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 54cd96b69c8be4d08b5f8e3488dfe8b3, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7071182760956848314, guid: 54cd96b69c8be4d08b5f8e3488dfe8b3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: a4ec7f2a760794852ad661057a30aa7e, type: 2}
+    - target: {fileID: 8513859187771203891, guid: 54cd96b69c8be4d08b5f8e3488dfe8b3, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

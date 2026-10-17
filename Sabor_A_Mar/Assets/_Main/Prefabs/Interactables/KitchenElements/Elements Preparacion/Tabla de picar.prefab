@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7490889626776060006}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tabla
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3616027549599850932}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,8 +76,7 @@ GameObject:
   - component: {fileID: 6853728063628612749}
   - component: {fileID: 620873569047625}
   - component: {fileID: 797245433408139747}
-  - component: {fileID: 304861349559128931}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tabla de picar
   m_TagString: Tabla
   m_Icon: {fileID: 0}
@@ -155,34 +154,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66a6c4381322624aa6277de7dad95c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TablaPicar
-  pescadoScript: {fileID: 0}
---- !u!54 &304861349559128931
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2795813700756043492}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1001 &5965352183310755225
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -234,6 +205,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2f24a806259099044bd4e2c57547ef5f, type: 3}
       propertyPath: m_Name
       value: 'Tabla de picar '
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2f24a806259099044bd4e2c57547ef5f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2f24a806259099044bd4e2c57547ef5f, type: 3}
       propertyPath: m_StaticEditorFlags
