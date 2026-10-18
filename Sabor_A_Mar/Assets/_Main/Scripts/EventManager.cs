@@ -4,6 +4,7 @@ public class EventManager : MonoBehaviour
 {
     public UI_Manager uiManager;
     public Pescado pescadoScript;
+    public Patacon pataconScript;
     public ToggleInteractions toggleInteractions;
 
 
@@ -45,7 +46,14 @@ public class EventManager : MonoBehaviour
                 }
                 break;
             case "Platano":
-                //aqui activar el script del platano
+                pataconScript = other.gameObject.GetComponent<Patacon>();
+                if (pataconScript != null)
+                {
+                    if (pataconScript.enabled == false)
+                    {
+                        pataconScript.enabled = true;
+                    }
+                }
                 break;
             default:
                 Debug.LogWarning("Chequear el tag de este objeto:  " + other.gameObject + " y el pirobo que está mandando este mensaje es: " + this.gameObject.name);
@@ -68,7 +76,15 @@ public class EventManager : MonoBehaviour
                 }
                 break;
             case "Platano":
-                //aqui activar el script del platano
+                pataconScript = other.gameObject.GetComponent<Patacon>();
+                if (pataconScript != null)
+                {
+                    if (pataconScript.enabled == false)
+                    {
+                        pataconScript.enabled = true;
+                    }
+                    StartCoroutine(pataconScript.Fritura());
+                }
                 break;
             default:
                 break;
