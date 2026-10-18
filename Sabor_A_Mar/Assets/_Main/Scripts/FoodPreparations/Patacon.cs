@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class Patacon : MonoBehaviour
 {
@@ -43,14 +44,16 @@ public class Patacon : MonoBehaviour
         SetPataconState(currentPataconState);
         OnPreparacionPatacon?.Invoke(false, this.gameObject);
     }
-    private void OnCollisionEnter(Collision collision) 
+    private void OnTriggerEnter(Collider other) 
     {
-        string collisionTag = collision.gameObject.tag;
+        Debug.LogWarning("Entró en OnTriggerEnter con: " + other.gameObject.name);
+        string collisionTag = other.gameObject.tag;
         switch (collisionTag)
         {
             case "Hand":
                 if (currentPataconState == PataconState.Verde)
                 {
+                    Debug.LogWarning("Patacón verde, se puede pelar");
                     SetPataconState(PataconState.Pelado);
                 }
                 break;
@@ -83,6 +86,7 @@ public class Patacon : MonoBehaviour
             case PataconState.Cortado:
                 TurnOffAllHijosExcept(platano);
                 ChangeMesh(platanoMeshFilter, platano_Cortado);
+                this.gameObject.GetComponent<PositionConstraint>().enabled = false;
                 break;
             case PataconState.Dorado:
                 TurnOffAllHijosExcept(platano_Cortado_Dorado);

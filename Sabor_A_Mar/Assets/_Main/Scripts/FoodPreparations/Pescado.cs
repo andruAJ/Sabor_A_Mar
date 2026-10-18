@@ -40,7 +40,7 @@ public class Pescado : MonoBehaviour
         currentState = PescadoState.Escamas;
         OnPreparacionPescado?.Invoke(false, this.gameObject);
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)        //debería corregir esta función para que detecte colisiones trigger, pero sólo hacer de último para más profesionalismo, ya que funcione bien cómo está
     {
         string collisionTag = collision.gameObject.tag;
         switch (collisionTag)
