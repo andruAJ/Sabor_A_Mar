@@ -46,14 +46,12 @@ public class Patacon : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other) 
     {
-        Debug.LogWarning("Entró en OnTriggerEnter con: " + other.gameObject.name);
         string collisionTag = other.gameObject.tag;
         switch (collisionTag)
         {
             case "Hand":
                 if (currentPataconState == PataconState.Verde)
                 {
-                    Debug.LogWarning("Patacón verde, se puede pelar");
                     SetPataconState(PataconState.Pelado);
                 }
                 break;
@@ -64,7 +62,10 @@ public class Patacon : MonoBehaviour
                 }
                 break;
             case "Pataconera":
-                
+                if (currentPataconState == PataconState.Cortado)
+                {
+                    SetPataconState(PataconState.Aplastado);
+                }
                 break;
             default:
                 break;
@@ -90,6 +91,7 @@ public class Patacon : MonoBehaviour
                 break;
             case PataconState.Dorado:
                 TurnOffAllHijosExcept(platano_Cortado_Dorado);
+                this.gameObject.GetComponent<PositionConstraint>().enabled = false;
                 break;
             case PataconState.Aplastado:
                 TurnOffAllHijosExcept(pataconCrudo);
@@ -101,15 +103,18 @@ public class Patacon : MonoBehaviour
                 ChangeMesh(patacon2Hijo1MeshFilter, patacon_Frito1);
                 ChangeMesh(patacon2Hijo2MeshFilter, patacon_Frito2);
                 OnPreparacionPatacon?.Invoke(true, this.gameObject);
+                this.gameObject.GetComponent<PositionConstraint>().enabled = false;
                 break;
         }
-        Debug.LogWarning("Estado del patacón cambiado a: " + currentPataconState);
+
     }
     public void TurnOffAllHijosExcept(GameObject except) 
     {
-        foreach (Transform child in transform.GetChild(0)) 
+        Debug.LogWarning("TurnOffAllHijosExcept llamado con: " + except.name);
+        foreach (Transform child in transform.Find("HijoPrincipales")) 
         {
-            if (child.gameObject != except) 
+            Debug.LogWarning("Desactivando hijo: " + child.gameObject.name);
+            if (child.gameObject.name != except.name) 
             {
                 child.gameObject.SetActive(false);
             }
@@ -132,7 +137,14 @@ public class Patacon : MonoBehaviour
         }
         if(elapsedTime >= 3f)
         {
-            SetPataconState(PataconState.Frito);
+            if (currentPataconState == PataconState.Cortado) 
+            {
+                SetPataconState(PataconState.Dorado);
+            }
+            else if(currentPataconState == PataconState.Aplastado)
+            {
+                SetPataconState(PataconState.Frito);
+            }
         }
     }
 }
