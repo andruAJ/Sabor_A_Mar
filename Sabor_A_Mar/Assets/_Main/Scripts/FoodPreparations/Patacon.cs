@@ -74,6 +74,7 @@ public class Patacon : MonoBehaviour
     public void SetPataconState(PataconState state) 
     {
         currentPataconState = state;
+        Debug.LogWarning("Patacon State changed to: " + currentPataconState.ToString());
         switch (currentPataconState) 
         {
             case PataconState.Verde:
@@ -83,6 +84,7 @@ public class Patacon : MonoBehaviour
                 TurnOffAllHijosExcept(platano);
                 ChangeMesh(platanoMeshFilter, platano_Pelado);
                 cascaras.SetActive(true);
+                cascaras.transform.parent = cascaras.transform.parent.parent;
                 break;
             case PataconState.Cortado:
                 TurnOffAllHijosExcept(platano);
@@ -110,13 +112,17 @@ public class Patacon : MonoBehaviour
     }
     public void TurnOffAllHijosExcept(GameObject except) 
     {
-        Debug.LogWarning("TurnOffAllHijosExcept llamado con: " + except.name);
         foreach (Transform child in transform.Find("HijoPrincipales")) 
         {
-            Debug.LogWarning("Desactivando hijo: " + child.gameObject.name);
-            if (child.gameObject.name != except.name) 
+            if (child.gameObject != except) 
             {
+                Debug.LogWarning("Desactivando hijo: " + child.gameObject.name);
                 child.gameObject.SetActive(false);
+            }
+            else
+            {
+                Debug.LogWarning("Activando hijo: " + child.gameObject.name);
+                child.gameObject.SetActive(true);
             }
         }
     }

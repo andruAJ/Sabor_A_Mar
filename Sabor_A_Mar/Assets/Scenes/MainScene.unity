@@ -2803,6 +2803,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 337422501}
     m_Modifications:
+    - target: {fileID: 926085963526646131, guid: 411127c26076c384a8f51a28ec26dd23, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.089
+      objectReference: {fileID: 0}
     - target: {fileID: 2144293327774163167, guid: 411127c26076c384a8f51a28ec26dd23, type: 3}
       propertyPath: m_Name
       value: KitchenElements_Accs
@@ -2810,6 +2814,10 @@ PrefabInstance:
     - target: {fileID: 2904779136862936700, guid: 411127c26076c384a8f51a28ec26dd23, type: 3}
       propertyPath: m_Size.x
       value: 0.040834
+      objectReference: {fileID: 0}
+    - target: {fileID: 2904779136862936700, guid: 411127c26076c384a8f51a28ec26dd23, type: 3}
+      propertyPath: m_Size.z
+      value: 0.0047992277
       objectReference: {fileID: 0}
     - target: {fileID: 2904779136862936700, guid: 411127c26076c384a8f51a28ec26dd23, type: 3}
       propertyPath: m_Center.x
@@ -2821,7 +2829,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2904779136862936700, guid: 411127c26076c384a8f51a28ec26dd23, type: 3}
       propertyPath: m_Center.z
-      value: 0.0011028672
+      value: -0.0065056887
       objectReference: {fileID: 0}
     - target: {fileID: 8376968521834693217, guid: 411127c26076c384a8f51a28ec26dd23, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2881,6 +2889,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1797305775}
     m_Modifications:
+    - target: {fileID: 268253493171119374, guid: a25f0f0594b26d94e814a946a2712536, type: 3}
+      propertyPath: m_Name
+      value: platano_Cortado_Dorado;
+      objectReference: {fileID: 0}
     - target: {fileID: 843323377254266277, guid: a25f0f0594b26d94e814a946a2712536, type: 3}
       propertyPath: m_Weight
       value: 1
@@ -2920,6 +2932,10 @@ PrefabInstance:
     - target: {fileID: 4519614329976266728, guid: a25f0f0594b26d94e814a946a2712536, type: 3}
       propertyPath: m_Name
       value: Platano
+      objectReference: {fileID: 0}
+    - target: {fileID: 4853520997691692049, guid: a25f0f0594b26d94e814a946a2712536, type: 3}
+      propertyPath: m_Name
+      value: platano
       objectReference: {fileID: 0}
     - target: {fileID: 6574060090851097346, guid: a25f0f0594b26d94e814a946a2712536, type: 3}
       propertyPath: platano
@@ -2992,6 +3008,10 @@ PrefabInstance:
     - target: {fileID: 6952965201353309052, guid: a25f0f0594b26d94e814a946a2712536, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8802565157845920529, guid: a25f0f0594b26d94e814a946a2712536, type: 3}
+      propertyPath: m_Name
+      value: pataconCrudo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
