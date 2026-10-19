@@ -46,6 +46,7 @@ public class Patacon : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other) 
     {
+        Debug.LogWarning("Patacon collisioned");
         string collisionTag = other.gameObject.tag;
         switch (collisionTag)
         {
@@ -62,7 +63,8 @@ public class Patacon : MonoBehaviour
                 }
                 break;
             case "Pataconera":
-                if (currentPataconState == PataconState.Cortado)
+                Debug.LogWarning("patacon colisionó con pataconera");
+                if (currentPataconState == PataconState.Dorado)
                 {
                     SetPataconState(PataconState.Aplastado);
                 }
