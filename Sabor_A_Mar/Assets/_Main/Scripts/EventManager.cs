@@ -14,9 +14,11 @@ public class EventManager : MonoBehaviour
         FoodGrabbed.OnFoodGrabbed += OnFoodGrabbed;
         Enable_Preparaciones.OnTablaCollided += PreparacionTabla;
         Enable_Preparaciones.OnSartenCollided += PreparacionSarten;
+        Enable_Preparaciones.OnOllaCollided += PreparacionOlla;
         Inventory.OnQuantityChanged +=  ChangeInventoryIcon;
         Inventory.OnInventoryChanged += ToggleInteractions;
         Pescado.OnPreparacionPescado += ToggleInteractions;
+        
     }
 
     public void OnFoodGrabbed(FoodGrabbed.FoodType foodType)
@@ -89,6 +91,9 @@ public class EventManager : MonoBehaviour
             default:
                 break;
         }
+    }
+    public void PreparacionOlla(Collider other)
+    {         // Implementación de la preparación en la olla
     }
     public void ChangeInventoryIcon(int quantity) 
     {
