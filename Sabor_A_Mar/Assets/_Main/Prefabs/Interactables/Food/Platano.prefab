@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9163837074069569476}
   m_Layer: 0
-  m_Name: PlatanoCortadoDorado
+  m_Name: platano_Cortado_Dorado;
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -244,9 +244,9 @@ GameObject:
   - component: {fileID: 3068195759290878761}
   - component: {fileID: 7850780547347422158}
   - component: {fileID: 1113359851479047654}
-  - component: {fileID: 2778295970807573635}
   - component: {fileID: 3464093431645912406}
   - component: {fileID: 843323377254266277}
+  - component: {fileID: 4809605339398084406}
   m_Layer: 0
   m_Name: Platano
   m_TagString: Platano
@@ -262,10 +262,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4519614329976266728}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -26.74, y: 0.36, z: 5.59}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.36, y: 0.36, z: 0.36}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5440152189450596736}
   - {fileID: 3313752568521327196}
@@ -288,10 +288,10 @@ MonoBehaviour:
   platano_Cortado: {fileID: 4454210459964731182, guid: e5bc47dd68ea61b489b0c7c0cb940302, type: 3}
   patacon_Frito1: {fileID: -412575595361462815, guid: e4d62ce8ab9b9204b8de0c2b4dadaa68, type: 3}
   patacon_Frito2: {fileID: 2296978202078409622, guid: e4d62ce8ab9b9204b8de0c2b4dadaa68, type: 3}
-  platano: {fileID: 2556631921201737408}
-  cascaras: {fileID: 5445386272566173453}
-  platano_Cortado_Dorado: {fileID: 3105056955056961547}
-  pataconCrudo: {fileID: 8544932847622096294}
+  platano: {fileID: 4853520997691692049}
+  cascaras: {fileID: 3131830147947901496}
+  platano_Cortado_Dorado: {fileID: 268253493171119374}
+  pataconCrudo: {fileID: 8802565157845920529}
   platanoMeshFilter: {fileID: 2278522439046020063}
   patacon1Hijo1MeshFilter: {fileID: 1245393150927574264}
   patacon1Hijo2MeshFilter: {fileID: 9081307305929187288}
@@ -418,29 +418,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FoodElement
   food_Name: 
---- !u!136 &2778295970807573635
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4519614329976266728}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.25
-  m_Height: 1.22
-  m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3464093431645912406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -469,8 +446,8 @@ PositionConstraint:
   m_Enabled: 0
   serializedVersion: 2
   m_Weight: 1
-  m_TranslationAtRest: {x: 2.388, y: 1.3065, z: -0.28917}
-  m_TranslationOffset: {x: 0, y: 0.058649898, z: 0}
+  m_TranslationAtRest: {x: 0, y: 0, z: 0}
+  m_TranslationOffset: {x: 0, y: 0.1, z: 0}
   m_AffectTranslationX: 1
   m_AffectTranslationY: 1
   m_AffectTranslationZ: 1
@@ -479,6 +456,27 @@ PositionConstraint:
   m_Sources:
   - sourceTransform: {fileID: 0}
     weight: 1
+--- !u!65 &4809605339398084406
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4519614329976266728}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.21999998, y: 0.38732654, z: 1.037715}
+  m_Center: {x: 0, y: -0.05966673, z: 0.0759246}
 --- !u!1 &4853520997691692049
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,7 +487,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4351172882689384257}
   m_Layer: 0
-  m_Name: Platano
+  m_Name: platano
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -677,7 +675,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7879523950440289027}
   m_Layer: 0
-  m_Name: PataconCrudo
+  m_Name: pataconCrudo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1117,11 +1115,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1111ec4a0a21aca41b5aa105f73c0c30, type: 3}
   m_PrefabInstance: {fileID: 2870491744767280474}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &3105056955056961547 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1111ec4a0a21aca41b5aa105f73c0c30, type: 3}
-  m_PrefabInstance: {fileID: 2870491744767280474}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3439504360729105297
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1198,11 +1191,6 @@ PrefabInstance:
 --- !u!33 &2278522439046020063 stripped
 MeshFilter:
   m_CorrespondingSourceObject: {fileID: -5754084199372789682, guid: 7e863bef3dbb7d14c8da2488eb707bb1, type: 3}
-  m_PrefabInstance: {fileID: 3439504360729105297}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2556631921201737408 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7e863bef3dbb7d14c8da2488eb707bb1, type: 3}
   m_PrefabInstance: {fileID: 3439504360729105297}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &2896143878461011066 stripped
@@ -1282,11 +1270,6 @@ PrefabInstance:
 --- !u!4 &4673106225417160119 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 66a38b7929fc07e4c8e6a525f1f64ed8, type: 3}
-  m_PrefabInstance: {fileID: 5138761274717725276}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &5445386272566173453 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 66a38b7929fc07e4c8e6a525f1f64ed8, type: 3}
   m_PrefabInstance: {fileID: 5138761274717725276}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8814911125064268023
@@ -1378,11 +1361,6 @@ PrefabInstance:
       addedObject: {fileID: 1851078386279631834}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f557c58943a269f4db0153a2c4487659, type: 3}
---- !u!1 &8544932847622096294 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f557c58943a269f4db0153a2c4487659, type: 3}
-  m_PrefabInstance: {fileID: 8814911125064268023}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &9069796146052161308 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f557c58943a269f4db0153a2c4487659, type: 3}

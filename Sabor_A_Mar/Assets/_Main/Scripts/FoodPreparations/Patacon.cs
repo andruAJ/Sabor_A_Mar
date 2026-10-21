@@ -46,7 +46,7 @@ public class Patacon : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other) 
     {
-        Debug.LogWarning("Patacon collisioned");
+        Debug.LogWarning("Patacon collisioned con: " + other.gameObject.name);
         string collisionTag = other.gameObject.tag;
         switch (collisionTag)
         {
@@ -133,6 +133,7 @@ public class Patacon : MonoBehaviour
         if (meshFilter != null && newMesh != null)
         {
             meshFilter.mesh = newMesh;
+            Debug.LogWarning("Mesh changed to: " + newMesh.name);
         }
     }
     public IEnumerator Fritura()
