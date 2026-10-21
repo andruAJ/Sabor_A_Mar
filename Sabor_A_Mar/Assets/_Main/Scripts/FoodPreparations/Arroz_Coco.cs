@@ -11,7 +11,7 @@ public class Arroz_Coco : MonoBehaviour
     public GameObjects pescado_Cortado;
     public GameObjects pescado_Frito;
 
-    //MeshRenderer
+    //MeshFilter
     public MeshFilter arrozMeshFilter;
 
     //Eventos
@@ -37,8 +37,14 @@ public class Arroz_Coco : MonoBehaviour
         string collisionTag = other.gameObject.tag;
         switch (collisionTag)
         {
+            case "n":
+                if (currentState == ArrozState.CocoEntero)
+                {
+                    Debug.LogWarning("Golpe con cuchillo");
+                    SetArrozState(ArrozState.CocoVacio);       
+                }   
+                break;
             case "Rallador":
-                Debug.LogWarning("Golpe con rallador");
                 if (currentState == ArrozState.CocoEntero)
                 {
                     Debug.LogWarning("Golpe con rallador");
@@ -74,6 +80,20 @@ public class Arroz_Coco : MonoBehaviour
                 break;
         }
         Debug.LogWarning("Estado del arroz cambiado a: " + currentState.ToString());
+    }
+    public void TurnOffAllHijosExcept(GameObject except) 
+    {
+        foreach (Transform child in transform.Find("HijoPrincipales")) 
+        {
+            if (child.gameObject != except) 
+            {
+                child.gameObject.SetActive(false);
+            }
+            else
+            {
+                child.gameObject.SetActive(true);
+            }
+        }
     }
     
     public IEnumerator Fritura() 

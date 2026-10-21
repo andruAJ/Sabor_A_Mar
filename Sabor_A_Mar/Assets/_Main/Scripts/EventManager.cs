@@ -5,6 +5,7 @@ public class EventManager : MonoBehaviour
     public UI_Manager uiManager;
     public Pescado pescadoScript;
     public Patacon pataconScript;
+    public Arroz_Coco arrozScript;
     public ToggleInteractions toggleInteractions;
 
 
@@ -18,14 +19,13 @@ public class EventManager : MonoBehaviour
         Inventory.OnQuantityChanged +=  ChangeInventoryIcon;
         Inventory.OnInventoryChanged += ToggleInteractions;
         Pescado.OnPreparacionPescado += ToggleInteractions;
-        
+        Patacon.OnPreparacionPatacon += ToggleInteractions;
+        Arroz_Coco.OnPreparacionArroz += ToggleInteractions;
     }
 
     public void OnFoodGrabbed(FoodGrabbed.FoodType foodType)
     {
-        Debug.Log("Evento recibido: " + foodType);
         uiManager.ChangeSlotTexture((int)foodType);
-        
         Debug.Log("Comida agarrada: " + foodType);
     }
     public void ToggleInteractions(bool enable, GameObject targetObject) 

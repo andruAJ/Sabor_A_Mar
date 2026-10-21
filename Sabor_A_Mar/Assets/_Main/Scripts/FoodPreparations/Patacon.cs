@@ -118,12 +118,10 @@ public class Patacon : MonoBehaviour
         {
             if (child.gameObject != except) 
             {
-                Debug.LogWarning("Desactivando hijo: " + child.gameObject.name);
                 child.gameObject.SetActive(false);
             }
             else
             {
-                Debug.LogWarning("Activando hijo: " + child.gameObject.name);
                 child.gameObject.SetActive(true);
             }
         }
