@@ -1142,7 +1142,7 @@ GameObject:
   - component: {fileID: 343940364}
   m_Layer: 0
   m_Name: Paso5
-  m_TagString: Untagged
+  m_TagString: ArrozCoco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1290,6 +1290,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8f0963caa73b0444caf39127af661f08, type: 3}
       propertyPath: m_Name
       value: 'Arroz coco paso 2 '
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8f0963caa73b0444caf39127af661f08, type: 3}
+      propertyPath: m_TagString
+      value: Coco
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -1585,7 +1589,7 @@ GameObject:
   - component: {fileID: 816456964}
   m_Layer: 0
   m_Name: Paso1
-  m_TagString: Untagged
+  m_TagString: Coco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1785,13 +1789,29 @@ PrefabInstance:
       propertyPath: m_AllowXRRendering
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2195011733536136444, guid: 7ee90bb57579a09449b83f7cd662d9e6, type: 3}
+      propertyPath: m_RequiresDepthTextureOption
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2195011733536136444, guid: 7ee90bb57579a09449b83f7cd662d9e6, type: 3}
+      propertyPath: m_RequiresOpaqueTextureOption
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3469124927717208425, guid: 7ee90bb57579a09449b83f7cd662d9e6, type: 3}
+      propertyPath: m_RequiresDepthTextureOption
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3469124927717208425, guid: 7ee90bb57579a09449b83f7cd662d9e6, type: 3}
+      propertyPath: m_RequiresOpaqueTextureOption
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4425298075895893597, guid: 7ee90bb57579a09449b83f7cd662d9e6, type: 3}
       propertyPath: m_TranslationOffset.x
-      value: -200.16669
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4890988565531677834, guid: 7ee90bb57579a09449b83f7cd662d9e6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 24.02
+      value: 23.57
       objectReference: {fileID: 0}
     - target: {fileID: 5907682146480405199, guid: 7ee90bb57579a09449b83f7cd662d9e6, type: 3}
       propertyPath: m_IsActive
@@ -1799,11 +1819,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6309997970904525696, guid: 7ee90bb57579a09449b83f7cd662d9e6, type: 3}
       propertyPath: m_TranslationOffset.x
-      value: -24.02
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7104317103105676588, guid: 7ee90bb57579a09449b83f7cd662d9e6, type: 3}
       propertyPath: m_AllowXRRendering
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7104317103105676588, guid: 7ee90bb57579a09449b83f7cd662d9e6, type: 3}
+      propertyPath: m_RequiresDepthTextureOption
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7104317103105676588, guid: 7ee90bb57579a09449b83f7cd662d9e6, type: 3}
+      propertyPath: m_RequiresOpaqueTextureOption
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7983340676126242021, guid: 7ee90bb57579a09449b83f7cd662d9e6, type: 3}
       propertyPath: m_Name
@@ -2131,7 +2159,7 @@ GameObject:
   - component: {fileID: 1272526001}
   m_Layer: 0
   m_Name: Paso4
-  m_TagString: Untagged
+  m_TagString: Coco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2241,6 +2269,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: paso 7 - copia
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d8a20197f1c70254a999ce0d25e637db, type: 3}
+      propertyPath: m_TagString
+      value: ArrozCoco
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2340,7 +2372,7 @@ GameObject:
   - component: {fileID: 1372968277}
   m_Layer: 0
   m_Name: Paso2
-  m_TagString: Untagged
+  m_TagString: Coco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2532,7 +2564,7 @@ GameObject:
   - component: {fileID: 1441506339}
   m_Layer: 0
   m_Name: Paso7
-  m_TagString: Untagged
+  m_TagString: ArrozCoco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2640,6 +2672,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2cf068e6b480e22478f9978d847bf71e, type: 3}
       propertyPath: m_Name
       value: coco paso 1 - copia
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2cf068e6b480e22478f9978d847bf71e, type: 3}
+      propertyPath: m_TagString
+      value: Coco
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2cf068e6b480e22478f9978d847bf71e, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3981,6 +4017,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: paso 5 arroz con coco  - copia
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e0ac72da86a3fb34782110a97bb3213f, type: 3}
+      propertyPath: m_TagString
+      value: ArrozCoco
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 8955748739881718869, guid: e0ac72da86a3fb34782110a97bb3213f, type: 3}
@@ -4091,7 +4131,7 @@ GameObject:
   - component: {fileID: 1849393640}
   m_Layer: 0
   m_Name: Paso6
-  m_TagString: Untagged
+  m_TagString: ArrozCoco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4175,7 +4215,7 @@ GameObject:
   - component: {fileID: 1906165374}
   m_Layer: 0
   m_Name: Restos(?)
-  m_TagString: Untagged
+  m_TagString: Coco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
