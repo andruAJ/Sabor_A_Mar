@@ -208,7 +208,7 @@ Shader "Custom/SimpleWaterURP_VR_Version"
 
                 // ---- Foam near shorelines / underwater objects ----
                 half foamNoise = SAMPLE_TEXTURE2D(_FoamNoiseTex, sampler_FoamNoiseTex, IN.foamUV).r;
-                half foamLine = saturate((half)smoothstep(_FoamDistance, 0.0, depthY) * foamNoise);
+                half foamLine = saturate((1.0h - smoothstep(0.0h, _FoamDistance, depthY))* foamNoise);
                 half3 finalColor = lerp(colorWithReflection, _FoamColor.rgb, foamLine);
                 alpha = lerp(alpha, 1.0h, foamLine);
 
