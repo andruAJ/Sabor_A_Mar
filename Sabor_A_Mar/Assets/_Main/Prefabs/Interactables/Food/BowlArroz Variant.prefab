@@ -30,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4222398685488678063, guid: 542d08b95a4a6cd4c98f977ff6c74f7a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.131
+      value: 0.751
       objectReference: {fileID: 0}
     - target: {fileID: 4222398685488678063, guid: 542d08b95a4a6cd4c98f977ff6c74f7a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -76,7 +76,9 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 219904748771847263, guid: 542d08b95a4a6cd4c98f977ff6c74f7a, type: 3}
+    - {fileID: 4402762350606806020, guid: 542d08b95a4a6cd4c98f977ff6c74f7a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

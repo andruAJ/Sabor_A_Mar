@@ -44,6 +44,9 @@ TagManager:
   - Tabla
   - Rallador
   - Canasta
+  - Rayador
+  - BowlConLeche
+  - TapaOlla
   layers:
   - Default
   - TransparentFX

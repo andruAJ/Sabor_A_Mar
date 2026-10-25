@@ -1,5 +1,7 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
+using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.Animations;
 
@@ -7,9 +9,6 @@ public class Arroz_Coco : MonoBehaviour
 {
     //GameObjects
     public GameObject[] pasos;
-
-    //Eventos
-    public static event Action <bool, GameObject> OnPreparacionArroz;
 
     //bool de comprobación
     private bool encimaDeOlla;
@@ -78,22 +77,23 @@ public class Arroz_Coco : MonoBehaviour
                 TurnOffAllHijosExcept(pasos[1]);
                 break;
             case ArrozState.CocoRallado:
-                TurnOffAllHijosExcept(pasos[2]);
+                pasos[2].SetActive(true);
                 break;
             case ArrozState.LecheHervida:
-                TurnOffAllHijosExcept(pasos[3]);
+                
                 break;
             case ArrozState.ArrozAgregado:
-                TurnOffAllHijosExcept(pasos[4]);
+                pasos[4].SetActive(true);
                 break;
             case ArrozState.Agua_SalAgregados:
-                TurnOffAllHijosExcept(pasos[5]);
+                
                 break;
             case ArrozState.ArrozCocido:
-                TurnOffAllHijosExcept(pasos[6]);
+                TurnOffAllHijosExcept(pasos[7]);
+                pasos[1].SetActive(true);
                 break;
             case ArrozState.ArrozListo:
-                TurnOffAllHijosExcept(pasos[7]);
+                
                 break;
         }
         Debug.LogWarning("Estado del arroz cambiado a: " + currentState.ToString());

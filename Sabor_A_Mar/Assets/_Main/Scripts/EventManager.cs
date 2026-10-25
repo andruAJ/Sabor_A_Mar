@@ -19,7 +19,6 @@ public class EventManager : MonoBehaviour
         Inventory.OnInventoryChanged += ToggleInteractions;
         Pescado.OnPreparacionPescado += ToggleInteractions;
         Patacon.OnPreparacionPatacon += ToggleInteractions;
-        Arroz_Coco.OnPreparacionArroz += ToggleInteractions;
         Olla.PasoActual += PreparacionOlla;
     }
 
