@@ -130,8 +130,8 @@ public class Arroz_Coco : MonoBehaviour
     {
         encimaDeBowl = encima;
     }
-    public void IngredienteFueAñadido(ArrozState estadoAnterior) 
+    public void IngredienteFueAñadido(ArrozState estadoNuevo) 
     {
-        if (currentState == estadoAnterior) { currentState ++;}
+        if (currentState == estadoNuevo-1) { currentState = estadoNuevo;}
     }
 }

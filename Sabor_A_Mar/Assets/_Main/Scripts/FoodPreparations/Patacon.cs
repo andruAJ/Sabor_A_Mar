@@ -71,6 +71,7 @@ public class Patacon : MonoBehaviour
                 break;
             default:
                 break;
+                
         }
     }
     public void SetPataconState(PataconState state) 

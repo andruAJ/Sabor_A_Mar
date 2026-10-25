@@ -42,6 +42,7 @@ public class Bowl : MonoBehaviour
             if (currentState == Arroz_Coco.ArrozState.CocoPartido || currentState == Arroz_Coco.ArrozState.CocoRallado) 
             {
                 LecheServida = true;
+                this.gameObject.tag = "BowlConLeche";
                 EfectoLecheEnBowl();
             }  
         }

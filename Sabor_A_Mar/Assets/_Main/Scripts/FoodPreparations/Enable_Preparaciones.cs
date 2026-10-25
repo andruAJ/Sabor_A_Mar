@@ -9,12 +9,11 @@ public class Enable_Preparaciones : MonoBehaviour
 {
     public static event Action<Collider> OnTablaCollided;
     public static event Action<Collider> OnSartenCollided;
-    public static event Action<Collider> OnOllaCollided;
     private PositionConstraint positionConstraint;
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Coco") || other.gameObject.CompareTag("Pescado") || other.gameObject.CompareTag("Platano"))
+        if(other.gameObject.CompareTag("Pescado") || other.gameObject.CompareTag("Platano"))
         {
             this.gameObject.GetComponent<SphereCollider>().enabled = false;
 
@@ -29,9 +28,6 @@ public class Enable_Preparaciones : MonoBehaviour
                     break;
                 case "Sarten":
                     OnSartenCollided?.Invoke(other);
-                    break;
-                case "Olla":
-                    OnOllaCollided?.Invoke(other);
                     break;
                 default:
                     Debug.LogWarning("Chequear el tag de este objeto:  " + this);

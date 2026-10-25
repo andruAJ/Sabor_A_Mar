@@ -15,12 +15,12 @@ public class EventManager : MonoBehaviour
         FoodGrabbed.OnFoodGrabbed += OnFoodGrabbed;
         Enable_Preparaciones.OnTablaCollided += PreparacionTabla;
         Enable_Preparaciones.OnSartenCollided += PreparacionSarten;
-        Enable_Preparaciones.OnOllaCollided += PreparacionOlla;
         Inventory.OnQuantityChanged +=  ChangeInventoryIcon;
         Inventory.OnInventoryChanged += ToggleInteractions;
         Pescado.OnPreparacionPescado += ToggleInteractions;
         Patacon.OnPreparacionPatacon += ToggleInteractions;
         Arroz_Coco.OnPreparacionArroz += ToggleInteractions;
+        Olla.PasoActual += PreparacionOlla;
     }
 
     public void OnFoodGrabbed(FoodGrabbed.FoodType foodType)
@@ -92,8 +92,9 @@ public class EventManager : MonoBehaviour
                 break;
         }
     }
-    public void PreparacionOlla(Collider other)
-    {         // Implementación de la preparación en la olla
+    public void PreparacionOlla(Arroz_Coco.ArrozState estado)
+    {
+        arrozScript.IngredienteFueAñadido(estado);
     }
     public void ChangeInventoryIcon(int quantity) 
     {
