@@ -32,7 +32,6 @@ public class Arroz_Coco : MonoBehaviour
     private void Start()
     {
         currentState = ArrozState.CocoEntero;
-        OnPreparacionArroz?.Invoke(false, this.gameObject);
     }
     private void OnTriggerEnter(Collider other) 
     {

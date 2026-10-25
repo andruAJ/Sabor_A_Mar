@@ -11,6 +11,13 @@ public class FoodGrabbed : MonoBehaviour
     {
         Platano, Pescado, Coco
     }
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Canasta") 
+        {
+            Seleccionarobjeto();
+        }
+    }
     public void Seleccionarobjeto()
     {
 

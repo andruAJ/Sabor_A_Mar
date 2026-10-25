@@ -253,7 +253,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6952965201353309052
 Transform:
   m_ObjectHideFlags: 0
@@ -348,19 +348,7 @@ MonoBehaviour:
       m_Calls: []
   _whenSelect:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7850780547347422158}
-        m_TargetAssemblyTypeName: FoodGrabbed, Assembly-CSharp
-        m_MethodName: Seleccionarobjeto
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   _whenUnselect:
     m_PersistentCalls:
       m_Calls: []
@@ -770,7 +758,7 @@ MonoBehaviour:
     _pinkyRequirement: 1
     _unselectMode: 0
   _movementProvider: {fileID: 0}
-  _handAligment: 1
+  _handAligment: 0
   _handGrabPoses: []
 --- !u!114 &1108551466200806637
 MonoBehaviour:
@@ -808,7 +796,7 @@ MonoBehaviour:
     _pinkyRequirement: 1
     _unselectMode: 0
   _movementProvider: {fileID: 0}
-  _handAligment: 1
+  _handAligment: 0
   _handGrabPoses: []
 --- !u!114 &6374521746128929354
 MonoBehaviour:

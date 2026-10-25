@@ -43,6 +43,7 @@ TagManager:
   - Olla
   - Tabla
   - Rallador
+  - Canasta
   layers:
   - Default
   - TransparentFX
@@ -51,7 +52,7 @@ TagManager:
   - Water
   - UI
   - Interactable
-  - 
+  - Food
   - 
   - 
   - 

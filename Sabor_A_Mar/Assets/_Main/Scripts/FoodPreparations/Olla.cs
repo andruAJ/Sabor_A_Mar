@@ -1,14 +1,20 @@
 using System;
 using System.Collections;
-using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.Animations;
 
 public class Olla : MonoBehaviour
 {
     private Arroz_Coco.ArrozState currentState;
     public Arroz_Coco arroz_Coco;
+
+    //bool para cocciones e ingredientes agregados
     public bool ralladuraServida = false;
+    public bool lecheServida = false;
+    public bool lecheCocinada = false;
+    public bool arrozCocinado = false;
+
+    //evento
+    public static event Action<Arroz_Coco.ArrozState> PasoActual;
     private string collisionTag;
 
     private void OnTriggerEnter(Collider other)
@@ -20,8 +26,7 @@ public class Olla : MonoBehaviour
     private void OnTriggerStay(Collider other) 
     {
 
-        RalladuraServida = true;
-            EfectoLecheEnOlla();
+        
         
     }
     private void EfectoLecheEnOlla() 
@@ -34,6 +39,22 @@ public class Olla : MonoBehaviour
         private set
         {
             ralladuraServida = value;
+        }
+    }
+    public IEnumerator Coccion(bool comidaAHervir)
+    {
+        float elapsedTime = 0f;
+        while (elapsedTime < 5f)
+        {
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        if (elapsedTime >= 5f)
+        {
+            if (!comidaAHervir) 
+            {
+                comidaAHervir = true;  
+            }
         }
     }
 }
