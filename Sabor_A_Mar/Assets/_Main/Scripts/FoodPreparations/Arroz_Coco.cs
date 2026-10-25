@@ -10,8 +10,10 @@ public class Arroz_Coco : MonoBehaviour
 
     //Eventos
     public static event Action <bool, GameObject> OnPreparacionArroz;
-    
 
+    //bool de comprobación
+    private bool encimaDeOlla;
+    private bool encimaDeBowl;
     public enum ArrozState
     {
         CocoEntero,
@@ -49,8 +51,15 @@ public class Arroz_Coco : MonoBehaviour
                 if (currentState == ArrozState.CocoPartido)
                 {
                     Debug.LogWarning("Golpe con rallador");
-                    //Confirmar que se haga encima de la olla
-                    SetArrozState(ArrozState.CocoRallado);       
+                    if (encimaDeOlla) 
+                    {
+                        //efectos visuales y cambia de estado
+                        SetArrozState(ArrozState.CocoRallado);
+                    }
+                    else 
+                    {
+                        //efectos visuales pero no cambia de estado
+                    } 
                 }   
                 break;
             default:
@@ -103,7 +112,6 @@ public class Arroz_Coco : MonoBehaviour
             }
         }
     }
-    
     public IEnumerator Coccion() 
     {
         float elapsedTime = 0f;
@@ -113,5 +121,17 @@ public class Arroz_Coco : MonoBehaviour
             
             yield return null;
         }
+    }
+    public void EncimaDeOlla(bool encima) 
+    {
+        encimaDeOlla = encima;
+    }
+    public void EncimaDeBowl(bool encima)
+    {
+        encimaDeBowl = encima;
+    }
+    public void IngredienteFueAñadido(ArrozState estadoAnterior) 
+    {
+        if (currentState == estadoAnterior) { currentState ++;}
     }
 }
