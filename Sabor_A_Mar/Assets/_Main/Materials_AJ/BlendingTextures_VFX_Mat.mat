@@ -46,7 +46,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _CombiningValue: 0
+    - _CombiningValue: 0.0019999992
     - _QueueControl: 0
     - _QueueOffset: 0
     - _XRMotionVectorsPass: 1
