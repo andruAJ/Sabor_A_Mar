@@ -1823,7 +1823,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7104317103105676588, guid: 7ee90bb57579a09449b83f7cd662d9e6, type: 3}
       propertyPath: m_AllowXRRendering
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7104317103105676588, guid: 7ee90bb57579a09449b83f7cd662d9e6, type: 3}
       propertyPath: m_RequiresDepthTextureOption
