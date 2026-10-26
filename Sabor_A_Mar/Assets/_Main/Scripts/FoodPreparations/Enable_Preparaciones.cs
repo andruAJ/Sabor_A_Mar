@@ -11,8 +11,7 @@ public class Enable_Preparaciones : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("Pescado") || other.gameObject.CompareTag("Platano"))
-        {
-            this.gameObject.GetComponent<SphereCollider>().enabled = false;
+        {  
             other.gameObject.TryGetComponent<Pescado>(out Pescado pescadoScript);
             other.gameObject.TryGetComponent<Patacon>(out Patacon pataconScript);
             bool pataconCortado = pataconScript != null && pataconScript.CurrentState == Patacon.PataconState.Cortado;
@@ -20,26 +19,32 @@ public class Enable_Preparaciones : MonoBehaviour
 
             if (pataconCortado || pescadoCortado)
             {
+                this.gameObject.GetComponent<SphereCollider>().enabled = false;
                 other.gameObject.TryGetComponent<PositionConstraint>(out PositionConstraint positionConstraint);
                 if (positionConstraint != null)
                 {
                     positionConstraint.enabled = true;
                     positionConstraint.SetSource(0, new ConstraintSource { sourceTransform = this.transform, weight = 1 });
                 }
+                switch (this.gameObject.tag)
+                {
+                    case "Tabla":
+                        OnTablaCollided?.Invoke(other);
+                        break;
+                    case "Sarten":
+                        OnSartenCollided?.Invoke(other);
+                        break;
+                    default:
+                        Debug.LogWarning("Chequear el tag de este objeto:  " + this);
+                        break;
+                }
             }
-            switch (this.gameObject.tag)
-            {
-                case "Tabla":
-                    OnTablaCollided?.Invoke(other);
-                    break;
-                case "Sarten":
-                    OnSartenCollided?.Invoke(other);
-                    break;
-                default:
-                    Debug.LogWarning("Chequear el tag de este objeto:  " + this);
-                    break;
-            }
+            
         }
            
+    }
+    public void ActivarCollider() 
+    {
+        this.gameObject.GetComponent<SphereCollider>().enabled = true;
     }
 }

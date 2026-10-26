@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 8261887091397537352}
   - component: {fileID: 7122069105962412718}
   - component: {fileID: 2472620097864770860}
+  - component: {fileID: 184341285481121674}
+  - component: {fileID: 2190490829155824623}
   m_Layer: 0
   m_Name: MetaInteractions
   m_TagString: Untagged
@@ -111,7 +113,7 @@ MonoBehaviour:
     _ringRequirement: 2
     _pinkyRequirement: 1
     _unselectMode: 0
-  _movementProvider: {fileID: 0}
+  _movementProvider: {fileID: 2472620097864770860}
   _handAligment: 1
   _handGrabPoses: []
 --- !u!114 &8261887091397537352
@@ -196,6 +198,34 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
+--- !u!114 &184341285481121674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3881743263116123133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830a777c9bbd60441b589b654b94b2c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _filter: {fileID: 8453306102307810204}
+--- !u!114 &2190490829155824623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3881743263116123133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0529a9671a3b6a74fab00c4d05312c64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _renderer: {fileID: 0}
+  _customIcon: {fileID: 2800000, guid: aa3a2b3718100f84fb5d8ff9adb8ccb7, type: 3}
+  _snappiness: 1
 --- !u!1 &4630857438089977539
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,7 +330,7 @@ MonoBehaviour:
   _forwardElement: {fileID: 0}
   _oneGrabTransformer: {fileID: 0}
   _twoGrabTransformer: {fileID: 0}
-  _targetTransform: {fileID: 0}
+  _targetTransform: {fileID: 404092715729522954}
   _maxGrabPoints: -1
   _rigidbody: {fileID: 3952737986202319712}
   _kinematicWhileSelected: 1
@@ -533,5 +563,10 @@ MeshRenderer:
 --- !u!4 &2528266098473160486 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3468191288451c646bce33dddeedfc66, type: 3}
+  m_PrefabInstance: {fileID: 2638139485541017805}
+  m_PrefabAsset: {fileID: 0}
+--- !u!33 &8453306102307810204 stripped
+MeshFilter:
+  m_CorrespondingSourceObject: {fileID: -3329109008628300975, guid: 3468191288451c646bce33dddeedfc66, type: 3}
   m_PrefabInstance: {fileID: 2638139485541017805}
   m_PrefabAsset: {fileID: 0}

@@ -7,6 +7,8 @@ public class EventManager : MonoBehaviour
     public Patacon pataconScript;
     public Arroz_Coco arrozScript;
     public ToggleInteractions toggleInteractions;
+    public Enable_Preparaciones enable_Preparaciones_Sarten;
+    public Enable_Preparaciones enable_Preparaciones_Tabla;
 
 
 
@@ -20,6 +22,10 @@ public class EventManager : MonoBehaviour
         Pescado.OnPreparacionPescado += ToggleInteractions;
         Patacon.OnPreparacionPatacon += ToggleInteractions;
         Olla.PasoActual += PreparacionOlla;
+        Pescado.PescadoListo += PescadoListo;
+        Patacon.PataconListo += PataconListo;
+        Arroz_Coco.ArrozListo += ArrozListo;
+
     }
 
     public void OnFoodGrabbed(FoodGrabbed.FoodType foodType)
@@ -94,6 +100,20 @@ public class EventManager : MonoBehaviour
     public void PreparacionOlla(Arroz_Coco.ArrozState estado)
     {
         arrozScript.IngredienteFueAñadido(estado);
+    }
+    public void PescadoListo(bool completado) 
+    {
+        enable_Preparaciones_Sarten.ActivarCollider();
+        enable_Preparaciones_Tabla.ActivarCollider();
+    }
+    public void PataconListo(bool completado)
+    {
+        enable_Preparaciones_Sarten.ActivarCollider();
+        enable_Preparaciones_Tabla.ActivarCollider();
+    }
+    public void ArrozListo(bool completado)
+    {
+
     }
     public void ChangeInventoryIcon(int quantity) 
     {
