@@ -129,4 +129,8 @@ public class Pescado : MonoBehaviour
             yield return null;
         }
     }
+    public PescadoState CurrentState 
+    {
+        get => currentState;
+    }
 }

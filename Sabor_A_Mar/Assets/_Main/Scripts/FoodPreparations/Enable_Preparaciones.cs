@@ -1,9 +1,6 @@
-using Oculus.Interaction;
-using Oculus.Interaction.HandGrab;
 using System;
 using UnityEngine;
 using UnityEngine.Animations;
-using static FoodGrabbed;
 
 public class Enable_Preparaciones : MonoBehaviour
 {
@@ -16,11 +13,20 @@ public class Enable_Preparaciones : MonoBehaviour
         if(other.gameObject.CompareTag("Pescado") || other.gameObject.CompareTag("Platano"))
         {
             this.gameObject.GetComponent<SphereCollider>().enabled = false;
+            other.gameObject.TryGetComponent<Pescado>(out Pescado pescadoScript);
+            other.gameObject.TryGetComponent<Patacon>(out Patacon pataconScript);
+            bool pataconCortado = pataconScript != null && pataconScript.CurrentState == Patacon.PataconState.Cortado;
+            bool pescadoCortado = pescadoScript != null && pescadoScript.CurrentState == Pescado.PescadoState.Cortado;
 
-            other.gameObject.TryGetComponent<PositionConstraint>(out PositionConstraint positionConstraint);
-            positionConstraint.enabled = true;
-            positionConstraint.SetSource(0, new ConstraintSource { sourceTransform = this.transform, weight = 1 });
-
+            if (pataconCortado || pescadoCortado)
+            {
+                other.gameObject.TryGetComponent<PositionConstraint>(out PositionConstraint positionConstraint);
+                if (positionConstraint != null)
+                {
+                    positionConstraint.enabled = true;
+                    positionConstraint.SetSource(0, new ConstraintSource { sourceTransform = this.transform, weight = 1 });
+                }
+            }
             switch (this.gameObject.tag)
             {
                 case "Tabla":

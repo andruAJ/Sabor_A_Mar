@@ -155,4 +155,8 @@ public class Patacon : MonoBehaviour
             }
         }
     }
+    public PataconState CurrentState 
+    {
+        get => currentPataconState;
+    }
 }
