@@ -44,10 +44,10 @@ TagManager:
   - Tabla
   - Rallador
   - Canasta
-  - Rayador
   - BowlConLeche
   - TapaOlla
   - ArrozCoco
+  - Rayador
   layers:
   - Default
   - TransparentFX
