@@ -1,7 +1,10 @@
+using System.Diagnostics;
+using System;
 using UnityEngine;
 
 public class EventManager : MonoBehaviour
 {
+    public GameManager gameManager;
     public UI_Manager uiManager;
     public Pescado pescadoScript;
     public Patacon pataconScript;
@@ -26,6 +29,7 @@ public class EventManager : MonoBehaviour
         Pescado.PescadoListo += PescadoListo;
         Patacon.PataconListo += PataconListo;
         Arroz_Coco.ArrozListo += ArrozListo;
+        EmplatadoFinal.ComidaEnPlato += EmplatadoFinal;
 
     }
 
@@ -123,5 +127,29 @@ public class EventManager : MonoBehaviour
     public void ChangeInventoryIcon(int quantity) 
     {
         uiManager.ChangeInvButtonTexture(quantity);
+    }
+    public void EmplatadoFinal(string comidaAEmplatar)
+    {
+        switch(comidaAEmplatar)
+        {
+            case "Pescado":
+                gameManager.PescadoEmplatado();
+                //audio diciendo que se puso el pescado
+                gameManager.FinalExperiencia();
+                break;
+            case "Patacones":
+                gameManager.PataconesEmplatados();
+                //audio diciendo que se pusieron los patacones
+                gameManager.FinalExperiencia();
+                break;
+            case "Arroz":
+                gameManager.ArrozEmplatado();
+                //audio diciendo que se puso el arroz
+                gameManager.FinalExperiencia();
+                break;
+            default:
+                Debug.LogWarning("Algo que no es comida colisionó con el plato");
+                break;
+        }
     }
 }

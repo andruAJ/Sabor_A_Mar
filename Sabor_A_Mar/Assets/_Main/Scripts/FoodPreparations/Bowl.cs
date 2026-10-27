@@ -44,7 +44,7 @@ public class Bowl : MonoBehaviour
             if (currentState == Arroz_Coco.ArrozState.CocoPartido || currentState == Arroz_Coco.ArrozState.CocoRallado) 
             {
                 LecheServida = true;
-                DebugInfoGenerator.LogWarning("Leche fue servida en el bowl");
+                Debug.LogWarning("Leche fue servida en el bowl");
                 this.gameObject.tag = "BowlConLeche";
                 EfectoLecheEnBowl();
             }  
