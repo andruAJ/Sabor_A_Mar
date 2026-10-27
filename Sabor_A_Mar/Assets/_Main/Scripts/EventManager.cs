@@ -1,4 +1,3 @@
-using System.Diagnostics;
 using System;
 using UnityEngine;
 
@@ -29,7 +28,7 @@ public class EventManager : MonoBehaviour
         Pescado.PescadoListo += PescadoListo;
         Patacon.PataconListo += PataconListo;
         Arroz_Coco.ArrozListo += ArrozListo;
-        EmplatadoFinal.ComidaEnPlato += EmplatadoFinal;
+        EmplatadoFinal.ComidaEnPlato += Emplatado;
 
     }
 
@@ -128,22 +127,22 @@ public class EventManager : MonoBehaviour
     {
         uiManager.ChangeInvButtonTexture(quantity);
     }
-    public void EmplatadoFinal(string comidaAEmplatar)
+    public void Emplatado(string comidaAEmplatar)
     {
         switch(comidaAEmplatar)
         {
             case "Pescado":
-                gameManager.PescadoEmplatado();
+                gameManager.PescadoEmplatado = true;
                 //audio diciendo que se puso el pescado
                 gameManager.FinalExperiencia();
                 break;
             case "Patacones":
-                gameManager.PataconesEmplatados();
+                gameManager.PataconesEmplatados = true;
                 //audio diciendo que se pusieron los patacones
                 gameManager.FinalExperiencia();
                 break;
             case "Arroz":
-                gameManager.ArrozEmplatado();
+                gameManager.ArrozEmplatado = true;
                 //audio diciendo que se puso el arroz
                 gameManager.FinalExperiencia();
                 break;
