@@ -21,15 +21,17 @@ public class Bowl : MonoBehaviour
     }
     private void OnTriggerStay(Collider other) 
     {
-        if (90 <= other.transform.rotation.x && other.transform.rotation.x >= 270)
+        var rot = other.transform.localEulerAngles;
+        float x = rot.x % 360;
+        float z = rot.z % 360;
+
+        bool xIsMax = Mathf.Abs(x) > Mathf.Abs(z);
+        float maxValue = xIsMax ? x : z;
+        float delta = Mathf.DeltaAngle(0, maxValue);
+        if (Mathf.Abs(delta) > 90f && Mathf.Abs(delta) < 270f)
         {
             LecheSiendoServida();
-        }
-        else if (-90 >= other.transform.rotation.x && other.transform.rotation.x <= -270)
-        {
-            LecheSiendoServida();
-        }
-        
+        } 
     }
     private void EfectoLecheEnBowl() 
     {
@@ -42,6 +44,7 @@ public class Bowl : MonoBehaviour
             if (currentState == Arroz_Coco.ArrozState.CocoPartido || currentState == Arroz_Coco.ArrozState.CocoRallado) 
             {
                 LecheServida = true;
+                DebugInfoGenerator.LogWarning("Leche fue servida en el bowl");
                 this.gameObject.tag = "BowlConLeche";
                 EfectoLecheEnBowl();
             }  

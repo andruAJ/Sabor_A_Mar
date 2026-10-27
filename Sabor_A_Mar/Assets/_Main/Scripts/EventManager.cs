@@ -22,6 +22,7 @@ public class EventManager : MonoBehaviour
         Pescado.OnPreparacionPescado += ToggleInteractions;
         Patacon.OnPreparacionPatacon += ToggleInteractions;
         Olla.PasoActual += PreparacionOlla;
+        Olla.cocoEncimaDeOlla += CocoEncimaDeolla;
         Pescado.PescadoListo += PescadoListo;
         Patacon.PataconListo += PataconListo;
         Arroz_Coco.ArrozListo += ArrozListo;
@@ -100,6 +101,10 @@ public class EventManager : MonoBehaviour
     public void PreparacionOlla(Arroz_Coco.ArrozState estado)
     {
         arrozScript.IngredienteFueAñadido(estado);
+    }
+    public void CocoEncimaDeolla(bool encima)
+    {
+        arrozScript.EncimaDeOlla(encima);
     }
     public void PescadoListo(bool completado) 
     {
