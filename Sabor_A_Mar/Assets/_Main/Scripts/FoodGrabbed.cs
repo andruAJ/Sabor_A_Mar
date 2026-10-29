@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class FoodGrabbed : MonoBehaviour
 {
-    public static event Action <FoodType> OnFoodGrabbed;
+    public static event Action<FoodType> OnFoodGrabbed;
+    private bool comidaGuardada;
 
     public enum FoodType
     {
@@ -13,7 +14,7 @@ public class FoodGrabbed : MonoBehaviour
     }
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Canasta") 
+        if (other.gameObject.tag == "Canasta" && !comidaGuardada)
         {
             Seleccionarobjeto();
         }
@@ -23,7 +24,7 @@ public class FoodGrabbed : MonoBehaviour
 
         Inventory.Instance.AddToInventory(GetComponent<FoodElement>());
 
-        try 
+        try
         {
             Debug.Log("Elemento agarrado");
 
@@ -45,7 +46,7 @@ public class FoodGrabbed : MonoBehaviour
                     Debug.LogWarning("Tipo de comida desconocido: " + GetComponent<FoodElement>().food_Name);
                     break;
             }
-        } 
+        }
         catch (ArgumentException e)
         {
             throw new ArgumentException("Error al desactivar los componentes de interacción: " + e.Message);
@@ -53,4 +54,16 @@ public class FoodGrabbed : MonoBehaviour
         GameObject parent = this.gameObject.transform.parent.gameObject;
         this.gameObject.SetActive(false);
     }
-}
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Canasta") 
+        {
+            ComidaGuradada = false;
+        }
+    }
+    public bool ComidaGuradada
+    {
+        get => comidaGuardada;
+        set {comidaGuardada = value;} 
+    }
+}   

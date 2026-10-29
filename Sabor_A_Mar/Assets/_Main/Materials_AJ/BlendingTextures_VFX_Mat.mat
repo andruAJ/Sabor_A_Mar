@@ -25,11 +25,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Texture1:
-        m_Texture: {fileID: 2800000, guid: befaa2e1d95ae704aa566e038a789721, type: 3}
+        m_Texture: {fileID: 2800000, guid: 59d59b291d941d348b43d9a7e8e006be, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture2:
-        m_Texture: {fileID: 2800000, guid: 7673b2dfb329f0547b673aa41d879159, type: 3}
+        m_Texture: {fileID: 2800000, guid: befaa2e1d95ae704aa566e038a789721, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -46,7 +46,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _CombiningValue: 0
+    - _CombiningValue: 0.7
     - _QueueControl: 0
     - _QueueOffset: 0
     - _XRMotionVectorsPass: 1

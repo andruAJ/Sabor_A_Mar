@@ -9,8 +9,6 @@ public class Inventory : MonoBehaviour
 {
     public static Inventory Instance { get; private set; }
 
-    public Transform inventorySpawnPoint;
-
     public int maxInventorySize = 3;
 
     public Stack<FoodElement> inventory = new Stack<FoodElement>();
@@ -70,14 +68,16 @@ public class Inventory : MonoBehaviour
         inventory.Push(comida);
         OnQuantityChanged?.Invoke(inventory.Count);
     }
-    public void RemoveFromInventory()
+    public void RemoveFromInventory(Vector3 mano)
     {
         if (inventory.Count > 0)
         {
             if (inventory.TryPop(out var popped))
             {
-                popped.gameObject.SetActive(true);           
-                popped.transform.position = inventorySpawnPoint.position;
+                popped.gameObject.SetActive(true);
+                popped.TryGetComponent<FoodGrabbed>(out FoodGrabbed foodGrabbed);
+                foodGrabbed.ComidaGuradada = true;
+                popped.transform.position = mano;
                 OnInventoryChanged?.Invoke(true, popped.gameObject);
                 Debug.Log("Elemento salió del inventario");
             }
