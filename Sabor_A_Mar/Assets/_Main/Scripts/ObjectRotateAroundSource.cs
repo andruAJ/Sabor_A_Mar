@@ -9,7 +9,7 @@ public class ObjectRotateAroundSource : MonoBehaviour
    
     void Start()
     {
-        transform.rotation.x = source.rotation.x;
+        transform.rotation = source.rotation;
     }
 
     void Update()

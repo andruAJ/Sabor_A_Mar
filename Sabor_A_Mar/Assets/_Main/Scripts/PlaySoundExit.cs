@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlaySoundExit : MonoBehaviour
+public class PlaySoundExit : StateMachineBehaviour
 {
     [SerializeField] private SoundType sound;
     [SerializeField, Range(0,1)] private float volume = 1;

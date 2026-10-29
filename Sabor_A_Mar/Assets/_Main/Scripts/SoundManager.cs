@@ -8,9 +8,9 @@ public enum SoundType
 	PISADAS,
 	SELVA
 }
-[RequiredComponent(typeof(AudioSource)), ExecuteInEditMode]
+[RequireComponent(typeof(AudioSource)), ExecuteInEditMode]
 
-public class SoundManager: MonoBheaviour
+public class SoundManager: MonoBehaviour
 {
 	[SerializeField] private SoundList[] soundList;
 	private static SoundManager instance;
@@ -24,7 +24,7 @@ public class SoundManager: MonoBheaviour
 	{
 		audioSource = GetComponent<AudioSource>();
 	}
-	public void PlaySound(SoundType sound, float volume = 1) 
+	public static void PlaySound(SoundType sound, float volume = 1) 
 	{
 		AudioClip[] clips = instance.soundList[(int)sound].Sounds;
 		AudioClip randomClip = clips[UnityEngine.Random.Range(0,clips.Length)];
@@ -35,14 +35,14 @@ public class SoundManager: MonoBheaviour
 	private void OnEnable() 
 	{
 		string[] names = Enum.GetNames(typeof(SoundType));
-		Array.Resize(ref SoundList, names.Length);
+		Array.Resize(ref soundList, names.Length);
 		for(int i = 0; i < soundList.Length; i++)
 		{
 			soundList[i].name = names[i];
 		}
 	}
 }
-
+#endif
 [Serializable]
 public struct SoundList 
 {
