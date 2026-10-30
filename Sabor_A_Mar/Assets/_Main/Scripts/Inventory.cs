@@ -11,6 +11,8 @@ public class Inventory : MonoBehaviour
 
     public int maxInventorySize = 3;
 
+    public Transform inventorySpawnPoint;
+
     public Stack<FoodElement> inventory = new Stack<FoodElement>();
 
     public static event Action<int> OnQuantityChanged;
@@ -66,18 +68,19 @@ public class Inventory : MonoBehaviour
     {
         OnInventoryChanged?.Invoke(false, comida.gameObject);
         inventory.Push(comida);
+        Debug.LogWarning("Se guardo el elemento " + comida);
         OnQuantityChanged?.Invoke(inventory.Count);
     }
-    public void RemoveFromInventory(Vector3 mano)
+    public void RemoveFromInventory()
     {
+        Debug.LogWarning("Entro a RemoveFromInventory");
         if (inventory.Count > 0)
         {
             if (inventory.TryPop(out var popped))
             {
+                Debug.LogWarning("hizo el TryPop");
                 popped.gameObject.SetActive(true);
-                popped.TryGetComponent<FoodGrabbed>(out FoodGrabbed foodGrabbed);
-                foodGrabbed.ComidaGuradada = true;
-                popped.transform.position = mano;
+                popped.transform.position = inventorySpawnPoint.transform.position;
                 OnInventoryChanged?.Invoke(true, popped.gameObject);
                 Debug.Log("Elemento salió del inventario");
             }
