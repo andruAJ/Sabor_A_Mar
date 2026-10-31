@@ -12,17 +12,19 @@ public class Enable_Preparaciones : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Pescado") || other.gameObject.CompareTag("Platano"))
         {  
-            other.gameObject.TryGetComponent<Pescado>(out Pescado pescadoScript);
             other.gameObject.TryGetComponent<Patacon>(out Patacon pataconScript);
-            bool pataconCortado = pataconScript != null && pataconScript.CurrentState == Patacon.PataconState.Cortado;
-            bool pescadoCortado = pescadoScript != null && pescadoScript.CurrentState == Pescado.PescadoState.Cortado;
+            other.gameObject.TryGetComponent<Pescado>(out Pescado pescadoScript);
+            bool pataconDisponible = pataconScript != null && pataconScript.CurrentState != Patacon.PataconState.Cortado && pataconScript.CurrentState != Patacon.PataconState.Dorado && pataconScript.CurrentState != Patacon.PataconState.Aplastado && pataconScript.CurrentState != Patacon.PataconState.Frito;
+            bool pescadoDisponible = pescadoScript != null && pescadoScript.CurrentState != Pescado.PescadoState.Cortado && pescadoScript.CurrentState != Pescado.PescadoState.Frito;
 
-            if (pataconCortado || pescadoCortado)
+            if (pataconDisponible || pescadoDisponible)
             {
                 this.gameObject.GetComponent<SphereCollider>().enabled = false;
+
                 other.gameObject.TryGetComponent<PositionConstraint>(out PositionConstraint positionConstraint);
                 if (positionConstraint != null)
                 {
+                    Debug.LogWarning("Entré al segundo if de Patacon Cortado");
                     positionConstraint.enabled = true;
                     positionConstraint.SetSource(0, new ConstraintSource { sourceTransform = this.transform, weight = 1 });
                 }
@@ -40,6 +42,7 @@ public class Enable_Preparaciones : MonoBehaviour
                 }
             }
             
+
         }
            
     }

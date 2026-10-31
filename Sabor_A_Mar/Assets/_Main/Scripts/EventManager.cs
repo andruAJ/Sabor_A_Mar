@@ -51,7 +51,7 @@ public class EventManager : MonoBehaviour
                 {
                     if (pescadoScript.enabled == false)
                     {
-
+                        Debug.LogWarning("PreparacionTabla Pescado EventManager pescadoScript != nulls, pescadoScript.enable == false");
                         pescadoScript.enabled = true;
                     }
                 }

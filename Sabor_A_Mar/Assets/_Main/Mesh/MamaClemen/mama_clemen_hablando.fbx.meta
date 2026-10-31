@@ -3,7 +3,27 @@ guid: c5b840a48f549af408fad2ce687e7a59
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cara hablar
+    second: {fileID: 2100000, guid: fc34969b815ebe04a87eb3ef9b97f7a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: clemen completa normal
+    second: {fileID: 2100000, guid: 02bdca8f1e70e55468932eaaa60e8b6a, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: cara hablar
+    second: {fileID: 2800000, guid: bf34861a3c1f0924a8aa93c24f920427, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: clemen completa normal
+    second: {fileID: 2800000, guid: 37d9a9f420337134fb73e4f26d809673, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -35,7 +35,7 @@ public class Pescado : MonoBehaviour
         Frito
     }
     private PescadoState currentState;
-    private void Start()
+    private void OnEnable()
     {
         pescadoMaterial = pescadoMeshRenderer.material;
         currentState = PescadoState.Escamas;
