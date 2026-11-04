@@ -51,7 +51,6 @@ public class EventManager : MonoBehaviour
                 {
                     if (pescadoScript.enabled == false)
                     {
-                        Debug.LogWarning("PreparacionTabla Pescado EventManager pescadoScript != nulls, pescadoScript.enable == false");
                         pescadoScript.enabled = true;
                     }
                 }
@@ -76,6 +75,7 @@ public class EventManager : MonoBehaviour
         switch (other.gameObject.tag)
         {
             case "Pescado":
+                Debug.LogWarning("Case Pescado en PreparacionSarten");
                 pescadoScript = other.gameObject.GetComponent<Pescado>();
                 if (pescadoScript != null)
                 {

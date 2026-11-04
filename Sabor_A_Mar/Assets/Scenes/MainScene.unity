@@ -956,6 +956,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1062638833005063013, guid: 60daf0f2029ff9a44812e08ea9e1a7b0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1405185753462390339, guid: 60daf0f2029ff9a44812e08ea9e1a7b0, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -2773,7 +2777,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 620873569047625, guid: a79f6273d433ade468986441f765a044, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
