@@ -83,6 +83,7 @@ public class EventManager : MonoBehaviour
                     {
                         pescadoScript.enabled = true;
                     }
+                    Debug.LogWarning("Entro a la PreparacionSarten auqneu no creo posible");
                     ToggleInteractions(false, other.gameObject);
                     StartCoroutine(pescadoScript.Fritura());
                 }
