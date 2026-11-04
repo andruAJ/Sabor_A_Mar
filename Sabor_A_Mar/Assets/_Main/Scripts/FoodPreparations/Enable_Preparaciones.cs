@@ -14,37 +14,55 @@ public class Enable_Preparaciones : MonoBehaviour
         {  
             other.gameObject.TryGetComponent<Patacon>(out Patacon pataconScript);
             other.gameObject.TryGetComponent<Pescado>(out Pescado pescadoScript);
-            bool pataconDisponible = pataconScript != null && pataconScript.CurrentState != Patacon.PataconState.Cortado && pataconScript.CurrentState != Patacon.PataconState.Dorado && pataconScript.CurrentState != Patacon.PataconState.Aplastado && pataconScript.CurrentState != Patacon.PataconState.Frito;
-            bool pescadoDisponible = pescadoScript != null && pescadoScript.CurrentState != Pescado.PescadoState.Cortado && pescadoScript.CurrentState != Pescado.PescadoState.Frito;
+            bool pataconDisponibleTabla = pataconScript != null && pataconScript.CurrentState != Patacon.PataconState.Cortado && pataconScript.CurrentState != Patacon.PataconState.Dorado && pataconScript.CurrentState != Patacon.PataconState.Aplastado && pataconScript.CurrentState != Patacon.PataconState.Frito;      
+            bool pescadoDisponibleTabla = pescadoScript != null && pescadoScript.CurrentState != Pescado.PescadoState.Frito;
+            bool pataconDisponibleSarten = pataconScript != null && pataconScript.CurrentState != Patacon.PataconState.Verde && pataconScript.CurrentState != Patacon.PataconState.Pelado && pataconScript.CurrentState != Patacon.PataconState.Dorado && pataconScript.CurrentState != Patacon.PataconState.Frito;
+            bool pescadoDisponibleSarten = pescadoScript != null && pescadoScript.CurrentState == Pescado.PescadoState.Cortado;
 
-            if (pataconDisponible || pescadoDisponible)
+            other.gameObject.TryGetComponent<PositionConstraint>(out PositionConstraint positionConstraint);
+            this.gameObject.GetComponent<SphereCollider>().enabled = false;
+
+            if (positionConstraint != null)
             {
-                this.gameObject.GetComponent<SphereCollider>().enabled = false;
+                positionConstraint.enabled = true;
+                positionConstraint.SetSource(0, new ConstraintSource { sourceTransform = this.transform, weight = 1 });
+            }
 
-                other.gameObject.TryGetComponent<PositionConstraint>(out PositionConstraint positionConstraint);
-                if (positionConstraint != null)
-                {
-                    Debug.LogWarning("Entré al segundo if de Patacon Cortado");
-                    positionConstraint.enabled = true;
-                    positionConstraint.SetSource(0, new ConstraintSource { sourceTransform = this.transform, weight = 1 });
-                }
+            if (pataconDisponibleTabla || pescadoDisponibleTabla)
+            {  
                 switch (this.gameObject.tag)
                 {
                     case "Tabla":
                         OnTablaCollided?.Invoke(other);
                         break;
                     case "Sarten":
-                        OnSartenCollided?.Invoke(other);
-                        break;
-                    default:
-                        Debug.LogWarning("Chequear el tag de este objeto:  " + this);
+                        positionConstraint.enabled = false;
+                        positionConstraint.RemoveSource(0);
+                        this.gameObject.GetComponent<SphereCollider>().enabled = true;
                         break;
                 }
             }
-            
-
-        }
-           
+            else if (pataconDisponibleSarten || pescadoDisponibleSarten)
+            {
+                switch (this.gameObject.tag)
+                {
+                    case "Tabla":
+                        positionConstraint.enabled = false;
+                        positionConstraint.RemoveSource(0);
+                        this.gameObject.GetComponent<SphereCollider>().enabled = true;
+                        break;
+                    case "Sarten":
+                        OnSartenCollided?.Invoke(other);
+                        break;
+                }
+            }
+            else //necesario si el patacón está dorado o frito
+            {
+                positionConstraint.enabled = false;
+                positionConstraint.RemoveSource(0);
+                this.gameObject.GetComponent<SphereCollider>().enabled = true;
+            }
+        }     
     }
     public void ActivarCollider() 
     {

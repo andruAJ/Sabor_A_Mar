@@ -105,6 +105,7 @@ public class Pescado : MonoBehaviour
             case PescadoState.Frito:
                 UpdateTextures(pescado_Frito, pescado_Frito);
                 this.gameObject.GetComponent<PositionConstraint>().enabled = false;
+                OnPreparacionPescado?.Invoke(true, this.gameObject);
                 BlendTextures(1f);
                 break;
         }
@@ -129,6 +130,7 @@ public class Pescado : MonoBehaviour
             BlendTextures(elapsedTime / 10f);
             yield return null;
         }
+        SetPescadoState(PescadoState.Frito);
     }
     public PescadoState CurrentState 
     {

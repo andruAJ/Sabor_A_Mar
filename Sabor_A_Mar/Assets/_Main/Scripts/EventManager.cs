@@ -83,6 +83,7 @@ public class EventManager : MonoBehaviour
                     {
                         pescadoScript.enabled = true;
                     }
+                    ToggleInteractions(false, other.gameObject);
                     StartCoroutine(pescadoScript.Fritura());
                 }
                 break;
