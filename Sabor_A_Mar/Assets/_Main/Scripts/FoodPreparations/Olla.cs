@@ -106,7 +106,7 @@ public class Olla : MonoBehaviour
             arrozCocinado = arrozServido;
             if (lecheCocinada) {leche.SetActive(false); PasoActual?.Invoke(Arroz_Coco.ArrozState.LecheHervida);}
             else if (arrozCocinado) { PasoActual?.Invoke(Arroz_Coco.ArrozState.ArrozCocido); }
-            else { PasoActual?.Invoke(Arroz_Coco.ArrozState.ArrozListo); } //tengo sospecha que este else puede dar a casos donde no se aplicarian
+            else { PasoActual?.Invoke(Arroz_Coco.ArrozState.ArrozListo); } //tengo sospecha que este else puede dar a casos donde no se aplicarian, para solucionarlo debería de poner el condicional que sólo sea con el current state arroz cocido
         }
     }
 }
