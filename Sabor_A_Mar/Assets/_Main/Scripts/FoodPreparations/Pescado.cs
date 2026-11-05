@@ -25,7 +25,6 @@ public class Pescado : MonoBehaviour
 
     //Eventos
     public static event Action <bool, GameObject> OnPreparacionPescado;
-    public static event Action<bool> PescadoListo;
 
     public enum PescadoState
     {

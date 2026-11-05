@@ -26,7 +26,6 @@ public class Patacon : MonoBehaviour
 
     //Eventos
     public static event Action<bool, GameObject> OnPreparacionPatacon;
-    public static event Action<bool> PataconListo;
 
     public enum PataconState
     {

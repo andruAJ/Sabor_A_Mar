@@ -7,12 +7,8 @@ public class EventManager : MonoBehaviour
     public UI_Manager uiManager;
     public Pescado pescadoScript;
     public Patacon pataconScript;
-    public Arroz_Coco arrozScript;
+    public Arroz_Coco arrozScript;  // estoy poniendo esta referencia desde el interactable del coco pero si hay varios cocos, habrá problema porque solo hace referencia a uno específico manualmente
     public ToggleInteractions toggleInteractions;
-    public Enable_Preparaciones enable_Preparaciones_Sarten;
-    public Enable_Preparaciones enable_Preparaciones_Tabla;
-
-
 
     void Awake()
     {
@@ -25,9 +21,6 @@ public class EventManager : MonoBehaviour
         Patacon.OnPreparacionPatacon += ToggleInteractions;
         Olla.PasoActual += PreparacionOlla;
         Olla.cocoEncimaDeOlla += CocoEncimaDeolla;
-        Pescado.PescadoListo += PescadoListo;
-        Patacon.PataconListo += PataconListo;
-        Arroz_Coco.ArrozListo += ArrozListo;
         EmplatadoFinal.ComidaEnPlato += Emplatado;
 
     }
@@ -111,20 +104,6 @@ public class EventManager : MonoBehaviour
     {
         arrozScript.EncimaDeOlla(encima);
     }
-    public void PescadoListo(bool completado) 
-    {
-        enable_Preparaciones_Sarten.ActivarCollider();
-        enable_Preparaciones_Tabla.ActivarCollider();
-    }
-    public void PataconListo(bool completado)
-    {
-        enable_Preparaciones_Sarten.ActivarCollider();
-        enable_Preparaciones_Tabla.ActivarCollider();
-    }
-    public void ArrozListo(bool completado)
-    {
-
-    }
     public void ChangeInventoryIcon(int quantity) 
     {
         uiManager.ChangeInvButtonTexture(quantity);
@@ -134,16 +113,19 @@ public class EventManager : MonoBehaviour
         switch(comidaAEmplatar)
         {
             case "Pescado":
+                Debug.LogWarning("Pescado emplatado");
                 gameManager.PescadoEmplatado = true;
                 //audio diciendo que se puso el pescado
                 gameManager.FinalExperiencia();
                 break;
-            case "Patacones":
+            case "Platano":
+                Debug.LogWarning("Patacones emplatados");
                 gameManager.PataconesEmplatados = true;
                 //audio diciendo que se pusieron los patacones
                 gameManager.FinalExperiencia();
                 break;
-            case "Arroz":
+            case "Coco":
+                Debug.LogWarning("Arroz emplatado");
                 gameManager.ArrozEmplatado = true;
                 //audio diciendo que se puso el arroz
                 gameManager.FinalExperiencia();

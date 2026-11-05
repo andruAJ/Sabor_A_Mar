@@ -14,8 +14,6 @@ public class Arroz_Coco : MonoBehaviour
     private bool encimaDeOlla;
     private bool encimaDeBowl;
 
-    //eventos
-    public static event Action<bool> ArrozListo;
     public enum ArrozState
     {
         CocoEntero,
