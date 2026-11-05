@@ -49,7 +49,7 @@ public class Arroz_Coco : MonoBehaviour
                     Debug.LogWarning("Golpe con rallador");
                     if (encimaDeOlla) 
                     {
-                        //Aquí deja el coco rallado pero falta que se agregue la leche al bowl
+                        //Aquí deja el coco rallado pero puede que falta que se agregue la leche al bowl
                         //efectos visuales y cambia de estado
                         SetArrozState(ArrozState.CocoRallado);
                     }
@@ -78,7 +78,7 @@ public class Arroz_Coco : MonoBehaviour
                 pasos[2].SetActive(true);
                 break;
             case ArrozState.LecheHervida:
-                
+                //el apagado de la leche lo hice desde la olla pero podría ser desde aquí directamente
                 break;
             case ArrozState.ArrozAgregado:
                 TurnOffAllHijosExcept(pasos[4]);
@@ -131,6 +131,6 @@ public class Arroz_Coco : MonoBehaviour
     }
     public void IngredienteFueAñadido(ArrozState estadoNuevo) 
     {
-        if (currentState == estadoNuevo-1) { currentState = estadoNuevo;}
+        if (currentState == estadoNuevo-1) { SetArrozState(estadoNuevo);} //preciento que si se hecha la ralladura y la leche en desorden, esto creara problemas
     }
 }

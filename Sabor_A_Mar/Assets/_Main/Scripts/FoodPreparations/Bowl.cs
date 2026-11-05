@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Bowl : MonoBehaviour
@@ -6,6 +7,8 @@ public class Bowl : MonoBehaviour
     private Arroz_Coco.ArrozState currentState;
 
     public Arroz_Coco arroz_Coco;
+
+    public GameObject LecheEnElPlato;
 
     //pa saber si la leche fue servida
     public bool lecheServida = false;
@@ -29,21 +32,34 @@ public class Bowl : MonoBehaviour
             LecheSiendoServida();
         } 
     }
-    private void EfectoLecheEnBowl() 
-    {
-        //Poner VFX
+    private IEnumerator EfectoLecheEnBowl() 
+    { 
+        float elapsedTime = 0f;
+        while (elapsedTime < 2f)
+        {
+            elapsedTime += Time.deltaTime;
+            //Poner VFX
+            yield return null;
+        }
+        if (LecheEnElPlato != null)
+        {
+            LecheEnElPlato.SetActive(true);
+        }
     }
     private void LecheSiendoServida() 
     {
-        if (collisionTag == "Coco")
+        if (LecheServida)
+            return;
+
+        if (collisionTag == "Coco" &&
+        (currentState == Arroz_Coco.ArrozState.CocoPartido ||
+         currentState == Arroz_Coco.ArrozState.CocoRallado))
         {
-            if (currentState == Arroz_Coco.ArrozState.CocoPartido || currentState == Arroz_Coco.ArrozState.CocoRallado) 
-            {
-                LecheServida = true;
-                Debug.LogWarning("Leche fue servida en el bowl");
-                this.gameObject.tag = "BowlConLeche";
-                EfectoLecheEnBowl();
-            }  
+            LecheServida = true;
+            Debug.LogWarning("Leche fue servida en el bowl");
+            gameObject.tag = "BowlConLeche";
+
+            StartCoroutine(EfectoLecheEnBowl());
         }
     }
     public bool LecheServida
