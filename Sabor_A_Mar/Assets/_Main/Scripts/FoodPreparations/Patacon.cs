@@ -40,7 +40,7 @@ public class Patacon : MonoBehaviour
 
     private void Start()
     {
-        //currentPataconState = PataconState.Verde;
+        currentPataconState = PataconState.Verde;
         SetPataconState(currentPataconState);
         OnPreparacionPatacon?.Invoke(true, this.gameObject);
     }

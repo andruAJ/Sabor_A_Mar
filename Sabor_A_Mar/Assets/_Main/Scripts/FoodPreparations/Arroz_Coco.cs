@@ -1,9 +1,5 @@
-using System;
 using System.Collections;
-using Unity.VisualScripting;
-using Unity.XR.CoreUtils;
 using UnityEngine;
-using UnityEngine.Animations;
 
 public class Arroz_Coco : MonoBehaviour
 {
@@ -53,6 +49,7 @@ public class Arroz_Coco : MonoBehaviour
                     Debug.LogWarning("Golpe con rallador");
                     if (encimaDeOlla) 
                     {
+                        //Aquí deja el coco rallado pero falta que se agregue la leche al bowl
                         //efectos visuales y cambia de estado
                         SetArrozState(ArrozState.CocoRallado);
                     }
@@ -84,13 +81,14 @@ public class Arroz_Coco : MonoBehaviour
                 
                 break;
             case ArrozState.ArrozAgregado:
-                pasos[4].SetActive(true);
+                TurnOffAllHijosExcept(pasos[4]);
+                pasos[1].SetActive(true);
                 break;
             case ArrozState.Agua_SalAgregados:
                 
                 break;
             case ArrozState.ArrozCocido:
-                TurnOffAllHijosExcept(pasos[7]);
+                TurnOffAllHijosExcept(pasos[6]);
                 pasos[1].SetActive(true);
                 break;
             case ArrozState.ArrozListo:

@@ -1,8 +1,4 @@
-using System;
-using System.Collections;
-using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.Animations;
 
 public class Bowl : MonoBehaviour
 {
