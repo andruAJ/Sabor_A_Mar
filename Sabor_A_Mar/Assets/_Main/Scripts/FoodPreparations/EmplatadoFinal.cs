@@ -6,7 +6,7 @@ using UnityEngine.Animations;
 public class EmplatadoFinal : MonoBehaviour
 {
     //Evento
-    public static event Action <String> ComidaEnPlato;
+    public static event Action <GameObject, String> ComidaEnPlato;
 
     public Transform pescadoPosition;
     public Transform pataconPosition;
@@ -26,11 +26,12 @@ public class EmplatadoFinal : MonoBehaviour
         {
             string comidaEmplatada = other.gameObject.tag.ToString();
             AcoplarComida(other.gameObject, comidaEmplatada);
-            ComidaEnPlato?.Invoke(comidaEmplatada);
+            ComidaEnPlato?.Invoke(other.gameObject, comidaEmplatada);
         }
     }
     public void AcoplarComida(GameObject comida, string tipo) 
     {
+
         switch (tipo)
         {
             case "Pescado":

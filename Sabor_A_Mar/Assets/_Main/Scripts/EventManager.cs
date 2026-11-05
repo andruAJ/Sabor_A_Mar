@@ -10,6 +10,9 @@ public class EventManager : MonoBehaviour
     public Arroz_Coco arrozScript;  // estoy poniendo esta referencia desde el interactable del coco pero si hay varios cocos, habrá problema porque solo hace referencia a uno específico manualmente
     public ToggleInteractions toggleInteractions;
 
+    public Enable_Preparaciones enablePreparaciones_Sarten;
+    public Enable_Preparaciones enablePreparaciones_Tabla;
+
     void Awake()
     {
         FoodGrabbed.OnFoodGrabbed += OnFoodGrabbed;
@@ -54,6 +57,7 @@ public class EventManager : MonoBehaviour
                 {
                     if (pataconScript.enabled == false)
                     {
+                        Debug.LogWarning("Patacon script was disabled, enabling it now.");
                         pataconScript.enabled = true;
                     }
                 }
@@ -108,9 +112,16 @@ public class EventManager : MonoBehaviour
     {
         uiManager.ChangeInvButtonTexture(quantity);
     }
-    public void Emplatado(string comidaAEmplatar)
+    //CREO QUE ESTA SIGUIENTE FUNCIÓN NO SE NECESITA
+    public void ActivarCollidersElementosCocina()
     {
-        switch(comidaAEmplatar)
+        enablePreparaciones_Sarten.ActivarCollider();
+        enablePreparaciones_Tabla.ActivarCollider();
+    }
+    public void Emplatado(GameObject comida, string comidaAEmplatar)
+    {
+        ToggleInteractions(false, comida);
+        switch (comidaAEmplatar)
         {
             case "Pescado":
                 Debug.LogWarning("Pescado emplatado");

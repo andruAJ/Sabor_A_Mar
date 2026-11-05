@@ -12,7 +12,8 @@ public class Enable_Preparaciones : MonoBehaviour
     {
         
         if (other.gameObject.CompareTag("Pescado") || other.gameObject.CompareTag("Platano"))
-        {  
+        {
+            Debug.LogWarning("Hizo colisión con el sartén");
             other.gameObject.TryGetComponent<Patacon>(out Patacon pataconScript);
             other.gameObject.TryGetComponent<Pescado>(out Pescado pescadoScript);
             bool pataconDisponibleTabla = pataconScript != null && pataconScript.CurrentState != Patacon.PataconState.Cortado && pataconScript.CurrentState != Patacon.PataconState.Dorado && pataconScript.CurrentState != Patacon.PataconState.Aplastado && pataconScript.CurrentState != Patacon.PataconState.Frito;      
@@ -20,7 +21,7 @@ public class Enable_Preparaciones : MonoBehaviour
             bool pataconDisponibleSarten = pataconScript != null && pataconScript.CurrentState != Patacon.PataconState.Verde && pataconScript.CurrentState != Patacon.PataconState.Pelado && pataconScript.CurrentState != Patacon.PataconState.Dorado && pataconScript.CurrentState != Patacon.PataconState.Frito;
             bool pescadoDisponibleSarten = pescadoScript != null && pescadoScript.CurrentState == Pescado.PescadoState.Cortado;
             other.gameObject.TryGetComponent<PositionConstraint>(out PositionConstraint positionConstraint);
-            this.gameObject.GetComponent<SphereCollider>().enabled = false;
+            //this.gameObject.GetComponent<SphereCollider>().enabled = false;
             if (positionConstraint != null)
             {
                 positionConstraint.enabled = true;
@@ -32,11 +33,12 @@ public class Enable_Preparaciones : MonoBehaviour
                 switch (this.gameObject.tag)
                 {
                     case "Tabla":
+                        Debug.LogWarning("OnTablaCollided invoked");
                         OnTablaCollided?.Invoke(other);
                         break;
                     case "Sarten": 
                         positionConstraint.enabled = false;
-                        this.gameObject.GetComponent<SphereCollider>().enabled = true;
+                        //this.gameObject.GetComponent<SphereCollider>().enabled = true;
                         break;
                 }
             }
@@ -46,9 +48,10 @@ public class Enable_Preparaciones : MonoBehaviour
                 {
                     case "Tabla":
                         positionConstraint.enabled = false;
-                        this.gameObject.GetComponent<SphereCollider>().enabled = true;
+                        //this.gameObject.GetComponent<SphereCollider>().enabled = true;
                         break;
                     case "Sarten":
+                        Debug.LogWarning("OnSartenCollided invoked");
                         OnSartenCollided?.Invoke(other);
                         break;
                 }
@@ -56,7 +59,7 @@ public class Enable_Preparaciones : MonoBehaviour
             else //necesario si el patacón está dorado o frito
             {
                 positionConstraint.enabled = false;
-                this.gameObject.GetComponent<SphereCollider>().enabled = true;
+                //this.gameObject.GetComponent<SphereCollider>().enabled = true;
             }
         }     
     }

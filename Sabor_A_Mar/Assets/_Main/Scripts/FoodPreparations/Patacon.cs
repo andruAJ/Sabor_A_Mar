@@ -40,19 +40,19 @@ public class Patacon : MonoBehaviour
 
     private void Start()
     {
-        currentPataconState = PataconState.Aplastado;
+        //currentPataconState = PataconState.Verde;
         SetPataconState(currentPataconState);
-        OnPreparacionPatacon?.Invoke(false, this.gameObject);
+        OnPreparacionPatacon?.Invoke(true, this.gameObject);
     }
     private void OnTriggerEnter(Collider other) 
     {
-        Debug.LogWarning("Patacon collisioned con: " + other.gameObject.name);
         string collisionTag = other.gameObject.tag;
         switch (collisionTag)
         {
             case "Hand":
                 if (currentPataconState == PataconState.Verde)
                 {
+                    //aquí tal vez debería hacer que el platano confirme si está en la tabla o casa porque de momento se pela ahí mismo
                     SetPataconState(PataconState.Pelado);
                 }
                 break;
@@ -63,7 +63,6 @@ public class Patacon : MonoBehaviour
                 }
                 break;
             case "Pataconera":
-                Debug.LogWarning("patacon colisionó con pataconera");
                 if (currentPataconState == PataconState.Dorado)
                 {
                     SetPataconState(PataconState.Aplastado);
@@ -93,6 +92,7 @@ public class Patacon : MonoBehaviour
                 TurnOffAllHijosExcept(platano);
                 ChangeMesh(platanoMeshFilter, platano_Cortado);
                 this.gameObject.GetComponent<PositionConstraint>().enabled = false;
+                OnPreparacionPatacon?.Invoke(true, this.gameObject);
                 break;
             case PataconState.Dorado:
                 TurnOffAllHijosExcept(platano_Cortado_Dorado);
@@ -132,7 +132,6 @@ public class Patacon : MonoBehaviour
         if (meshFilter != null && newMesh != null)
         {
             meshFilter.mesh = newMesh;
-            Debug.LogWarning("Mesh changed to: " + newMesh.name);
         }
     }
     public IEnumerator Fritura()
