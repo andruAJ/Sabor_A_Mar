@@ -31,7 +31,7 @@ public class SoundManager: MonoBehaviour
 		instance.audioSource.PlayOneShot(randomClip, volume);
 	}
 
-#if UNITY_EDITOR
+ #if UNITY_EDITOR
 	private void OnEnable() 
 	{
 		string[] names = Enum.GetNames(typeof(SoundType));
@@ -41,8 +41,9 @@ public class SoundManager: MonoBehaviour
 			soundList[i].name = names[i];
 		}
 	}
-}
 #endif
+}
+
 [Serializable]
 public struct SoundList 
 {

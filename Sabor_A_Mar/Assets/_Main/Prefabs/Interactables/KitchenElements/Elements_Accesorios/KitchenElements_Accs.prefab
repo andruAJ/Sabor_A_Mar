@@ -139,6 +139,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8376968521834693217}
     m_Modifications:
+    - target: {fileID: 2818459566026401429, guid: e45d00d89cb626543bfe5741ede57a99, type: 3}
+      propertyPath: _handAligment
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2879694809771389964, guid: e45d00d89cb626543bfe5741ede57a99, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7071068
@@ -319,6 +323,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 976782743195582228, guid: 9f93921fbf32b6e409e682dbb983237e, type: 3}
+      propertyPath: _handAligment
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1734815458521762213, guid: 9f93921fbf32b6e409e682dbb983237e, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.12
@@ -411,6 +419,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 5603289644577817625, guid: 9f93921fbf32b6e409e682dbb983237e, type: 3}
+      propertyPath: _movementProvider
+      value: 
+      objectReference: {fileID: 119900220804138147}
     - target: {fileID: 7206620809892316381, guid: 9f93921fbf32b6e409e682dbb983237e, type: 3}
       propertyPath: m_Name
       value: base rallador
@@ -549,7 +561,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 771970372265992543, guid: d8b61a31db2eaa048aae76659e3d101b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.599
+      value: -1.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 771970372265992543, guid: d8b61a31db2eaa048aae76659e3d101b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 771970372265992543, guid: d8b61a31db2eaa048aae76659e3d101b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 771970372265992543, guid: d8b61a31db2eaa048aae76659e3d101b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 771970372265992543, guid: d8b61a31db2eaa048aae76659e3d101b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 771970372265992543, guid: d8b61a31db2eaa048aae76659e3d101b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 3800349149828493581, guid: d8b61a31db2eaa048aae76659e3d101b, type: 3}
       propertyPath: m_LocalScale.x
@@ -601,6 +633,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3800349149828493581, guid: d8b61a31db2eaa048aae76659e3d101b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872237609356388859, guid: d8b61a31db2eaa048aae76659e3d101b, type: 3}
+      propertyPath: _handAligment
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6419513418089186840, guid: d8b61a31db2eaa048aae76659e3d101b, type: 3}
@@ -1071,6 +1107,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4627005235536940735, guid: 82d720ca65d976749ba5bd69b52d2e4b, type: 3}
+      propertyPath: _movementProvider
+      value: 
+      objectReference: {fileID: 794855892705944671}
     - target: {fileID: 7104466894131853211, guid: 82d720ca65d976749ba5bd69b52d2e4b, type: 3}
       propertyPath: m_Name
       value: Descamador
