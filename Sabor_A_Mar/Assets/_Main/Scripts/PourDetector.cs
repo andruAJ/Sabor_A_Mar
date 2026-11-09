@@ -2,7 +2,11 @@ using UnityEngine;
 
 public class PourDetector : MonoBehaviour
 {
-    public int pourTreshold = 45;
+    //public int pourTreshold = 45;
+
+    [SerializeField] private float startPourThreshold = 45f;
+    [SerializeField] private float stopPourThreshold = 179f;
+
     public Transform origin = null;
     public GameObject streamPrefab = null;
 
@@ -16,7 +20,7 @@ public class PourDetector : MonoBehaviour
         if (origin == null || streamPrefab == null)
             return;
 
-        bool pourDetected = CalculatePourAngle() < pourTreshold;
+        bool pourDetected = CalculatePourAngle() < startPourThreshold;
 
         if (isPouring != pourDetected)
         {
@@ -26,7 +30,7 @@ public class PourDetector : MonoBehaviour
                 Debug.LogWarning("Inicio de vertido");
                 StartPour();
             }
-            else
+            else if (CalculatePourAngle() > stopPourThreshold)
             {
                 Debug.LogWarning("Fin de vertido");
                 isPouring = false;
