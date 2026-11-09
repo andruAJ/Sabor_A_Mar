@@ -14,6 +14,10 @@ GameObject:
   - component: {fileID: 1518620307974301852}
   - component: {fileID: 9209013274846957624}
   - component: {fileID: 4596781614323697576}
+  - component: {fileID: 328013822115267208}
+  - component: {fileID: 3091308653956534752}
+  - component: {fileID: 5511913973960529547}
+  - component: {fileID: 5499823275406614746}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -48,6 +52,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4227f92c53b885c4b9f1ab42d76062ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  pescadoEmplatado: 0
+  pataconesEmplatados: 0
+  arrozEmplatado: 0
 --- !u!114 &1775625922605993846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,8 +67,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c3e67d52457e08449b0662f31c2023d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Inventory
-  inventorySpawnPoint: {fileID: 0}
   maxInventorySize: 3
+  inventorySpawnPoint: {fileID: 0}
   platanoAgarrado: 0
   cocoAgarrado: 0
   pescadoAgarrado: 0
@@ -77,8 +84,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333f6f28ba8ab2f448ea1e76be762a10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EventManager
+  gameManager: {fileID: 1138596922475432033}
   uiManager: {fileID: 9209013274846957624}
   pescadoScript: {fileID: 0}
+  pataconScript: {fileID: 0}
+  arrozScript: {fileID: 0}
+  toggleInteractions: {fileID: 328013822115267208}
+  enablePreparaciones_Sarten: {fileID: 0}
+  enablePreparaciones_Tabla: {fileID: 0}
 --- !u!114 &9209013274846957624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,3 +161,162 @@ MonoBehaviour:
   m_DefaultActionMap: PrototypeButtons
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &328013822115267208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7165781367132025492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a16937bbf4b6c4e498d0ae1096ef61fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ToggleInteractions
+--- !u!114 &3091308653956534752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7165781367132025492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76ce0437e3f8a164c87e79382a2547df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VFX_Manager
+  vfxObjects:
+  - name: Interactable
+    effect: {fileID: 0}
+  - name: Agua
+    effect: {fileID: 0}
+  - name: Leche
+    effect: {fileID: 0}
+  - name: Arroz
+    effect: {fileID: 0}
+  - name: Salero
+    effect: {fileID: 0}
+  - name: Ralladura
+    effect: {fileID: 0}
+  - name: Aceite
+    effect: {fileID: 0}
+  - name: Escamas
+    effect: {fileID: 0}
+--- !u!82 &5511913973960529547
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7165781367132025492}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &5499823275406614746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7165781367132025492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b52ee9fd0b5a0440881c5f5e4ea6de4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SoundManager
+  soundList:
+  - name: MAR
+    sounds: []
+  - name: ACEITE
+    sounds: []
+  - name: PISADAS
+    sounds: []
+  - name: SELVA
+    sounds: []

@@ -10,19 +10,35 @@ public enum VFXType
     Arroz,
     Salero,
     Ralladura,
-    Aceite
+    Aceite,
+    Escamas
 }
 [ExecuteInEditMode]
 public class VFX_Manager : MonoBehaviour
 {
+    public static VFX_Manager Instance { get; private set; }
     public VFXList[] vfxObjects;
 
-    public void PrenderEfecto(VFXType efecto) 
+    private void Awake()
+    {
+        Instance = this;
+    }
+
+    public void PrenderEfecto(VFXType efecto, bool deseamover, Transform targetTransform)
     {
         GameObject effect = vfxObjects[(int)efecto].Effect;
+        if(deseamover)
+        {
+            MoverEfecto(effect, targetTransform);
+        }
         effect.SetActive(true);
+        
     }
-    public IEnumerator ApagarEfecto(VFXType efecto)
+    public void MoverEfecto(GameObject efecto, Transform targetTransform)
+    {
+        efecto.transform.position = targetTransform.position;
+    }
+    public IEnumerator ApagarEfecto(VFXType efecto, float time)
     {
         GameObject effect = vfxObjects[(int)efecto].Effect;
         ParticleSystem childrenPS = effect.GetComponentInChildren<ParticleSystem>();
@@ -35,10 +51,10 @@ public class VFX_Manager : MonoBehaviour
         float startAlpha = startColor.a;
 
         float elapsedTime = 0f;
-        while (elapsedTime < 3f)
+        while (elapsedTime < time)
         {
             elapsedTime += Time.deltaTime;
-            float progress = Mathf.Clamp01(elapsedTime/ 3f);
+            float progress = Mathf.Clamp01(elapsedTime/ time);
             Color currentColor = startColor;
             currentColor.a = Mathf.Lerp(startAlpha, 0f, progress);
             mainModule.startColor = currentColor;

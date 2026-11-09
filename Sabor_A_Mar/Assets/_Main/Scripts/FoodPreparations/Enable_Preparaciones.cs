@@ -53,6 +53,7 @@ public class Enable_Preparaciones : MonoBehaviour
                     case "Sarten":
                         Debug.LogWarning("OnSartenCollided invoked");
                         OnSartenCollided?.Invoke(other);
+                        VFX_Manager.Instance.PrenderEfecto(VFXType.Aceite, false, this.transform);
                         break;
                 }
             }
