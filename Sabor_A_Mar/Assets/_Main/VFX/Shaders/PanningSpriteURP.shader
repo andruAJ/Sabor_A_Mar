@@ -36,6 +36,7 @@ Shader "Custom/PanningSpriteURP"
             float4 positionOS : POSITION;
             float2 uv : TEXCOORD0;
             half4 color : COLOR;
+            UNITY_VERTEX_INPUT_INSTANCE_ID
         };
 
         struct Varyings
@@ -43,6 +44,7 @@ Shader "Custom/PanningSpriteURP"
             float4 positionHCS : SV_POSITION;
             float2 uv : TEXCOORD0;
             half4 color : COLOR;
+            UNITY_VERTEX_OUTPUT_STEREO
         };
 
         TEXTURE2D(_MainTex); SAMPLER(sampler_MainTex);
@@ -56,6 +58,8 @@ Shader "Custom/PanningSpriteURP"
         Varyings vert(Attributes IN)
         {
             Varyings OUT;
+            UNITY_SETUP_INSTANCE_ID(IN);
+            UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(OUT);
             OUT.positionHCS = TransformObjectToHClip(IN.positionOS.xyz);
             OUT.uv = TRANSFORM_TEX(IN.uv, _MainTex);
             OUT.color = IN.color * _Color;
@@ -64,6 +68,7 @@ Shader "Custom/PanningSpriteURP"
 
         half4 frag(Varyings IN) : SV_Target
         {
+            UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(IN);
             float2 uv = IN.uv;
             uv.x -= _Time.y * _Speed;
             half4 c = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, uv) * IN.color;
@@ -79,6 +84,7 @@ Shader "Custom/PanningSpriteURP"
             HLSLPROGRAM
             #pragma vertex vert
             #pragma fragment frag
+            #pragma multi_compile_instancing
             ENDHLSL
         }
 
@@ -89,6 +95,7 @@ Shader "Custom/PanningSpriteURP"
             HLSLPROGRAM
             #pragma vertex vert
             #pragma fragment frag
+            #pragma multi_compile_instancing
             ENDHLSL
         }
     }

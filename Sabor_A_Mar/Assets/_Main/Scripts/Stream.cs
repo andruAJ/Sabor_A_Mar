@@ -60,8 +60,8 @@ public class Stream : MonoBehaviour
     {
         RaycastHit hit;
         Ray ray = new Ray(transform.position, Vector3.down);
-        Physics.Raycast(ray, out hit, 2.0f);
-        Vector3 endPoint = hit.collider ? hit.point : ray.GetPoint(2.0f);
+        Physics.Raycast(ray, out hit, 10f);
+        Vector3 endPoint = hit.collider ? hit.point : ray.GetPoint(10f);
         return endPoint;
     }
     private void MoveToPosition(int index, Vector3 targetPosition) 

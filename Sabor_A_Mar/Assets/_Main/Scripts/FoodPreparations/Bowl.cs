@@ -56,6 +56,7 @@ public class Bowl : MonoBehaviour
          currentState == Arroz_Coco.ArrozState.CocoRallado))
         {
             LecheServida = true;
+            arroz_Coco.gameObject.GetComponent<PourDetector>().enabled = false;
             Debug.LogWarning("Leche fue servida en el bowl");
             gameObject.tag = "BowlConLeche";
 

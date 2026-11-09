@@ -73,6 +73,8 @@ public class Arroz_Coco : MonoBehaviour
                 break;
             case ArrozState.CocoPartido:
                 TurnOffAllHijosExcept(pasos[1]);
+                PourDetector pourDetector = GetComponent<PourDetector>();
+                pourDetector.enabled = true;
                 break;
             case ArrozState.CocoRallado:
                 pasos[2].SetActive(true);

@@ -30,7 +30,8 @@ public class Olla : MonoBehaviour
         currentState = arroz_Coco.CurrentState;
         lecheServida = false;
         if (other.gameObject.tag == "TapaOlla" && currentState == Arroz_Coco.ArrozState.ArrozCocido) { StartCoroutine(Coccion());}
-        
+        Debug.LogWarning("Colisión con la olla: " + other.gameObject.name + " con tag: " + other.gameObject.tag);
+
     }
     private void OnTriggerStay(Collider other) 
     {

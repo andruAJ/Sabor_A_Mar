@@ -106,6 +106,7 @@ public class Pescado : MonoBehaviour
                 this.gameObject.GetComponent<PositionConstraint>().enabled = false;
                 OnPreparacionPescado?.Invoke(true, this.gameObject);
                 BlendTextures(1f);
+                VFX_Manager.Instance.StartCoroutine(VFX_Manager.Instance.ApagarEfecto(VFXType.Aceite, 3f));
                 break;
         }
         Debug.LogWarning("Estado del pescado cambiado a: " + currentState.ToString());

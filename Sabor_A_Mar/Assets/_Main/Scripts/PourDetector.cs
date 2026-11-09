@@ -7,6 +7,8 @@ public class PourDetector : MonoBehaviour
     public GameObject streamPrefab = null;
 
     private bool isPouring = false;
+
+    private bool isEnding = false;
     private Stream currentStream = null;
 
     private void Update()
@@ -21,21 +23,31 @@ public class PourDetector : MonoBehaviour
             isPouring = pourDetected;
             if (isPouring)
             {
+                Debug.LogWarning("Inicio de vertido");
                 StartPour();
             }
             else
             {
+                Debug.LogWarning("Fin de vertido");
+                isPouring = false;
                 EndPour();
             }
         }    
     }
     private void StartPour()
     {
+        if (currentStream != null || isEnding)
+            return;
+
         currentStream = CreateStream();
         currentStream.Begin();
     }
     private void EndPour()
     {
+        if (currentStream == null)
+            return;
+
+        isEnding = true;
         currentStream.End();
         currentStream = null;
     }

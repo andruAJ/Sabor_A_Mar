@@ -97,6 +97,7 @@ public class Patacon : MonoBehaviour
             case PataconState.Dorado:
                 TurnOffAllHijosExcept(platano_Cortado_Dorado);
                 this.gameObject.GetComponent<PositionConstraint>().enabled = false;
+                VFX_Manager.Instance.StartCoroutine(VFX_Manager.Instance.ApagarEfecto(VFXType.Aceite, 3f));
                 break;
             case PataconState.Aplastado:
                 TurnOffAllHijosExcept(pataconCrudo);
@@ -109,6 +110,7 @@ public class Patacon : MonoBehaviour
                 ChangeMesh(patacon2Hijo2MeshFilter, patacon_Frito2);
                 OnPreparacionPatacon?.Invoke(true, this.gameObject);
                 this.gameObject.GetComponent<PositionConstraint>().enabled = false;
+                VFX_Manager.Instance.StartCoroutine(VFX_Manager.Instance.ApagarEfecto(VFXType.Aceite, 3f));
                 break;
         }
 
