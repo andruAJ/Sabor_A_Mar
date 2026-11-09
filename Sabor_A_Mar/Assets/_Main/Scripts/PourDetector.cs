@@ -27,12 +27,10 @@ public class PourDetector : MonoBehaviour
             isPouring = pourDetected;
             if (isPouring)
             {
-                Debug.LogWarning("Inicio de vertido");
                 StartPour();
             }
             else if (CalculatePourAngle() > stopPourThreshold)
             {
-                Debug.LogWarning("Fin de vertido");
                 isPouring = false;
                 EndPour();
             }

@@ -48,6 +48,8 @@ TagManager:
   - TapaOlla
   - ArrozCoco
   - Arroz
+  - Agua
+  - Salero
   layers:
   - Default
   - TransparentFX
