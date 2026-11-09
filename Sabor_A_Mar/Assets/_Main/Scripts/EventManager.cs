@@ -56,7 +56,6 @@ public class EventManager : MonoBehaviour
                 {
                     if (pataconScript.enabled == false)
                     {
-                        Debug.LogWarning("Patacon script was disabled, enabling it now.");
                         pataconScript.enabled = true;
                     }
                 }
@@ -71,7 +70,6 @@ public class EventManager : MonoBehaviour
         switch (other.gameObject.tag)
         {
             case "Pescado":
-                Debug.LogWarning("Case Pescado en PreparacionSarten");
                 pescadoScript = other.gameObject.GetComponent<Pescado>();
                 if (pescadoScript != null)
                 {
@@ -79,7 +77,6 @@ public class EventManager : MonoBehaviour
                     {
                         pescadoScript.enabled = true;
                     }
-                    Debug.LogWarning("Entro a la PreparacionSarten auqneu no creo posible");
                     ToggleInteractions(false, other.gameObject);
                     StartCoroutine(pescadoScript.Fritura());
                 }

@@ -56,6 +56,7 @@ public class Arroz_Coco : MonoBehaviour
                     else 
                     {
                         //efectos visuales pero no cambia de estado
+                        Debug.LogWarning("Coco rallado pero no encima de la olla");
                     } 
                 }   
                 break;

@@ -8,7 +8,7 @@ public class Bowl : MonoBehaviour
 
     public Arroz_Coco arroz_Coco;
 
-    public GameObject LecheEnElPlato;
+    public GameObject lecheEnElPlato;
 
     //pa saber si la leche fue servida
     public bool lecheServida = false;
@@ -37,13 +37,10 @@ public class Bowl : MonoBehaviour
         float elapsedTime = 0f;
         while (elapsedTime < 2f)
         {
+            lecheEnElPlato.SetActive(true);
             elapsedTime += Time.deltaTime;
-            //Poner VFX
+            lecheEnElPlato.transform.Translate(Vector3.up * Time.deltaTime * 0.02f);
             yield return null;
-        }
-        if (LecheEnElPlato != null)
-        {
-            LecheEnElPlato.SetActive(true);
         }
     }
     private void LecheSiendoServida() 
@@ -57,7 +54,6 @@ public class Bowl : MonoBehaviour
         {
             LecheServida = true;
             arroz_Coco.gameObject.GetComponent<PourDetector>().enabled = false;
-            Debug.LogWarning("Leche fue servida en el bowl");
             gameObject.tag = "BowlConLeche";
 
             StartCoroutine(EfectoLecheEnBowl());

@@ -30,8 +30,6 @@ public class Olla : MonoBehaviour
         currentState = arroz_Coco.CurrentState;
         lecheServida = false;
         if (other.gameObject.tag == "TapaOlla" && currentState == Arroz_Coco.ArrozState.ArrozCocido) { StartCoroutine(Coccion());}
-        Debug.LogWarning("Colisión con la olla: " + other.gameObject.name + " con tag: " + other.gameObject.tag);
-
     }
     private void OnTriggerStay(Collider other) 
     {
@@ -45,7 +43,6 @@ public class Olla : MonoBehaviour
         float delta = Mathf.DeltaAngle(0, maxValue);
         if (Mathf.Abs(delta) > 90f && Mathf.Abs(delta) < 270f)
         {
-            Debug.LogWarning("El ángulo del objeto es correcto");
             switch (collisionTag)
             {
                 case "BowlConLeche":
@@ -78,6 +75,7 @@ public class Olla : MonoBehaviour
         } 
         if(collisionTag == "Coco")
         {
+            Debug.LogWarning("Coco encima de la olla");
             cocoEncimaDeOlla?.Invoke(true);
         }  
     }
@@ -98,13 +96,14 @@ public class Olla : MonoBehaviour
         while (elapsedTime < 5f)
         {
             elapsedTime += Time.deltaTime;
-            if (leche.gameObject.activeInHierarchy) {leche.transform.Translate(Vector3.down * Time.deltaTime * 0.022f); }  //el 0.022f es el resultado de dividir la distancia a recorrer (0.11) entre el tiempo que dura la cocción (5s)
+            if (leche.gameObject.activeInHierarchy) {leche.transform.Translate(Vector3.down * Time.deltaTime * 0.0028f); }  //el 0.022f es el resultado de dividir la distancia a recorrer (0.11) entre el tiempo que dura la cocción (5s)
             yield return null;
         }
         if (elapsedTime >= 5f)
         {
             lecheCocinada = lecheServida;
             arrozCocinado = arrozServido;
+            Debug.LogWarning("Aquí hay problema con los booleanos");
             if (lecheCocinada) {leche.SetActive(false); PasoActual?.Invoke(Arroz_Coco.ArrozState.LecheHervida);}
             else if (arrozCocinado) { PasoActual?.Invoke(Arroz_Coco.ArrozState.ArrozCocido); }
             else { PasoActual?.Invoke(Arroz_Coco.ArrozState.ArrozListo); } //tengo sospecha que este else puede dar a casos donde no se aplicarian, para solucionarlo debería de poner el condicional que sólo sea con el current state arroz cocido
