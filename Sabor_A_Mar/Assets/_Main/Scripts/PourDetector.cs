@@ -31,11 +31,13 @@ public class PourDetector : MonoBehaviour
     }
     private void StartPour()
     {
-        
+        currentStream = CreateStream();
+        currentStream.Begin();
     }
     private void EndPour()
     {
-        
+        currentStream.End();
+        currentStream = null;
     }
     private float CalculatePourAngle()
     {
