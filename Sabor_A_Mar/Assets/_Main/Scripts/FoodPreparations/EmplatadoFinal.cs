@@ -14,17 +14,24 @@ public class EmplatadoFinal : MonoBehaviour
     {
         other.TryGetComponent<Pescado>(out Pescado pescado);
         other.TryGetComponent<Patacon>(out Patacon patacon);
-        other.TryGetComponent<Arroz_Coco>(out Arroz_Coco arroz);
+        other.TryGetComponent<Bowl>(out Bowl arroz);
 
         bool pescadoListo = pescado != null && pescado.CurrentState == Pescado.PescadoState.Frito;
         bool pataconListo = patacon != null && patacon.CurrentState == Patacon.PataconState.Frito;
-        bool arrozListo = arroz != null && arroz.CurrentState == Arroz_Coco.ArrozState.ArrozListo;
-
-        if (pescadoListo || pataconListo || arrozListo)
+        bool arrozListo = arroz != null && arroz.arrozServido;
+        if (arrozListo) 
         {
-            string comidaEmplatada = other.gameObject.tag.ToString();
+            string comidaEmplatada = "Arroz";
             AcoplarComida(other.gameObject, comidaEmplatada);
             ComidaEnPlato?.Invoke(other.gameObject, comidaEmplatada);
+        }
+        else if (pescadoListo || pataconListo)
+        {
+            string comidaEmplatada = other.gameObject.tag.ToString();
+            GameObject Plato = other.transform.GetChild(0).gameObject;
+            GameObject arrozEnBowl = Plato.transform.GetChild(1).gameObject;
+            AcoplarComida(arrozEnBowl, comidaEmplatada);
+            ComidaEnPlato?.Invoke(arrozEnBowl, comidaEmplatada);
         }
     }
     public void AcoplarComida(GameObject comida, string tipo) 

@@ -9,29 +9,21 @@ public class Bowl : MonoBehaviour
     public Arroz_Coco arroz_Coco;
 
     public GameObject lecheEnElPlato;
+    public GameObject arrozListo;
 
     //pa saber si la leche fue servida
     public bool lecheServida = false;
+    public bool arrozServido = false;
     private string collisionTag;
     private void OnTriggerEnter(Collider other)
     {
         collisionTag = other.gameObject.tag;
-        currentState = arroz_Coco.CurrentState;      
+        currentState = arroz_Coco.CurrentState;
+        if (collisionTag == "Coco") { LecheSiendoServida(); }
+        else if (collisionTag == "Olla" && currentState == Arroz_Coco.ArrozState.ArrozListo) {arrozListo.SetActive(true); arrozServido = true; }
+        else if (collisionTag == "Plato" && arrozServido) { }
     }
-    private void OnTriggerStay(Collider other) 
-    {
-        var rot = other.transform.localEulerAngles;
-        float x = rot.x % 360;
-        float z = rot.z % 360;
-
-        bool xIsMax = Mathf.Abs(x) > Mathf.Abs(z);
-        float maxValue = xIsMax ? x : z;
-        float delta = Mathf.DeltaAngle(0, maxValue);
-        if (Mathf.Abs(delta) > 90f && Mathf.Abs(delta) < 270f)
-        {
-            LecheSiendoServida();
-        } 
-    }
+ 
     private IEnumerator EfectoLecheEnBowl() 
     { 
         float elapsedTime = 0f;
@@ -48,9 +40,7 @@ public class Bowl : MonoBehaviour
         if (LecheServida)
             return;
 
-        if (collisionTag == "Coco" &&
-        (currentState == Arroz_Coco.ArrozState.CocoPartido ||
-         currentState == Arroz_Coco.ArrozState.CocoRallado))
+        if (currentState == Arroz_Coco.ArrozState.CocoPartido || currentState == Arroz_Coco.ArrozState.CocoRallado)
         {
             LecheServida = true;
             arroz_Coco.gameObject.GetComponent<PourDetector>().enabled = false;
@@ -65,6 +55,14 @@ public class Bowl : MonoBehaviour
         private set
         {
             lecheServida = value;
+        }
+    }
+    public bool ArrozServido
+    {
+        get => arrozServido;
+        private set
+        {
+            arrozServido = value;
         }
     }
 }

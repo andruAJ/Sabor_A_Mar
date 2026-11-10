@@ -116,7 +116,6 @@ public class EventManager : MonoBehaviour
     }
     public void Emplatado(GameObject comida, string comidaAEmplatar)
     {
-        ToggleInteractions(false, comida);
         switch (comidaAEmplatar)
         {
             case "Pescado":
@@ -124,12 +123,14 @@ public class EventManager : MonoBehaviour
                 gameManager.PescadoEmplatado = true;
                 //audio diciendo que se puso el pescado
                 gameManager.FinalExperiencia();
+                ToggleInteractions(false, comida);
                 break;
             case "Platano":
                 Debug.LogWarning("Patacones emplatados");
                 gameManager.PataconesEmplatados = true;
                 //audio diciendo que se pusieron los patacones
                 gameManager.FinalExperiencia();
+                ToggleInteractions(false, comida);
                 break;
             case "Coco":
                 Debug.LogWarning("Arroz emplatado");
