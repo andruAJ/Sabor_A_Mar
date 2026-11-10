@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class EmplatadoFinal : MonoBehaviour
 {
@@ -22,16 +23,17 @@ public class EmplatadoFinal : MonoBehaviour
         if (arrozListo) 
         {
             string comidaEmplatada = "Arroz";
-            AcoplarComida(other.gameObject, comidaEmplatada);
-            ComidaEnPlato?.Invoke(other.gameObject, comidaEmplatada);
-        }
-        else if (pescadoListo || pataconListo)
-        {
-            string comidaEmplatada = other.gameObject.tag.ToString();
             GameObject Plato = other.transform.GetChild(0).gameObject;
             GameObject arrozEnBowl = Plato.transform.GetChild(1).gameObject;
             AcoplarComida(arrozEnBowl, comidaEmplatada);
             ComidaEnPlato?.Invoke(arrozEnBowl, comidaEmplatada);
+            
+        }
+        else if (pescadoListo || pataconListo)
+        {
+            string comidaEmplatada = other.gameObject.tag.ToString();
+            AcoplarComida(other.gameObject, comidaEmplatada);
+            ComidaEnPlato?.Invoke(other.gameObject, comidaEmplatada);
         }
     }
     public void AcoplarComida(GameObject comida, string tipo) 
@@ -47,9 +49,15 @@ public class EmplatadoFinal : MonoBehaviour
                 comida.transform.position = pataconPosition.position;
                 comida.transform.rotation = pataconPosition.rotation;
                 break;
-            case "Coco":
+            case "Arroz":
                 comida.transform.position = arrozPosition.position;
                 comida.transform.rotation = arrozPosition.rotation;
+                comida.TryGetComponent<PositionConstraint>(out PositionConstraint constraint);
+                constraint.enabled = true;
+                constraint.SetSource(0, new ConstraintSource { sourceTransform = arrozPosition, weight = 1 });
+                comida.TryGetComponent<RotationConstraint>(out RotationConstraint rotationConstraint);
+                rotationConstraint.enabled = true;
+                rotationConstraint.SetSource(0, new ConstraintSource { sourceTransform = arrozPosition, weight = 1 });
                 break;
         }
     }

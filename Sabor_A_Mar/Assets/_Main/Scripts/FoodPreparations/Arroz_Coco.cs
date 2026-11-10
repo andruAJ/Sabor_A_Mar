@@ -39,14 +39,12 @@ public class Arroz_Coco : MonoBehaviour
             case "Cuchillo":
                 if (currentState == ArrozState.CocoEntero)
                 {
-                    Debug.LogWarning("Golpe con cuchillo");
                     SetArrozState(ArrozState.CocoPartido);       
                 }   
                 break;
             case "Rallador":
                 if (currentState == ArrozState.CocoPartido)
                 {
-                    Debug.LogWarning("Golpe con rallador");
                     if (encimaDeOlla) 
                     {
                         //Aquí deja el coco rallado pero puede que falta que se agregue la leche al bowl
@@ -56,7 +54,6 @@ public class Arroz_Coco : MonoBehaviour
                     else 
                     {
                         //efectos visuales pero no cambia de estado
-                        Debug.LogWarning("Coco rallado pero no encima de la olla");
                     } 
                 }   
                 break;
@@ -98,7 +95,6 @@ public class Arroz_Coco : MonoBehaviour
                 
                 break;
         }
-        Debug.LogWarning("Estado del arroz cambiado a: " + currentState.ToString());
     }
     public void TurnOffAllHijosExcept(GameObject except) 
     {

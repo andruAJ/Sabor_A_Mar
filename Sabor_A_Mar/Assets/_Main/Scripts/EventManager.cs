@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class EventManager : MonoBehaviour
 {
@@ -132,14 +133,14 @@ public class EventManager : MonoBehaviour
                 gameManager.FinalExperiencia();
                 ToggleInteractions(false, comida);
                 break;
-            case "Coco":
+            case "ArrozCoco":
                 Debug.LogWarning("Arroz emplatado");
                 gameManager.ArrozEmplatado = true;
                 //audio diciendo que se puso el arroz
                 gameManager.FinalExperiencia();
                 break;
             default:
-                Debug.LogWarning("Algo que no es comida colisionó con el plato");
+                Debug.LogWarning("Algo que no es comida colisionó con el plato: " + comida.name + " tag: " + comida.tag);
                 break;
         }
     }

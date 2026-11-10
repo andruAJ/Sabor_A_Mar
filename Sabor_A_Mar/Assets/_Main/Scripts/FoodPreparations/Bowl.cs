@@ -20,7 +20,7 @@ public class Bowl : MonoBehaviour
         collisionTag = other.gameObject.tag;
         currentState = arroz_Coco.CurrentState;
         if (collisionTag == "Coco") { LecheSiendoServida(); }
-        else if (collisionTag == "Olla" && currentState == Arroz_Coco.ArrozState.ArrozListo) {arrozListo.SetActive(true); arrozServido = true; }
+        else if (collisionTag == "Olla" && currentState == Arroz_Coco.ArrozState.ArrozListo) {arrozListo.SetActive(true); arrozServido = true; this.gameObject.tag = "ArrozCoco";}
         else if (collisionTag == "Plato" && arrozServido) { }
     }
  

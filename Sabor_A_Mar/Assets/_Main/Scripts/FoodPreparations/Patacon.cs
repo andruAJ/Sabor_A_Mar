@@ -76,7 +76,6 @@ public class Patacon : MonoBehaviour
     public void SetPataconState(PataconState state) 
     {
         currentPataconState = state;
-        Debug.LogWarning("Patacon State changed to: " + currentPataconState.ToString());
         switch (currentPataconState) 
         {
             case PataconState.Verde:

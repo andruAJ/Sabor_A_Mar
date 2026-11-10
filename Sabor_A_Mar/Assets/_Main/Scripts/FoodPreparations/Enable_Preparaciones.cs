@@ -33,7 +33,6 @@ public class Enable_Preparaciones : MonoBehaviour
                 switch (this.gameObject.tag)
                 {
                     case "Tabla":
-                        Debug.LogWarning("OnTablaCollided invoked");
                         OnTablaCollided?.Invoke(other);
                         break;
                     case "Sarten": 
@@ -51,7 +50,6 @@ public class Enable_Preparaciones : MonoBehaviour
                         //this.gameObject.GetComponent<SphereCollider>().enabled = true;
                         break;
                     case "Sarten":
-                        Debug.LogWarning("OnSartenCollided invoked");
                         OnSartenCollided?.Invoke(other);
                         VFX_Manager.Instance.PrenderEfecto(VFXType.Aceite, false, this.transform);
                         break;
@@ -60,7 +58,6 @@ public class Enable_Preparaciones : MonoBehaviour
             else //necesario si el patacón está dorado o frito
             {
                 positionConstraint.enabled = false;
-                //this.gameObject.GetComponent<SphereCollider>().enabled = true;
             }
         }     
     }

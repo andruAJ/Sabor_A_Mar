@@ -46,10 +46,8 @@ public class Pescado : MonoBehaviour
         switch (collisionTag)
         {
             case "Cuchillo":
-                Debug.LogWarning("Golpe con cuchillo");
                 if (currentState == PescadoState.SinEscamas)
                 {
-                    Debug.LogWarning("Golpe con cuchillo y estado SinEscamas");
                     golpes++;
                     blendValue += 0.35f;
                     BlendTextures(blendValue);
@@ -60,10 +58,8 @@ public class Pescado : MonoBehaviour
                 }   
                 break;
             case "Descamador":
-                Debug.LogWarning("Golpe con descamador");
                 if (currentState == PescadoState.Escamas)
                 {
-                    Debug.LogWarning("Golpe con descamador y estado Escamas");
                     golpes++;
                     blendValue += 0.35f;
                     BlendTextures(blendValue);
@@ -109,7 +105,6 @@ public class Pescado : MonoBehaviour
                 VFX_Manager.Instance.StartCoroutine(VFX_Manager.Instance.ApagarEfecto(VFXType.Aceite, 3f));
                 break;
         }
-        Debug.LogWarning("Estado del pescado cambiado a: " + currentState.ToString());
     }
     public void UpdateTextures(Texture2D texture1, Texture2D texture2) 
     {
