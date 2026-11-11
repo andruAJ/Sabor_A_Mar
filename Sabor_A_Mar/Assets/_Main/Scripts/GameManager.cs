@@ -49,7 +49,8 @@ public class GameManager : MonoBehaviour
     }
     public void FinalExperiencia()
     {
-        comidaEmplatada = pescadoEmplatado  == true && pataconesEmplatados  == true && arrozEmplatado == true;
+        if (pescadoEmplatado == true && pataconesEmplatados == true && arrozEmplatado == true) { comidaEmplatada = true; }
+        
         if(comidaEmplatada)
         {
             ConversationManager.Instance.NextConversation(Conversacion.Final);

@@ -5,8 +5,15 @@ public enum SoundType
 {
 	MAR,
 	ACEITE,
-	PISADAS,
-	SELVA
+	PISADAS_ARENA,
+	PISADAS_MADERA,
+	SELVA,
+	APLASTAR_PLATANO,
+	CORTAR,
+	FRITAR,
+	DESCAMAR,
+	ABRIR_COCO,
+	LÍQUIDO
 }
 [RequireComponent(typeof(AudioSource)), ExecuteInEditMode]
 
