@@ -14,7 +14,7 @@ public class AreaDetection : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            VFX_Manager.Instance.StartCoroutine(VFX_Manager.Instance.ApagarEfecto(VFXType.Interactable, 1f));
+            VFX_Manager.Instance.StartCoroutine(VFX_Manager.Instance.ApagarEfecto(VFXType.Interactable, 0f));
             switch (areaType)
             {
                 case AreaType.Platano:

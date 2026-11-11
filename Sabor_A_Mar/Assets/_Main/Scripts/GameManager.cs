@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public bool seAcercoAlPlatano;
-    public bool seAcercoAlPescado;
-    public bool seAcercoAlCoco;
+    public bool seAcercoAlPlatano = false;
+    public bool seAcercoAlPescado = false;
+    public bool seAcercoAlCoco = false;
 
 
     public bool pescadoEmplatado;

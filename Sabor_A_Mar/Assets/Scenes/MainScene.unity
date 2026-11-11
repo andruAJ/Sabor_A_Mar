@@ -4973,7 +4973,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 404092715729522954, guid: b491032bc82755e4892cbe094e2903c4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2
+      value: 2.939
       objectReference: {fileID: 0}
     - target: {fileID: 404092715729522954, guid: b491032bc82755e4892cbe094e2903c4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5212,7 +5212,7 @@ Light:
   serializedVersion: 12
   m_Type: 2
   m_Color: {r: 0.36809802, g: 1, b: 0, a: 1}
-  m_Intensity: 0.12
+  m_Intensity: 5
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -5257,7 +5257,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 7.4e-43, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 1, y: 0.00003051851, z: 8.503553e+20, w: 0.000000041493877}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -37843,7 +37843,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -57786,7 +57786,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
