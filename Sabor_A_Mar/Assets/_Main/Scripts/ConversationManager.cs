@@ -22,6 +22,7 @@ public class ConversationManager : MonoBehaviour
 
     public GameObject parentTextoMama;
     public TextMeshPro cajaTexto;
+    public Animator animatorMama;
 
     [SerializeField] private float tiempoEntrePaginas = 3f;
     private Coroutine corrutinaConversacion;
@@ -47,7 +48,7 @@ public class ConversationManager : MonoBehaviour
         {
             StopCoroutine(corrutinaConversacion);
         }
-
+        animatorMama.SetTrigger("Hablando");
         corrutinaConversacion = StartCoroutine(MostrarPaginas());
     }
     private IEnumerator MostrarPaginas()

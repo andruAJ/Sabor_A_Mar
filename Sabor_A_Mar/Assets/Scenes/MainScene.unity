@@ -11034,52 +11034,57 @@ MonoBehaviour:
     texto: "Vamos a hacer pescado, arroz de coco y patacones. V\xE9 y busca los ingredientes
       afuera de la casa. Aprovecha para pelar el platano."
   - name: DescamarPescado
-    texto: 
+    texto: Lleva el pescado a la TABLE DE PICAR y usa el descamador para limpiarlo.
   - name: CortarPescado
-    texto: 
+    texto: Ahora coge el cuchillo y hazle TRES cortes.
   - name: FritarPescado
-    texto: 
+    texto: "Lleva el pez al SART\xC9N pa fritarlo"
   - name: LlevarPescadoAPlato
-    texto: 
+    texto: "Listo, ahora ll\xE9valo al PLATO que est\xE1 en la MESA"
   - name: CortarPlatano
-    texto: 
+    texto: "Deja el pl\xE1tano en la TABLA DE PICAR y p\xE1rtelo en trozos con el
+      CUCHILLO"
   - name: DorarPlatano
-    texto: 
+    texto: "Lleva los trozos al SART\xC9N para dorarlos"
   - name: AplastarPlatano
-    texto: 
+    texto: Lleva los trozos ya dorados a la PATACONERA para aplastarlos
   - name: FritarPatacones
-    texto: 
+    texto: "Lleva los patacones al SART\xC9N para fritarlos."
   - name: LlevarPataconesAPlato
-    texto: 
+    texto: "\xA1Hermosos quedaron! Ll\xE9valos al PLATO en la MESA. "
   - name: AbrirCoco
-    texto: 
+    texto: Coge el coco en una mano y con la otra coge el CUCHILLO para DARLE y abrirlo.
   - name: RallarCoco
-    texto: 
+    texto: Con el coco en una mano y el RALLADOR en otra, ponlos encima de la OLLA
+      y empieza a rallar.
   - name: ServirLecheBowl
-    texto: 
+    texto: "Ahora pon el coco encima del PLATO HONDO NEGRO y VOLTEALO para servir
+      la leche en \xE9l. "
   - name: ServirLecheOlla
-    texto: 
+    texto: "Lleva el plato hondo con la LECHE y s\xEDrvela en la OLLA"
   - name: ServirArrozCrudo
-    texto: 
+    texto: "Coge el plato con el ARROZ BLANCO y ll\xE9valo a la OLLA."
   - name: ServirAgua
-    texto: 
+    texto: ECHA el AGUA DEL PLATO HONDO en la OLLA
   - name: ServirSal
-    texto: 
+    texto: "Coge el SALERO y \xE9chale sal al auga de la OLLA"
   - name: TaparOlla
-    texto: 
+    texto: "Ya est\xE1 casi listo el arroz, s\xF3lo t\xE1palo un rato y estar\xE1
+      listo. La TAPA de la olla est\xE1 en la MESA."
   - name: LlevarArrozAPlato
-    texto: 
+    texto: "Huele riqu\xEDsimo, ahora s\xF3lo faltar servirlo en el PLATO de la MESA."
   - name: PescadoEnPlato
-    texto: 
+    texto: "Perfecto, ya est\xE1 el pescado servido."
   - name: ArrozEnPlato
-    texto: 
+    texto: Bien, ya serviste el arroz.
   - name: PataconEnPlato
-    texto: 
+    texto: "Bien, ya est\xE1n los patacones en el plato."
   - name: Final
-    texto: 
+    texto: "Ya est\xE1 listo el almuerzo, sent\xE9monos a almorzar juntos."
   parentTextoMama: {fileID: 1204763180}
   cajaTexto: {fileID: 1551508534}
-  tiempoEntrePaginas: 3
+  animatorMama: {fileID: 540733402}
+  tiempoEntrePaginas: 7
 --- !u!1 &343093508
 GameObject:
   m_ObjectHideFlags: 0
@@ -42645,7 +42650,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
