@@ -69,9 +69,11 @@ public class Arroz_Coco : MonoBehaviour
                 TurnOffAllHijosExcept(pasos[1]);
                 PourDetector pourDetector = GetComponent<PourDetector>();
                 pourDetector.enabled = true;
+                ConversationManager.Instance.NextConversation(Conversacion.RallarCoco);
                 break;
             case ArrozState.CocoRallado:
                 pasos[2].SetActive(true);
+                ConversationManager.Instance.NextConversation(Conversacion.ServirLecheBowl);
                 break;
             case ArrozState.LecheHervida:
                 //el apagado de la leche lo hice desde la olla pero podría ser desde aquí directamente
@@ -86,10 +88,12 @@ public class Arroz_Coco : MonoBehaviour
             case ArrozState.ArrozCocido:
                 TurnOffAllHijosExcept(pasos[6]);
                 pasos[1].SetActive(true);
+                ConversationManager.Instance.NextConversation(Conversacion.TaparOlla);
                 break;
             case ArrozState.ArrozListo:
                 VFX_Manager.Instance.PrenderEfecto(VFXType.ComidaLista, true, pasos[6].transform);
                 VFX_Manager.Instance.StartCoroutine(VFX_Manager.Instance.ApagarEfecto(VFXType.ComidaLista, 1f));
+                ConversationManager.Instance.NextConversation(Conversacion.CogerArrozConPlatoHondo);
                 break;
         }
     }

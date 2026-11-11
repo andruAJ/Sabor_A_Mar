@@ -1,3 +1,5 @@
+using System.Collections;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -14,16 +16,18 @@ public class GameManager : MonoBehaviour
     public Transform platanoPosition;
     public Transform pescadoPosition;
     public Transform cocoPosition;
+    public GameObject deteccionDentroCasa;
     public static GameManager Instance { get; private set; }
     private void Awake()
     {
         Instance = this;
         VFX_Manager.Instance.PrenderEfecto(VFXType.Interactable, false, this.transform);
+        InicioExperiencia();
     }
 
     private void InicioExperiencia() 
     {
-        //poner texto de mama clemen diciendo los ingredientes
+        ConversationManager.Instance.NextConversation(Conversacion.Bienvenida);
     }
     public void EstablecerEfectoInteractables()
     {
@@ -34,6 +38,7 @@ public class GameManager : MonoBehaviour
         else if (!seAcercoAlPescado)
         {
             VFX_Manager.Instance.PrenderEfecto(VFXType.Interactable, true, pescadoPosition);
+            deteccionDentroCasa.SetActive(true);
         }
         else if (!seAcercoAlPlatano)
         {
@@ -45,9 +50,22 @@ public class GameManager : MonoBehaviour
         bool comidaEmplatada = pescadoEmplatado  == true && pataconesEmplatados  == true && arrozEmplatado == true;
         if(comidaEmplatada)
         {
-            //audio de felicitación
+            ConversationManager.Instance.NextConversation(Conversacion.Final);
             //Fade out a final de la experiencia
         }
+    }
+    public IEnumerator EsperarAlSiguienteDialogo() 
+    {
+        float elapsedTime = 0f;
+        while (elapsedTime < 3f)
+        {
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        if (arrozEmplatado) { ConversationManager.Instance.NextConversation(Conversacion.CortarPlatano); }
+        else if (pescadoEmplatado) { ConversationManager.Instance.NextConversation(Conversacion.AbrirCoco);}
+        
     }
     public bool SeAcercoAlPlatano
     {
@@ -67,18 +85,18 @@ public class GameManager : MonoBehaviour
     public bool PescadoEmplatado
     {
         get => pescadoEmplatado;
-        set { pescadoEmplatado = value; }
+        set { pescadoEmplatado = value; ConversationManager.Instance.NextConversation(Conversacion.PescadoEnPlato); StartCoroutine(EsperarAlSiguienteDialogo()); }
         
     }
     public bool PataconesEmplatados
     {
         get => pataconesEmplatados;
-        set {pataconesEmplatados = value; }
+        set {pataconesEmplatados = value; ConversationManager.Instance.NextConversation(Conversacion.PataconEnPlato); StartCoroutine(EsperarAlSiguienteDialogo()); }
     }
     public bool ArrozEmplatado
     {
         get => arrozEmplatado;
-        set { arrozEmplatado = value; }
+        set { arrozEmplatado = value; ConversationManager.Instance.NextConversation(Conversacion.ArrozEnPlato); StartCoroutine(EsperarAlSiguienteDialogo()); }
     }
     
 }

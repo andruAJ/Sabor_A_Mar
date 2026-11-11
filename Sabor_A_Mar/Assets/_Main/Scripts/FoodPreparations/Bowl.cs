@@ -55,6 +55,7 @@ public class Bowl : MonoBehaviour
         private set
         {
             lecheServida = value;
+            ConversationManager.Instance.NextConversation(Conversacion.ServirLecheOlla);
         }
     }
     public bool ArrozServido
@@ -63,6 +64,7 @@ public class Bowl : MonoBehaviour
         private set
         {
             arrozServido = value;
+            ConversationManager.Instance.NextConversation(Conversacion.LlevarArrozAPlato);
         }
     }
 }

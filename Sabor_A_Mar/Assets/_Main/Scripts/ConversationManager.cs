@@ -8,7 +8,7 @@ public enum Conversacion
     Bienvenida,
     DescamarPescado, CortarPescado, FritarPescado, LlevarPescadoAPlato,
     CortarPlatano, DorarPlatano, AplastarPlatano, FritarPatacones, LlevarPataconesAPlato,
-    AbrirCoco, RallarCoco, ServirLecheBowl, ServirLecheOlla, ServirArrozCrudo, ServirAgua, ServirSal,TaparOlla, LlevarArrozAPlato,
+    AbrirCoco, RallarCoco, ServirLecheBowl, ServirLecheOlla, ServirArrozCrudo, ServirAgua, ServirSal,TaparOlla, CogerArrozConPlatoHondo,LlevarArrozAPlato,
     PescadoEnPlato, ArrozEnPlato, PataconEnPlato,
     Final
 }

@@ -10871,6 +10871,10 @@ PrefabInstance:
       propertyPath: platanoPosition
       value: 
       objectReference: {fileID: 276229858}
+    - target: {fileID: 1138596922475432033, guid: 676fe87c8e8241f4da7aeb1958c1655d, type: 3}
+      propertyPath: deteccionDentroCasa
+      value: 
+      objectReference: {fileID: 1780258177}
     - target: {fileID: 1518620307974301852, guid: 676fe87c8e8241f4da7aeb1958c1655d, type: 3}
       propertyPath: arrozScript
       value: 
@@ -42806,6 +42810,7 @@ Transform:
   - {fileID: 406176335}
   - {fileID: 2078116687}
   - {fileID: 1912611136}
+  - {fileID: 1780258180}
   m_Father: {fileID: 336951498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1566652970
@@ -52854,11 +52859,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 451850177291368383, guid: c7e06c35a8120784fac57a2b258138d6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30.3
+      value: -11.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 451850177291368383, guid: c7e06c35a8120784fac57a2b258138d6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.86
       objectReference: {fileID: 0}
     - target: {fileID: 451850177291368383, guid: c7e06c35a8120784fac57a2b258138d6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 12.5
+      value: -12.16
       objectReference: {fileID: 0}
     - target: {fileID: 4107125892169978505, guid: c7e06c35a8120784fac57a2b258138d6, type: 3}
       propertyPath: m_Name
@@ -62788,6 +62797,72 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1758657960}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1780258177
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1780258180}
+  - component: {fileID: 1780258179}
+  - component: {fileID: 1780258178}
+  m_Layer: 0
+  m_Name: CasaAreaDetection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1780258178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780258177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8872f7ec2805a434494949b452efa6ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DeteccionInicioPreparaciones
+--- !u!65 &1780258179
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780258177}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.221681, y: 1, z: 1}
+  m_Center: {x: 0.33476663, y: 0, z: 0}
+--- !u!4 &1780258180
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780258177}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -29.87, y: 2.09, z: -7.35}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1553349419}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1797305774
 GameObject:
   m_ObjectHideFlags: 0

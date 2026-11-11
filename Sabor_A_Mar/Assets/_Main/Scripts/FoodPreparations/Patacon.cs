@@ -92,14 +92,17 @@ public class Patacon : MonoBehaviour
                 ChangeMesh(platanoMeshFilter, platano_Cortado);
                 this.gameObject.GetComponent<PositionConstraint>().enabled = false;
                 OnPreparacionPatacon?.Invoke(true, this.gameObject);
+                ConversationManager.Instance.NextConversation(Conversacion.DorarPlatano);
                 break;
             case PataconState.Dorado:
                 TurnOffAllHijosExcept(platano_Cortado_Dorado);
                 this.gameObject.GetComponent<PositionConstraint>().enabled = false;
                 VFX_Manager.Instance.StartCoroutine(VFX_Manager.Instance.ApagarEfecto(VFXType.Aceite, 3f));
+                ConversationManager.Instance.NextConversation(Conversacion.AplastarPlatano);
                 break;
             case PataconState.Aplastado:
                 TurnOffAllHijosExcept(pataconCrudo);
+                ConversationManager.Instance.NextConversation(Conversacion.FritarPatacones);
                 break;
             case PataconState.Frito:
                 TurnOffAllHijosExcept(pataconCrudo);
@@ -112,6 +115,7 @@ public class Patacon : MonoBehaviour
                 VFX_Manager.Instance.StartCoroutine(VFX_Manager.Instance.ApagarEfecto(VFXType.Aceite, 3f));
                 VFX_Manager.Instance.PrenderEfecto(VFXType.ComidaLista, true, this.transform);
                 VFX_Manager.Instance.StartCoroutine(VFX_Manager.Instance.ApagarEfecto(VFXType.ComidaLista, 1f));
+                ConversationManager.Instance.NextConversation(Conversacion.LlevarPataconesAPlato);
                 break;
         }
 

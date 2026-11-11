@@ -43,17 +43,20 @@ public class Olla : MonoBehaviour
                 pourDetector.enabled = false;
                 Paso4.SetActive(true);
                 VFX_Manager.Instance.PrenderEfecto(VFXType.Leche, false, this.transform);
+                ConversationManager.Instance.NextConversation(Conversacion.ServirArrozCrudo);
                 StartCoroutine(Coccion());
                 break;
             case "Arroz":
                 arrozServido = true;
                 arrozEnelBowl.SetActive(false);
                 PasoActual?.Invoke(Arroz_Coco.ArrozState.ArrozAgregado);
+                ConversationManager.Instance.NextConversation(Conversacion.ServirAgua);
                 break;
             case "Agua":
                 aguaServida = true;
                 aguaEnelBowl.SetActive(false);
                 aguaEnOlla.SetActive(true);
+                ConversationManager.Instance.NextConversation(Conversacion.ServirSal);
                 if (salServida) PasoActual?.Invoke(Arroz_Coco.ArrozState.Agua_SalAgregados); StartCoroutine(Coccion());
                 break;
             case "Salero":

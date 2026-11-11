@@ -91,6 +91,7 @@ public class Pescado : MonoBehaviour
                 blendValue = 0f;
                 BlendTextures(0f);
                 golpes = 0;
+                ConversationManager.Instance.NextConversation(Conversacion.CortarPescado);
                 break;
             case PescadoState.Cortado:
                 UpdateTextures(pescado_Cortado, pescado_Frito);
@@ -98,6 +99,7 @@ public class Pescado : MonoBehaviour
                 BlendTextures(0f);
                 this.gameObject.GetComponent<PositionConstraint>().enabled = false;
                 OnPreparacionPescado?.Invoke(true, this.gameObject);
+                ConversationManager.Instance.NextConversation(Conversacion.FritarPescado);
                 break;
             case PescadoState.Frito:
                 UpdateTextures(pescado_Frito, pescado_Frito);
@@ -107,6 +109,7 @@ public class Pescado : MonoBehaviour
                 VFX_Manager.Instance.StartCoroutine(VFX_Manager.Instance.ApagarEfecto(VFXType.Aceite, 3f));
                 VFX_Manager.Instance.PrenderEfecto(VFXType.ComidaLista, true, this.transform);
                 VFX_Manager.Instance.StartCoroutine(VFX_Manager.Instance.ApagarEfecto(VFXType.ComidaLista, 1f));
+                ConversationManager.Instance.NextConversation(Conversacion.LlevarPescadoAPlato);
                 break;
         }
     }
