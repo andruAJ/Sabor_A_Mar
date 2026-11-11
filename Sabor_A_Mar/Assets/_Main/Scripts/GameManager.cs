@@ -1,6 +1,6 @@
 using System.Collections;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     public bool pescadoEmplatado;
     public bool pataconesEmplatados;
     public bool arrozEmplatado;
+
+    private bool comidaEmplatada = false;
 
     public Transform platanoPosition;
     public Transform pescadoPosition;
@@ -47,22 +49,23 @@ public class GameManager : MonoBehaviour
     }
     public void FinalExperiencia()
     {
-        bool comidaEmplatada = pescadoEmplatado  == true && pataconesEmplatados  == true && arrozEmplatado == true;
+        comidaEmplatada = pescadoEmplatado  == true && pataconesEmplatados  == true && arrozEmplatado == true;
         if(comidaEmplatada)
         {
             ConversationManager.Instance.NextConversation(Conversacion.Final);
             //Fade out a final de la experiencia
+
         }
     }
     public IEnumerator EsperarAlSiguienteDialogo() 
     {
         float elapsedTime = 0f;
-        while (elapsedTime < 3f)
+        while (elapsedTime < 8f)
         {
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-
+        if (comidaEmplatada) { SceneManager.LoadScene("LastScene"); }
         if (arrozEmplatado) { ConversationManager.Instance.NextConversation(Conversacion.CortarPlatano); }
         else if (pescadoEmplatado) { ConversationManager.Instance.NextConversation(Conversacion.AbrirCoco);}
         

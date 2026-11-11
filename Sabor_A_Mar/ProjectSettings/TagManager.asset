@@ -50,6 +50,7 @@ TagManager:
   - Arroz
   - Agua
   - Salero
+  - Rayador
   layers:
   - Default
   - TransparentFX
