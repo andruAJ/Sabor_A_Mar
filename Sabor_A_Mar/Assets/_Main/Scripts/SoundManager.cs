@@ -13,7 +13,8 @@ public enum SoundType
 	FRITAR,
 	DESCAMAR,
 	ABRIR_COCO,
-	LÍQUIDO
+	LÍQUIDO,
+	TEXTO
 }
 [RequireComponent(typeof(AudioSource)), ExecuteInEditMode]
 

@@ -10973,11 +10973,59 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 273659300}
     - target: {fileID: 5499823275406614746, guid: 676fe87c8e8241f4da7aeb1958c1655d, type: 3}
+      propertyPath: soundList.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5499823275406614746, guid: 676fe87c8e8241f4da7aeb1958c1655d, type: 3}
+      propertyPath: soundList.Array.data[2].name
+      value: PISADAS_ARENA
+      objectReference: {fileID: 0}
+    - target: {fileID: 5499823275406614746, guid: 676fe87c8e8241f4da7aeb1958c1655d, type: 3}
+      propertyPath: soundList.Array.data[3].name
+      value: PISADAS_MADERA
+      objectReference: {fileID: 0}
+    - target: {fileID: 5499823275406614746, guid: 676fe87c8e8241f4da7aeb1958c1655d, type: 3}
+      propertyPath: soundList.Array.data[4].name
+      value: SELVA
+      objectReference: {fileID: 0}
+    - target: {fileID: 5499823275406614746, guid: 676fe87c8e8241f4da7aeb1958c1655d, type: 3}
+      propertyPath: soundList.Array.data[5].name
+      value: APLASTAR_PLATANO
+      objectReference: {fileID: 0}
+    - target: {fileID: 5499823275406614746, guid: 676fe87c8e8241f4da7aeb1958c1655d, type: 3}
+      propertyPath: soundList.Array.data[6].name
+      value: CORTAR
+      objectReference: {fileID: 0}
+    - target: {fileID: 5499823275406614746, guid: 676fe87c8e8241f4da7aeb1958c1655d, type: 3}
+      propertyPath: soundList.Array.data[7].name
+      value: FRITAR
+      objectReference: {fileID: 0}
+    - target: {fileID: 5499823275406614746, guid: 676fe87c8e8241f4da7aeb1958c1655d, type: 3}
+      propertyPath: soundList.Array.data[8].name
+      value: DESCAMAR
+      objectReference: {fileID: 0}
+    - target: {fileID: 5499823275406614746, guid: 676fe87c8e8241f4da7aeb1958c1655d, type: 3}
+      propertyPath: soundList.Array.data[9].name
+      value: ABRIR_COCO
+      objectReference: {fileID: 0}
+    - target: {fileID: 5499823275406614746, guid: 676fe87c8e8241f4da7aeb1958c1655d, type: 3}
+      propertyPath: soundList.Array.data[10].name
+      value: "L\xCDQUIDO"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5499823275406614746, guid: 676fe87c8e8241f4da7aeb1958c1655d, type: 3}
+      propertyPath: soundList.Array.data[11].name
+      value: TEXTO
+      objectReference: {fileID: 0}
+    - target: {fileID: 5499823275406614746, guid: 676fe87c8e8241f4da7aeb1958c1655d, type: 3}
       propertyPath: soundList.Array.data[0].sounds.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5499823275406614746, guid: 676fe87c8e8241f4da7aeb1958c1655d, type: 3}
       propertyPath: soundList.Array.data[1].sounds.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5499823275406614746, guid: 676fe87c8e8241f4da7aeb1958c1655d, type: 3}
+      propertyPath: soundList.Array.data[11].sounds.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5499823275406614746, guid: 676fe87c8e8241f4da7aeb1958c1655d, type: 3}
@@ -10988,6 +11036,14 @@ PrefabInstance:
       propertyPath: 'soundList.Array.data[1].sounds.Array.data[0]'
       value: 
       objectReference: {fileID: 8300000, guid: a339cd7ee506c054b8e2cd592f4f35c3, type: 3}
+    - target: {fileID: 5499823275406614746, guid: 676fe87c8e8241f4da7aeb1958c1655d, type: 3}
+      propertyPath: 'soundList.Array.data[11].sounds.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 0e0336585b1892c4fbb8aeaacd9cf5cd, type: 3}
+    - target: {fileID: 5511913973960529547, guid: 676fe87c8e8241f4da7aeb1958c1655d, type: 3}
+      propertyPath: Priority
+      value: 26
+      objectReference: {fileID: 0}
     - target: {fileID: 7165781367132025492, guid: 676fe87c8e8241f4da7aeb1958c1655d, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -22107,6 +22163,14 @@ PrefabInstance:
     - target: {fileID: 1246630389532579381, guid: 7ee90bb57579a09449b83f7cd662d9e6, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4638843981461931238, guid: 7ee90bb57579a09449b83f7cd662d9e6, type: 3}
+      propertyPath: _enableDynamicResolution
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4638843981461931238, guid: 7ee90bb57579a09449b83f7cd662d9e6, type: 3}
+      propertyPath: requestScenePermissionOnStartup
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5164551050281407567, guid: 7ee90bb57579a09449b83f7cd662d9e6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -47780,6 +47844,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4165280410959172331, guid: 291abb87ca51d23458da276b03cf6120, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4353848562840215800, guid: 291abb87ca51d23458da276b03cf6120, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.81
@@ -47815,6 +47883,14 @@ PrefabInstance:
     - target: {fileID: 4980216547606894823, guid: 291abb87ca51d23458da276b03cf6120, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5066902118468224690, guid: 291abb87ca51d23458da276b03cf6120, type: 3}
+      propertyPath: m_Size.y
+      value: 0.33342844
+      objectReference: {fileID: 0}
+    - target: {fileID: 5066902118468224690, guid: 291abb87ca51d23458da276b03cf6120, type: 3}
+      propertyPath: m_Center.y
+      value: 3.1261792
       objectReference: {fileID: 0}
     - target: {fileID: 5256884329825765130, guid: 291abb87ca51d23458da276b03cf6120, type: 3}
       propertyPath: m_IsActive
@@ -77910,6 +77986,10 @@ PrefabInstance:
     - target: {fileID: 2144293327774163167, guid: 411127c26076c384a8f51a28ec26dd23, type: 3}
       propertyPath: m_Name
       value: KitchenElements_Accs
+      objectReference: {fileID: 0}
+    - target: {fileID: 2641034195863192928, guid: 411127c26076c384a8f51a28ec26dd23, type: 3}
+      propertyPath: m_Size.z
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 5959742899790123528, guid: 411127c26076c384a8f51a28ec26dd23, type: 3}
       propertyPath: m_Size.x

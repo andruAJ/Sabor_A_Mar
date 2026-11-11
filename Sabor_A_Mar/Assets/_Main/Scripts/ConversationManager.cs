@@ -61,6 +61,8 @@ public class ConversationManager : MonoBehaviour
 
         for (int pagina = 1; pagina <= totalPaginas; pagina++)
         {
+            float volume = 1f;
+            SoundManager.PlaySound(SoundType.TEXTO, volume);
             cajaTexto.pageToDisplay = pagina;
 
             yield return new WaitForSeconds(tiempoEntrePaginas);
