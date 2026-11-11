@@ -11075,6 +11075,9 @@ MonoBehaviour:
   - name: TaparOlla
     texto: "Ya est\xE1 casi listo el arroz, s\xF3lo t\xE1palo un rato y estar\xE1
       listo. La TAPA de la olla est\xE1 en la MESA."
+  - name: CogerArrozConPlatoHondo
+    texto: 'Usa el PLATO HONDO con el que RECOGISTE LA LECHE para coger el arroz
+      que te vas a servir. '
   - name: LlevarArrozAPlato
     texto: "Huele riqu\xEDsimo, ahora s\xF3lo faltar servirlo en el PLATO de la MESA."
   - name: PescadoEnPlato
