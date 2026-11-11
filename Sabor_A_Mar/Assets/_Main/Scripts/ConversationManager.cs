@@ -28,10 +28,13 @@ public class ConversationManager : MonoBehaviour
     private Coroutine corrutinaConversacion;
     private void Awake() 
     {
-        if (Instance == null)
+        if (Instance != null && Instance != this)
         {
-            Instance = this;
+            Destroy(gameObject);
+            return;
         }
+
+        Instance = this;
     }
 
     public void NextConversation(Conversacion siguienteConversacion) 

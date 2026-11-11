@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     public Transform cocoPosition;
     public GameObject deteccionDentroCasa;
     public static GameManager Instance { get; private set; }
-    private void Awake()
+    private void Start()
     {
         Instance = this;
         VFX_Manager.Instance.PrenderEfecto(VFXType.Interactable, false, this.transform);
