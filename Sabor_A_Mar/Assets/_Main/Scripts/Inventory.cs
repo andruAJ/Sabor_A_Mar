@@ -66,23 +66,23 @@ public class Inventory : MonoBehaviour
 
     public void AddToInventory(FoodElement comida)
     {
-        OnInventoryChanged?.Invoke(false, comida.gameObject);
-        inventory.Push(comida);
-        Debug.LogWarning("Se guardo el elemento " + comida);
-        OnQuantityChanged?.Invoke(inventory.Count);
+        
+         OnInventoryChanged?.Invoke(false, comida.gameObject);
+         inventory.Push(comida);
+         OnQuantityChanged?.Invoke(inventory.Count);
+
     }
+        
+    
     public void RemoveFromInventory()
     {
-        Debug.LogWarning("Entro a RemoveFromInventory");
         if (inventory.Count > 0)
         {
             if (inventory.TryPop(out var popped))
             {
-                Debug.LogWarning("hizo el TryPop");
                 popped.gameObject.SetActive(true);
                 popped.transform.position = inventorySpawnPoint.transform.position;
                 OnInventoryChanged?.Invoke(true, popped.gameObject);
-                Debug.Log("Elemento salió del inventario");
             }
         }
         else

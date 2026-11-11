@@ -32,14 +32,17 @@ public class FoodGrabbed : MonoBehaviour
             {
                 case "Platano":
                     OnFoodGrabbed?.Invoke(FoodType.Platano);
+                    Inventory.Instance.PlatanoAgarrado = true;
                     Debug.Log("Platano agarrado");
                     break;
                 case "Pescado":
                     OnFoodGrabbed?.Invoke(FoodType.Pescado);
+                    Inventory.Instance.PescadoAgarrado = true;
                     Debug.Log("Pescado agarrado");
                     break;
                 case "Coco":
                     OnFoodGrabbed?.Invoke(FoodType.Coco);
+                    Inventory.Instance.CocoAgarrado = true;
                     Debug.Log("Coco agarrado");
                     break;
                 default:
