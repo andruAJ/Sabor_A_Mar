@@ -110,6 +110,8 @@ public class Patacon : MonoBehaviour
                 OnPreparacionPatacon?.Invoke(true, this.gameObject);
                 this.gameObject.GetComponent<PositionConstraint>().enabled = false;
                 VFX_Manager.Instance.StartCoroutine(VFX_Manager.Instance.ApagarEfecto(VFXType.Aceite, 3f));
+                VFX_Manager.Instance.PrenderEfecto(VFXType.ComidaLista, true, this.transform);
+                VFX_Manager.Instance.StartCoroutine(VFX_Manager.Instance.ApagarEfecto(VFXType.ComidaLista, 1f));
                 break;
         }
 

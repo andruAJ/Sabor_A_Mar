@@ -42,6 +42,7 @@ public class Olla : MonoBehaviour
                 other.TryGetComponent<PourDetector>(out PourDetector pourDetector);
                 pourDetector.enabled = false;
                 Paso4.SetActive(true);
+                VFX_Manager.Instance.PrenderEfecto(VFXType.Leche, false, this.transform);
                 StartCoroutine(Coccion());
                 break;
             case "Arroz":
@@ -87,8 +88,8 @@ public class Olla : MonoBehaviour
         {
             lecheCocinada = lecheServida;
             arrozCocinado = arrozServido;
-            if (lecheCocinada && !arrozCocinado) {leche.SetActive(false); PasoActual?.Invoke(Arroz_Coco.ArrozState.LecheHervida);}
-            else if (arrozCocinado && lecheCocinada && currentState != Arroz_Coco.ArrozState.ArrozCocido) { PasoActual?.Invoke(Arroz_Coco.ArrozState.ArrozCocido); }
+            if (lecheCocinada && !arrozCocinado) {leche.SetActive(false); VFX_Manager.Instance.StartCoroutine(VFX_Manager.Instance.ApagarEfecto(VFXType.Leche, 2f)); PasoActual?.Invoke(Arroz_Coco.ArrozState.LecheHervida);}
+            else if (arrozCocinado && lecheCocinada && currentState != Arroz_Coco.ArrozState.ArrozCocido) { VFX_Manager.Instance.StartCoroutine(VFX_Manager.Instance.ApagarEfecto(VFXType.Agua, 2f)); PasoActual?.Invoke(Arroz_Coco.ArrozState.ArrozCocido); }
             else if (arrozCocinado && lecheCocinada && currentState == Arroz_Coco.ArrozState.ArrozCocido)
             { 
                 PasoActual?.Invoke(Arroz_Coco.ArrozState.ArrozListo); } //tengo sospecha que este else puede dar a casos donde no se aplicarian, para solucionarlo debería de poner el condicional que sólo sea con el current state arroz cocido

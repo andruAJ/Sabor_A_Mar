@@ -45,16 +45,12 @@ public class Arroz_Coco : MonoBehaviour
             case "Rallador":
                 if (currentState == ArrozState.CocoPartido)
                 {
+                    VFX_Manager.Instance.PrenderEfecto(VFXType.Ralladura, true, this.transform);
                     if (encimaDeOlla) 
                     {
-                        //Aquí deja el coco rallado pero puede que falta que se agregue la leche al bowl
-                        //efectos visuales y cambia de estado
                         SetArrozState(ArrozState.CocoRallado);
-                    }
-                    else 
-                    {
-                        //efectos visuales pero no cambia de estado
                     } 
+                    VFX_Manager.Instance.StartCoroutine(VFX_Manager.Instance.ApagarEfecto(VFXType.Ralladura, 2f));
                 }   
                 break;
             default:
@@ -85,14 +81,15 @@ public class Arroz_Coco : MonoBehaviour
                 pasos[1].SetActive(true);
                 break;
             case ArrozState.Agua_SalAgregados:
-                
+                VFX_Manager.Instance.PrenderEfecto(VFXType.Agua, false, this.transform);
                 break;
             case ArrozState.ArrozCocido:
                 TurnOffAllHijosExcept(pasos[6]);
                 pasos[1].SetActive(true);
                 break;
             case ArrozState.ArrozListo:
-                
+                VFX_Manager.Instance.PrenderEfecto(VFXType.ComidaLista, true, pasos[6].transform);
+                VFX_Manager.Instance.StartCoroutine(VFX_Manager.Instance.ApagarEfecto(VFXType.ComidaLista, 1f));
                 break;
         }
     }

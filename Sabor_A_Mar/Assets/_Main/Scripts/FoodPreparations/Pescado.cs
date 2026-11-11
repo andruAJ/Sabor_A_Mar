@@ -62,12 +62,14 @@ public class Pescado : MonoBehaviour
                 {
                     golpes++;
                     blendValue += 0.35f;
+                    VFX_Manager.Instance.PrenderEfecto(VFXType.Escamas,true, this.transform);
                     BlendTextures(blendValue);
                     if (golpes >= 3)
                     {
                         SetPescadoState(PescadoState.SinEscamas);
 
                     }
+                    VFX_Manager.Instance.StartCoroutine(VFX_Manager.Instance.ApagarEfecto(VFXType.Escamas, 2f));
                 }
                 break;
             default:
@@ -103,6 +105,8 @@ public class Pescado : MonoBehaviour
                 OnPreparacionPescado?.Invoke(true, this.gameObject);
                 BlendTextures(1f);
                 VFX_Manager.Instance.StartCoroutine(VFX_Manager.Instance.ApagarEfecto(VFXType.Aceite, 3f));
+                VFX_Manager.Instance.PrenderEfecto(VFXType.ComidaLista, true, this.transform);
+                VFX_Manager.Instance.StartCoroutine(VFX_Manager.Instance.ApagarEfecto(VFXType.ComidaLista, 1f));
                 break;
         }
     }

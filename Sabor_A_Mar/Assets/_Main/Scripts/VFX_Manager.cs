@@ -11,7 +11,8 @@ public enum VFXType
     Salero,
     Ralladura,
     Aceite,
-    Escamas
+    Escamas,
+    ComidaLista
 }
 [ExecuteInEditMode]
 public class VFX_Manager : MonoBehaviour
